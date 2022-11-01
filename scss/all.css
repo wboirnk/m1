@@ -56,6 +56,10 @@ a:hover {
   color: white;
 }
 
+* {
+  outline: 1px solid #000;
+}
+
 *,
 *:before,
 *:after {
@@ -888,6 +892,9 @@ button.swiper-pagination-bullet {
   animation: sloganOut 2s ease-in both;
 }
 
+main {
+  overflow: hidden;
+}
 main .about {
   height: 80vh;
   margin: 0 auto;
@@ -1538,6 +1545,8 @@ main .about .about-all-content {
 
 .tea-type-swiper {
   display: none;
+  position: relative;
+  margin-top: 100px;
 }
 @media (max-width: 1400px) {
   .tea-type-swiper {
@@ -1557,6 +1566,11 @@ main .about .about-all-content {
   .tea-type-swiper .swiper {
     width: 508px;
   }
+}
+.tea-type-swiper .tea-type-swiper-bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .tea-type-swiper .swiper .swiper-slide {
   width: 25%;
@@ -1614,6 +1628,17 @@ main .about .about-all-content {
 .box.unHover {
   animation-name: test;
   animation-duration: 1s;
+}
+
+.news-bottom-bg {
+  position: absolute;
+  right: 0;
+  bottom: 119px;
+}
+@media (max-width: 767px) {
+  .news-bottom-bg {
+    display: none;
+  }
 }
 
 .news {
@@ -1769,7 +1794,7 @@ main .about .about-all-content {
   }
 }
 
-footer {
+footer .footer-pc {
   margin-top: 183px;
   width: 100%;
   height: 120px;
@@ -1779,35 +1804,40 @@ footer {
   align-items: center;
   background-color: #154058;
 }
+@media (max-width: 767px) {
+  footer .footer-pc {
+    display: none;
+  }
+}
 @media (max-width: 1400px) {
-  footer {
+  footer .footer-pc {
     padding: 1.1% 15.7%;
   }
 }
 @media (max-width: 1200px) {
-  footer {
+  footer .footer-pc {
     padding: 1.1% 12.7%;
   }
 }
 @media (max-width: 960px) {
-  footer {
+  footer .footer-pc {
     padding: 1.1% 3.1% 1.1% 9.7%;
   }
 }
-footer img {
+footer .footer-pc img {
   width: 203px;
   height: 80px;
 }
 @media (max-width: 1400px) {
-  footer img {
+  footer .footer-pc img {
     width: 179px;
     height: 70px;
   }
 }
-footer .footer-group {
+footer .footer-pc .footer-group {
   display: flex;
 }
-footer .footer-text-group {
+footer .footer-pc .footer-text-group {
   color: #f9f9f9;
   font-size: 16px;
   font-weight: 400;
@@ -1815,28 +1845,81 @@ footer .footer-text-group {
   white-space: nowrap;
 }
 @media (max-width: 1400px) {
-  footer .footer-text-group {
+  footer .footer-pc .footer-text-group {
     font-size: 12px;
   }
 }
-footer .footer-text-group .footer-phone-business {
+footer .footer-pc .footer-text-group .footer-phone-business {
   display: flex;
   margin-bottom: 11px;
   justify-content: center;
 }
-footer .footer-text-group .footer-phone-business .footer-phone {
+footer .footer-pc .footer-text-group .footer-phone-business .footer-phone {
   margin-right: 42px;
 }
-footer .footer-text-group .footer-address {
+footer .footer-pc .footer-text-group .footer-address {
   margin-bottom: 11px;
 }
-footer .footer-icon {
+footer .footer-pc .footer-icon {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-footer .footer-icon i {
+footer .footer-pc .footer-icon i {
   margin-right: 15.69px;
   font-size: 28px;
   color: white;
+}
+footer .footer-mb {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 210px;
+  background-color: #154058;
+  padding: 17px 4.7%;
+}
+@media (max-width: 767px) {
+  footer .footer-mb {
+    display: flex;
+  }
+}
+footer .footer-mb .footer-mb-text {
+  font-size: 12px;
+  color: white;
+  margin-bottom: 5px;
+}
+footer .footer-mb .footer-mb-icon-group {
+  position: absolute;
+  right: 20px;
+  bottom: 27px;
+}
+footer .footer-mb .footer-mb-icon-group i {
+  font-size: 30px;
+  color: white;
+}
+footer .footer-mb .footer-mb-icon-group .phone-icon {
+  position: absolute;
+  bottom: 46px;
+  right: 17px;
+}
+footer .footer-mb .footer-mb-icon-group .fb-icon {
+  position: absolute;
+  bottom: 0px;
+  right: 70px;
+}
+footer .footer-mb .footer-mb-icon-group .ig-icon {
+  position: absolute;
+  bottom: 0px;
+  right: 17px;
+}
+footer .footer-mb .footer-end-text {
+  display: flex;
+  font-size: 12px;
+  line-height: 11.5px;
+  justify-content: center;
+  color: white;
+  -webkit-transform: scale(0.8);
+  white-space: nowrap;
+  margin-top: 123px;
 }/*# sourceMappingURL=all.css.map */

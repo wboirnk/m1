@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="./scss/all.css" />
   </head>
+  <!-- TODO 全部hover -->
   <body>
     <nav class="nav">
       <!-- TODO slogan方塊 -->
@@ -108,6 +109,7 @@
           </div>
         </div>
       </div>
+
       <!--Hover add class改變z-index跟加動畫 -->
       <div class="tea-type">
         <div class="tea-group">
@@ -156,8 +158,20 @@
           </a>
         </div>
       </div>
+      <!-- 大小不一 -->
+      <!-- <div class="tea-type-bg-right">
+          <img src="./img/home_grilles_left.png" alt="" />
+        </div> -->
+      <!-- TODO zindex後還是被遮到 -->
+      <!-- <div class="tea-type-bg-left">
+          <img src="./img/home_grilles_right.png" alt="" />
+        </div> -->
       <!-- 問清楚再做 -->
       <div class="tea-type-swiper">
+        <div class="tea-type-swiper-bg">
+          <!-- TODO窗花合併 -->
+          <img src="./img/orangeBanner.png" alt="" />
+        </div>
         <div class="swiper">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
@@ -177,6 +191,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="news-bottom-bg">
+        <img src="./img/home_grilles_bottom.png" alt="" />
       </div>
       <div class="news">
         <div class="news-main">
@@ -243,12 +260,9 @@
             </a>
           </div>
         </div>
-        <!-- 把標題轉成block佔整條 然後畫邊框 動畫沒法做 -->
-        <!-- 不然就是要分別畫讓他可以做動畫 -->
         <div class="news-title-group">
           <p class="news-title">最新消息</p>
           <div class="news-title-line"></div>
-          <!-- TODO 等箭頭訂好要訂位 -->
           <!-- <p class="news-more">查看更多</p> -->
 
           <div class="news-arrow"><i class="fa-solid fa-arrow-right"></i></div>
@@ -256,22 +270,39 @@
       </div>
     </main>
     <footer>
-      <img src="./img/logoSmall.png" alt="" />
-      <div class="footer-text-group">
-        <div class="footer-phone-business">
-          <p class="footer-phone">電話：0965 656 865</p>
-          <p class="footer-business">營業時間：10：00~22：00</p>
+      <div class="footer-pc">
+        <img src="./img/logoSmall.png" alt="" />
+        <div class="footer-text-group">
+          <div class="footer-phone-business">
+            <p class="footer-phone">電話：0965 656 865</p>
+            <p class="footer-business">營業時間：10：00~22：00</p>
+          </div>
+          <p class="footer-address">地址：台中市北屯區遼寧路一段148號</p>
+          <p>
+            牧一春 2022 © Copyright All Rights Reserved.
+            <a href=""> 網頁設計‧JaZz SEA</a>
+          </p>
         </div>
-        <p class="footer-address">地址：台中市北屯區遼寧路一段148號</p>
-        <p>
-          牧一春 2022 © Copyright All Rights Reserved.
-          <a href=""> 網頁設計‧JaZz SEA</a>
-        </p>
+        <div class="footer-icon">
+          <i class="fa-solid fa-phone-flip"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
       </div>
-      <div class="footer-icon">
-        <i class="fa-solid fa-phone-flip"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
+      <div class="footer-mb">
+        <div class="footer-mb-text-group">
+          <p class="footer-mb-text">地址：台中市北屯區遼寧路一段148號</p>
+          <p class="footer-mb-text">營業時間：10:00 ~ 22:00</p>
+          <p class="footer-mb-text">電話： 0965 656 865</p>
+          <div class="footer-mb-icon-group" >
+            <i class="fa-solid fa-phone-flip phone-icon"></i>
+            <i class="fa-brands fa-facebook fb-icon"></i>
+            <i class="fa-brands fa-instagram ig-icon"></i>
+          </div>
+          <p class=" footer-end-text">
+            牧一春 2022 © Copyright All Rights Reserved. 網頁設計‧JaZz SEA
+          </p>
+        </div>
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
@@ -279,6 +310,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
 
     <script src="./js/swiper-bundle.min.js"></script>
+    <!-- TODO swiper斷點 -->
     <script>
       const swiper = new Swiper(".swiper", {
         effect: "coverflow",
@@ -286,6 +318,7 @@
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: "auto",
+        initialSlide: 1,
         coverflowEffect: {
           rotate: 0,
           stretch: 0,

@@ -51,9 +51,9 @@ a:hover {
 }
 // global css
 // !!補助線
-// * {
-//   outline: 1px solid #000;
-// }
+* {
+  outline: 1px solid #000;
+}
 *,
 *:before,
 *:after {
@@ -276,6 +276,8 @@ a {
 
 //main
 main {
+    overflow:hidden;
+
   .about {
     // display:none;
     height: 80vh;
@@ -838,6 +840,8 @@ main {
 }
 .tea-type-swiper {
   display: none;
+  position: relative;
+  margin-top: 100px;
   @include pc1400 {
     display: block;
   }
@@ -846,22 +850,25 @@ main {
   }
   .swiper {
     width: 600px;
-    @include mb767{
+    @include mb767 {
       width: 508px;
     }
-    height:500px;
-}
-
-.swiper .swiper-slide {
+    height: 500px;
+  }
+  .tea-type-swiper-bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    // overflow:hidden;
+  }
+  .swiper .swiper-slide {
     width: 25%;
     height: 100%;
 
     font-size: 32px;
     font-weight: 500;
     color: #ffffff;
-
-
-}
+  }
 }
 .drink:hover {
   margin-right: 250px;
@@ -913,7 +920,14 @@ main {
   animation-duration: 1s;
 }
 // 飲料類別1400
-
+.news-bottom-bg {
+  position: absolute;
+  right: 0;
+  bottom: 119px;
+  @include mb767 {
+    display:none;
+  }
+}
 //最新消息
 .news {
   max-width: 1336px;
@@ -1016,9 +1030,8 @@ main {
         writing-mode: unset;
         border-bottom: 3px solid white;
       }
-      
     }
-    .news-arrow{
+    .news-arrow {
       color: white;
       font-size: 30px;
       position: absolute;
@@ -1026,11 +1039,11 @@ main {
       bottom: 0;
       // width: 50px;
     }
-    .news-more{
-      display:none;
+    .news-more {
+      display: none;
       @include mb767 {
         display: flex;
-        justify-content:flex-end;
+        justify-content: flex-end;
         margin-top: 39px;
       }
       color: white;
@@ -1050,65 +1063,124 @@ main {
   }
 }
 footer {
-  margin-top: 183px;
-  width: 100%;
-  height: 120px;
-  padding: 0 23.8%;
-  @include pc1400 {
-    padding: 1.1% 15.7%;
-  }
-  @include pc1200 {
-    padding: 1.1% 12.7%;
-  }
-  @include mb960 {
-    padding: 1.1% 3.1% 1.1% 9.7%;
-  }
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #154058;
-  img {
-    width: 203px;
-    height: 80px;
-    @include pc1400 {
-      width: 179px;
-      height: 70px;
+  .footer-pc {
+    @include mb767{
+      display:none;
     }
-    // margin-right: 9.6%;
-  }
-  .footer-group {
+    margin-top: 183px;
+    width: 100%;
+    height: 120px;
+    padding: 0 23.8%;
+    @include pc1400 {
+      padding: 1.1% 15.7%;
+    }
+    @include pc1200 {
+      padding: 1.1% 12.7%;
+    }
+    @include mb960 {
+      padding: 1.1% 3.1% 1.1% 9.7%;
+    }
     display: flex;
-  }
-  .footer-text-group {
-    color: #f9f9f9;
-    font-size: 16px;
-    @include pc1400 {
-      font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #154058;
+    img {
+      width: 203px;
+      height: 80px;
+      @include pc1400 {
+        width: 179px;
+        height: 70px;
+      }
+      // margin-right: 9.6%;
     }
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    .footer-phone-business {
+    .footer-group {
       display: flex;
-      margin-bottom: 11px;
-      justify-content: center;
-      .footer-phone {
-        margin-right: 42px;
+    }
+    .footer-text-group {
+      color: #f9f9f9;
+      font-size: 16px;
+      @include pc1400 {
+        font-size: 12px;
+      }
+      font-weight: 400;
+      text-align: center;
+      white-space: nowrap;
+      .footer-phone-business {
+        display: flex;
+        margin-bottom: 11px;
+        justify-content: center;
+        .footer-phone {
+          margin-right: 42px;
+        }
+      }
+      .footer-address {
+        margin-bottom: 11px;
       }
     }
-    .footer-address {
-      margin-bottom: 11px;
+    .footer-icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      // margin-left: 5.1%;
+      i {
+        margin-right: 15.69px;
+        font-size: 28px;
+        color: white;
+      }
     }
   }
-  .footer-icon {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    // margin-left: 5.1%;
-    i {
-      margin-right: 15.69px;
-      font-size: 28px;
-      color: white;
+  .footer-mb{
+    display:none;
+    position: relative;
+    @include mb767 {
+      display:flex;
+    }
+    flex-direction: column;
+    width: 100%;
+    height:210px;
+    background-color: #154058;
+    padding:  17px 4.7%;
+    // background-image: ;
+    .footer-mb-text{
+     
+        font-size: 12px;
+      color:white;
+      margin-bottom: 5px;
+    }
+    .footer-mb-icon-group{
+      position:absolute;
+      right: 20px;
+      bottom:27px;
+      i{
+        font-size: 30px;
+        color: white;
+      }
+      .phone-icon{
+        position: absolute;
+        bottom:46px;
+        right:17px;
+      }
+      .fb-icon{
+        position: absolute;
+        bottom:0px;
+        right:70px;
+      }
+      .ig-icon{
+        position: absolute;
+        bottom:0px;
+        right:17px;
+      }
+    }
+    .footer-end-text{
+      display:flex;
+      font-size: 12px ;
+      line-height:11.5px;
+      justify-content: center;
+      color:white;
+      -webkit-transform: scale(0.8);
+      // margin:0 auto;
+      white-space: nowrap;
+      margin-top:123px;
     }
   }
 }
