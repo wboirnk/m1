@@ -56,10 +56,6 @@ a:hover {
   color: white;
 }
 
-* {
-  outline: 1px solid #000;
-}
-
 *,
 *:before,
 *:after {
@@ -854,6 +850,12 @@ button.swiper-pagination-bullet {
   background-image: url("../img/banner.png");
   background-size: cover;
   position: relative;
+  background-position: center;
+}
+@media (max-width: 767px) {
+  .banner {
+    height: 725px;
+  }
 }
 .banner .logoBig {
   width: 230px;
@@ -865,6 +867,11 @@ button.swiper-pagination-bullet {
   position: absolute;
   left: 224px;
   animation: logoIn 2s ease-in both;
+}
+@media (max-width: 767px) {
+  .banner .logoBig {
+    display: none;
+  }
 }
 .banner .logoBig.logoOut {
   animation: logoOut 2s ease-in both;
@@ -887,6 +894,11 @@ button.swiper-pagination-bullet {
   font-weight: bold;
   animation: sloganIn 2s ease-in both;
   animation-delay: 1.3s;
+}
+@media (max-width: 767px) {
+  .banner .slogan {
+    display: none;
+  }
 }
 .banner .slogan.sloganOut {
   animation: sloganOut 2s ease-in both;
@@ -1447,6 +1459,7 @@ main .about .about-all-content {
   left: 0;
   max-width: 100%;
   z-index: -1;
+  background-image: url("../img/home_product_introduc_bar.png");
 }
 .tea-type .tea-group {
   display: flex;
@@ -1553,24 +1566,27 @@ main .about .about-all-content {
     display: block;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .tea-type-swiper {
-    margin-top: 580px;
+    margin-top: 700px;
   }
 }
 .tea-type-swiper .swiper {
-  width: 600px;
+  width: 100%;
   height: 500px;
-}
-@media (max-width: 767px) {
-  .tea-type-swiper .swiper {
-    width: 508px;
-  }
 }
 .tea-type-swiper .tea-type-swiper-bg {
   position: absolute;
   bottom: 0;
+  height: 259px;
   width: 100%;
+  background-image: url(../img/home_product_introduc_bar.png);
+  background-position: right;
+}
+@media (max-width: 767px) {
+  .tea-type-swiper .tea-type-swiper-bg {
+    bottom: -70px;
+  }
 }
 .tea-type-swiper .swiper .swiper-slide {
   width: 25%;
@@ -1877,6 +1893,9 @@ footer .footer-mb {
   width: 100%;
   height: 210px;
   background-color: #154058;
+  background-image: url(../img/mobile_footer.png);
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 17px 4.7%;
 }
 @media (max-width: 767px) {

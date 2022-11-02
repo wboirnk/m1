@@ -17,7 +17,6 @@
   <!-- TODO 全部hover -->
   <body>
     <nav class="nav">
-      <!-- TODO slogan方塊 -->
       <a href="index.html" class="logo-small"
         ><img src="./img/logoSmall.png" alt="" />
       </a>
@@ -34,7 +33,9 @@
         <p class="menu-btn-text">菜單</p>
       </div>
     </a>
+    <!-- TOGO0 LOGO破版 -->
     <header>
+      <!-- banner bg position -->
       <div class="banner">
         <div class="logoBig">
           <img src="./img/logoBig.png" alt="" />
@@ -114,7 +115,7 @@
       <div class="tea-type">
         <div class="tea-group">
           <div class="tea-bg-img">
-            <img src="./img/orangeBanner.png" alt="" />
+            <img src="./img/home_product_introduc_bar.png" alt="" />
           </div>
           <a href="#" class="out">
             <div class="box">
@@ -166,13 +167,12 @@
       <!-- <div class="tea-type-bg-left">
           <img src="./img/home_grilles_right.png" alt="" />
         </div> -->
-      <!-- 問清楚再做 -->
+        <!-- TODO 360斷點 飲料最後一張先出  -->
       <div class="tea-type-swiper">
         <div class="tea-type-swiper-bg">
-          <!-- TODO窗花合併 -->
-          <img src="./img/orangeBanner.png" alt="" />
+          <!-- <img src="./img/home_product_introduc_bar.png" alt="" /> -->
         </div>
-        <div class="swiper">
+        <div class="swiper" id="pc-swiper">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -261,6 +261,7 @@
           </div>
         </div>
         <div class="news-title-group">
+          <!-- TODO news title重作 -->
           <p class="news-title">最新消息</p>
           <div class="news-title-line"></div>
           <!-- <p class="news-more">查看更多</p> -->
@@ -294,12 +295,12 @@
           <p class="footer-mb-text">地址：台中市北屯區遼寧路一段148號</p>
           <p class="footer-mb-text">營業時間：10:00 ~ 22:00</p>
           <p class="footer-mb-text">電話： 0965 656 865</p>
-          <div class="footer-mb-icon-group" >
+          <div class="footer-mb-icon-group">
             <i class="fa-solid fa-phone-flip phone-icon"></i>
             <i class="fa-brands fa-facebook fb-icon"></i>
             <i class="fa-brands fa-instagram ig-icon"></i>
           </div>
-          <p class=" footer-end-text">
+          <p class="footer-end-text">
             牧一春 2022 © Copyright All Rights Reserved. 網頁設計‧JaZz SEA
           </p>
         </div>
@@ -312,7 +313,7 @@
     <script src="./js/swiper-bundle.min.js"></script>
     <!-- TODO swiper斷點 -->
     <script>
-      const swiper = new Swiper(".swiper", {
+      const swiper = new Swiper("#pc-swiper", {
         effect: "coverflow",
         // loop: true,
         grabCursor: true,
@@ -321,10 +322,23 @@
         initialSlide: 1,
         coverflowEffect: {
           rotate: 0,
-          stretch: 0,
+          stretch: 3,
           depth: 300,
           modifier: 1,
           slideShadows: false,
+        },
+
+        breakpoints: {
+          768: {
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 50,
+              depth: 300,
+              modifier: 1,
+              slideShadows: false,
+              initialSlide: 3,
+            },
+          },
         },
         // pagination: {
         //     el: '.swiper-pagination',
