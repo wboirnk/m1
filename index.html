@@ -12,12 +12,14 @@
       integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./scss/all.css" />
   </head>
-  <!-- TODO 全部hover -->
   <body>
     <nav class="nav">
       <a href="index.html" class="logo-small"
@@ -47,7 +49,6 @@
       </div>
     </header>
 
-    <!-- TODO 把關於我們pin拔掉 -->
     <main>
       <div class="about">
         <div class="about-group">
@@ -66,9 +67,9 @@
               <div class="about-content-img">
                 <img src="./img/aboutImg.png" alt="" />
                 <div class="about-more-btn">
-                  <a href=""
-                    ><p>查看更多<i class="fa-solid fa-arrow-right"></i></p
-                  ></a>
+                  <a href="#">
+                    <span>查看</span><span class="more-text">更多</span><i class="fa-solid fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -113,10 +114,15 @@
           </div>
         </div>
       </div>
-      <!-- TODO teatype-title -->
-      <!--  TODO swiper 360 圖片width 改小 -->
-      <!--Hover add class改變z-index跟加動畫 -->
+      <div class="tea-type-title-group">
+        <p class="tea-type-title">產品介紹</p>
+        <div class="tea-type-title-arrow">
+          <p>查看更多</p>
+          <img src="./img/arrow.png" alt="">
+        </div>
+      </div>
       <div class="tea-type">
+       <!-- TODO 飲料太大看能不能修小 -->
         <div class="tea-group">
           <div class="tea-bg-img">
             <img src="./img/home_product_introduc_bar.png" alt="" />
@@ -171,7 +177,6 @@
       <!-- <div class="tea-type-bg-left">
           <img src="./img/home_grilles_right.png" alt="" />
         </div> -->
-        <!-- TODO 360斷點 飲料最後一張先出  -->
       <div class="tea-type-swiper">
         <div class="tea-type-swiper-bg">
           <!-- <img src="./img/home_product_introduc_bar.png" alt="" /> -->
@@ -180,12 +185,35 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-<!-- TODO mb多一swiper -->
             <div class="swiper-slide">
               <img src="./img/menu_cards_darktea.png" alt="" />
             </div>
             <div class="swiper-slide">
               <img src="./img/menu_cards_guavagreentea.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/menu_cards_blacktealatte.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/menu_cards_lemon.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tea-type-swiper-mb">
+        <div class="tea-type-swiper-bg">
+          <!-- <img src="./img/home_product_introduc_bar.png" alt="" /> -->
+        </div>
+        <div class="swiper" id="mb-swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./img/menu_cards_darktea-2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/menu_cards_guavagreentea-2.png" alt="" />
             </div>
             <div class="swiper-slide">
               <img src="./img/menu_cards_blacktealatte.png" alt="" />
@@ -202,7 +230,7 @@
       <div class="news">
         <div class="news-main">
           <div class="news-main-card-group">
-            <a class="news-main-card">
+            <a class="news-main-card" href="#">
               <div class="news-card-title">
                 缺貨公告
                 <div class="news-card-date">
@@ -212,7 +240,7 @@
               </div>
               <img src="./img/newImg-1.png" alt="" />
             </a>
-            <a class="news-main-card">
+            <a class="news-main-card" href="#">
               <div class="news-card-title">
                 缺貨公告
                 <div class="news-card-date">
@@ -222,7 +250,7 @@
               </div>
               <img src="./img/newImg-2.png" alt="" />
             </a>
-            <a class="news-main-card">
+            <a class="news-main-card" href="#">
               <div class="news-card-title">
                 缺貨公告
                 <div class="news-card-date">
@@ -232,7 +260,7 @@
               </div>
               <img src="./img/newImg-3.png" alt="" />
             </a>
-            <a class="news-main-card news-main-card-sec">
+            <a class="news-main-card news-main-card-sec" href="#">
               <div class="news-card-title">
                 缺貨公告
                 <div class="news-card-date">
@@ -242,7 +270,7 @@
               </div>
               <img src="./img/newImg-1.png" alt="" />
             </a>
-            <a class="news-main-card news-main-card-sec">
+            <a class="news-main-card news-main-card-sec" href="#">
               <div class="news-card-title">
                 缺貨公告
                 <div class="news-card-date">
@@ -252,7 +280,7 @@
               </div>
               <img src="./img/newImg-2.png" alt="" />
             </a>
-            <a class="news-main-card news-main-card-sec">
+            <a class="news-main-card news-main-card-sec" href="#">
               <div class="news-card-title">
                 缺貨公告
                 <div class="news-card-date">
@@ -264,14 +292,15 @@
             </a>
           </div>
         </div>
-        <!-- TODO news-title手機板更改 -->
         <div class="news-title-group">
-          <!-- TODO news title重作 -->
           <p class="news-title">最新消息</p>
           <div class="news-title-line"></div>
           <!-- <p class="news-more">查看更多</p> -->
 
-          <div class="news-arrow"><img src="./img/arrow.png" alt=""></div>
+          <div class="news-arrow">
+            <p>查看更多</p>
+            <img src="./img/arrow.png" alt="" />
+          </div>
         </div>
       </div>
     </main>
@@ -316,7 +345,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
 
     <script src="./js/swiper-bundle.min.js"></script>
-    <!-- TODO swiper斷點 -->
     <script>
       const swiper = new Swiper("#pc-swiper", {
         effect: "coverflow",
@@ -332,32 +360,26 @@
           modifier: 1,
           slideShadows: false,
         },
-
-        breakpoints: {
-          768: {
-            coverflowEffect: {
-              rotate: 0,
-              stretch: 50,
-              depth: 300,
-              modifier: 1,
-              slideShadows: false,
-              initialSlide: 3,
-            },
-          },
+      });
+      const swiper2 = new Swiper("#mb-swiper", {
+        effect: "coverflow",
+        // loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        initialSlide: 3,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 3,
+          depth: 300,
+          modifier: 1,
+          slideShadows: false,
         },
-        // pagination: {
-        //     el: '.swiper-pagination',
-        // },
-        // navigation: {
-        //     nextEl: '.swiper-button-prev',
-        //     prevEl: '.swiper-button-next',
-        // },
+
+    
       });
 
-      // 监听改变事件
-      // swiper.on('slideChange', (e) => {
-      //     console.log(e.realIndex);
-      // });
+      
     </script>
     <script src="./js/mainGroup.js"></script>
     <script src="./js/all.js"></script>

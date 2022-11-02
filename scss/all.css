@@ -944,6 +944,7 @@ main {
   overflow: hidden;
 }
 main .about {
+  top: 70px !important;
   height: 80vh;
   margin: 0 auto;
   max-width: 1400px;
@@ -1132,7 +1133,7 @@ main .about .about-group .about-main .about-more-btn {
     height: 70px;
   }
 }
-main .about .about-group .about-main .about-more-btn p {
+main .about .about-group .about-main .about-more-btn span {
   margin-left: 0;
 }
 @media (max-width: 767px) {
@@ -1142,14 +1143,29 @@ main .about .about-group .about-main .about-more-btn p {
     bottom: -24px;
   }
 }
-main .about .about-group .about-main .about-more-btn p {
+main .about .about-group .about-main .about-more-btn span {
   color: #4a4a4a;
   font-size: 20px;
 }
 @media (max-width: 960px) {
-  main .about .about-group .about-main .about-more-btn p {
+  main .about .about-group .about-main .about-more-btn span {
     font-size: 14px;
   }
+}
+main .about .about-group .about-main .about-more-btn i {
+  color: #4a4a4a;
+}
+main .about .about-group .about-main .about-more-btn:hover {
+  background: linear-gradient(to right, rgba(224, 224, 224, 0.5) 43%, #154058 43%);
+  transition: all 0.8s linear;
+}
+main .about .about-group .about-main .about-more-btn:hover .more-text {
+  color: white;
+  transition: all 0.8s linear;
+}
+main .about .about-group .about-main .about-more-btn:hover i {
+  color: white;
+  transition: all 0.8s linear;
 }
 main .about .about-group .about-title-slash:before {
   content: "";
@@ -1254,7 +1270,7 @@ main .about .spilt-group .spilt-slogan {
 }
 @media (max-width: 767px) {
   main .about .spilt-group .spilt-slogan {
-    margin-left: -192px;
+    margin-left: -208px;
   }
 }
 @media (max-width: 767px) {
@@ -1263,7 +1279,7 @@ main .about .spilt-group .spilt-slogan {
     font-size: 20px;
     vertical-align: unset;
     white-space: nowrap;
-    margin-top: 75px;
+    margin-top: 90px;
   }
 }
 main .about .spilt-group .spilt-main {
@@ -1491,9 +1507,38 @@ main .about .about-all-content {
   }
 }
 
+.tea-type-title-group {
+  width: 100%;
+  background-color: #154058;
+  height: 120px;
+  display: none;
+  margin-top: 700px;
+  color: white;
+  font-size: 28px;
+  letter-spacing: 10px;
+  font-family: "Noto Serif TC", serif;
+  padding: 6px 15px;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .tea-type-title-group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.tea-type-title-group .tea-type-title {
+  border-bottom: 3px solid white;
+}
+.tea-type-title-group .tea-type-title-arrow {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .tea-type {
+  display: flex;
   max-width: 1400px;
   margin: 0 auto;
+  margin-top: 300px;
   position: relative;
 }
 @media (max-width: 1400px) {
@@ -1617,7 +1662,7 @@ main .about .about-all-content {
 }
 @media (max-width: 767px) {
   .tea-type-swiper {
-    margin-top: 700px;
+    display: none;
   }
 }
 .tea-type-swiper .swiper {
@@ -1643,6 +1688,50 @@ main .about .about-all-content {
   font-size: 32px;
   font-weight: 500;
   color: #ffffff;
+}
+
+.tea-type-swiper-mb {
+  display: none;
+  position: relative;
+  margin-top: 100px;
+}
+@media (max-width: 1400px) {
+  .tea-type-swiper-mb {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .tea-type-swiper-mb {
+    display: block;
+  }
+}
+.tea-type-swiper-mb .swiper {
+  width: 100%;
+  height: 500px;
+}
+.tea-type-swiper-mb .tea-type-swiper-bg {
+  position: absolute;
+  bottom: 0;
+  height: 259px;
+  width: 100%;
+  background-image: url(../img/home_product_introduc_bar.png);
+  background-position: right;
+}
+@media (max-width: 767px) {
+  .tea-type-swiper-mb .tea-type-swiper-bg {
+    bottom: -70px;
+  }
+}
+.tea-type-swiper-mb .swiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  font-size: 32px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+#mb-swiper img {
+  width: 200px;
 }
 
 .drink:hover {
@@ -1744,6 +1833,7 @@ main .about .about-all-content {
   flex-wrap: wrap;
 }
 .news .news-main .news-main-card-group .news-main-card {
+  overflow: hidden;
   width: 31%;
   display: flex;
   margin-bottom: 38px;
@@ -1780,8 +1870,10 @@ main .about .about-all-content {
   background-color: #154058;
   writing-mode: vertical-lr;
   position: absolute;
+  z-index: 997;
   color: white;
   font-size: 20px;
+  letter-spacing: 7px;
   top: 8.9%;
   left: 15%;
 }
@@ -1795,6 +1887,10 @@ main .about .about-all-content {
   writing-mode: horizontal-tb;
   right: -20px;
   bottom: -20px;
+}
+.news .news-main .news-main-card-group .news-main-card > img:hover {
+  transform: scale(1.3);
+  transition: all 0.8s linear;
 }
 .news .news-main .news-main-card-group .news-main-card-sec {
   margin-bottom: 0px;
@@ -1813,6 +1909,7 @@ main .about .about-all-content {
     width: 100%;
     height: 120px;
     padding: 10px 9px 15px 15px;
+    flex-direction: column;
   }
 }
 .news .news-title-group .news-title {
@@ -1836,6 +1933,9 @@ main .about .about-all-content {
   .news .news-title-group .news-title {
     writing-mode: unset;
     border-bottom: 3px solid white;
+    border-right: unset;
+    padding-bottom: unset;
+    justify-content: start;
   }
 }
 .news .news-title-group .news-arrow {
@@ -1845,6 +1945,13 @@ main .about .about-all-content {
   align-items: flex-end;
   color: white;
   font-size: 30px;
+}
+@media (max-width: 767px) {
+  .news .news-title-group .news-arrow {
+    padding: 0;
+    justify-content: flex-end;
+    margin-top: 39px;
+  }
 }
 .news .news-title-group .news-arrow img {
   width: auto;
@@ -1864,6 +1971,7 @@ main .about .about-all-content {
 
 footer {
   font-family: "Noto Sans TC", sans-serif;
+  transition: all 0.8s linear;
 }
 footer .footer-pc {
   margin-top: 183px;
