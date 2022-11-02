@@ -799,6 +799,7 @@ button.swiper-pagination-bullet {
   z-index: 9999;
   top: -70px;
   transition: all 0.3s linear;
+  font-family: "Noto Serif TC", serif;
   display: none;
 }
 .nav .link-group {
@@ -842,6 +843,7 @@ button.swiper-pagination-bullet {
   font-weight: bold;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+  font-family: "Noto Serif TC", serif;
 }
 
 .banner {
@@ -878,6 +880,7 @@ button.swiper-pagination-bullet {
   animation-delay: 1.3s;
 }
 .banner .slogan {
+  font-family: "Noto Serif TC", serif;
   background-color: rgba(234, 232, 232, 0.5);
   height: 358px;
   width: 200px;
@@ -955,6 +958,7 @@ main .about .about-group {
 }
 main .about .about-group .about-title {
   opacity: 0;
+  font-family: "Noto Serif TC", serif;
 }
 @media (max-width: 767px) {
   main .about .about-group .about-title {
@@ -963,6 +967,7 @@ main .about .about-group .about-title {
 }
 main .about .about-group .about-slogan {
   position: absolute;
+  font-family: "Noto Sans TC", sans-serif;
   left: 70px;
   opacity: 0;
 }
@@ -976,6 +981,7 @@ main .about .about-group .about-slogan {
 main .about .about-group .about-main {
   position: relative;
   margin-top: 313px;
+  font-family: "Noto Sans TC", sans-serif;
   margin-left: 30px;
 }
 @media (max-width: 767px) {
@@ -1063,6 +1069,8 @@ main .about .about-group .about-main .about-more-btn {
   width: 180px;
   height: 80px;
   letter-spacing: 0px;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 4px;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -1175,6 +1183,7 @@ main .about .spilt-group .spilt-title-group {
 }
 main .about .spilt-group .spilt-title-group .spilt-title {
   margin-left: -92px;
+  font-family: "Noto Serif TC", serif;
   position: absolute;
   opacity: 0;
 }
@@ -1201,6 +1210,7 @@ main .about .spilt-group .spilt-title-group .spilt-title {
 main .about .spilt-group .spilt-slogan {
   margin-top: 20px;
   margin-left: 28px;
+  font-family: "Noto Sans TC", sans-serif;
   position: absolute;
   opacity: 0;
 }
@@ -1248,6 +1258,7 @@ main .about .spilt-group .spilt-main .spilt-content {
   width: 100%;
 }
 main .about .spilt-group .spilt-main .spilt-content .spilt-content-text-group {
+  font-family: "Noto Sans TC", sans-serif;
   opacity: 0;
   width: 300px;
 }
@@ -1290,6 +1301,7 @@ main .about .spilt-group .spilt-main .spilt-content .spilt-content-text-group {
 main .about .spilt-group .spilt-main .spilt-content .spilt-content-text-group .spilt-more-btn {
   width: 180px;
   height: 80px;
+  font-family: "Noto Sans TC", sans-serif;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -1484,6 +1496,7 @@ main .about .about-all-content {
   /* margin-right: 200px; */
 }
 .tea-type .box {
+  font-family: "Noto Serif TC", serif;
   width: 65.97px;
   height: 125px;
   background-color: #154058;
@@ -1680,6 +1693,7 @@ main .about .about-all-content {
 .news .news-main {
   padding: 1.3% 0;
   margin-right: 2.6%;
+  font-family: "Noto Serif TC", serif;
 }
 @media (max-width: 767px) {
   .news .news-main {
@@ -1748,6 +1762,8 @@ main .about .about-all-content {
 }
 .news .news-title-group {
   width: 200px;
+  font-family: "Noto Serif TC", serif;
+  letter-spacing: 4px;
   background-color: #154058;
   position: relative;
 }
@@ -1810,6 +1826,9 @@ main .about .about-all-content {
   }
 }
 
+footer {
+  font-family: "Noto Sans TC", sans-serif;
+}
 footer .footer-pc {
   margin-top: 183px;
   width: 100%;
