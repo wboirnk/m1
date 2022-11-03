@@ -1542,7 +1542,7 @@ main .about .about-all-content {
   .tea-type-title-group {
     display: flex;
     flex-direction: column;
-    margin-top: 750px;
+    margin-top: 800px;
   }
 }
 .tea-type-title-group .tea-type-title {
@@ -1819,6 +1819,11 @@ main .about .about-all-content {
 }
 .news img {
   width: 100%;
+}
+@media (max-width: 767px) {
+  .news {
+    margin-top: 150px;
+  }
 }
 @media (max-width: 767px) {
   .news {
