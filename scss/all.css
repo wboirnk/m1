@@ -56,6 +56,10 @@ a:hover {
   color: white;
 }
 
+* {
+  outline: 1px solid #000;
+}
+
 *,
 *:before,
 *:after {
@@ -800,7 +804,6 @@ button.swiper-pagination-bullet {
   top: -70px;
   transition: all 0.3s linear;
   font-family: "Noto Serif TC", serif;
-  display: none;
 }
 .nav .link-group {
   border-top: 1px solid white;
@@ -834,7 +837,7 @@ button.swiper-pagination-bullet {
   border-radius: 50%;
   position: fixed;
   bottom: 87px;
-  right: 76px;
+  right: 20px;
   z-index: 99999;
   border: 1px solid white;
 }
@@ -1524,6 +1527,7 @@ main .about .about-all-content {
   .tea-type-title-group {
     display: flex;
     flex-direction: column;
+    margin-top: 750px;
   }
 }
 .tea-type-title-group .tea-type-title {
@@ -1546,26 +1550,21 @@ main .about .about-all-content {
     display: none;
   }
 }
-.tea-type .tea-bg .tea-bg-img {
-  position: absolute;
-  bottom: 100px;
-  left: 0;
-  max-width: 100%;
-  z-index: -1;
-  background-image: url("../img/home_product_introduc_bar.png");
-}
 .tea-type .tea-group {
   display: flex;
   position: relative;
+  width: 100%;
 }
 .tea-type .tea-group .tea-bg-img {
   position: absolute;
   bottom: 0;
-  z-index: -2;
-  width: 100%;
-}
-.tea-type .tea-group .tea-bg-img img {
-  width: 100%;
+  left: 0;
+  width: 1400px;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-position: right;
+  background-image: url(../img/home_product_introduc_bar.png);
+  height: 259px;
 }
 .tea-type .out {
   width: 390px;
@@ -1653,7 +1652,7 @@ main .about .about-all-content {
 .tea-type-swiper {
   display: none;
   position: relative;
-  margin-top: 100px;
+  margin-top: 216px;
 }
 @media (max-width: 1400px) {
   .tea-type-swiper {
@@ -1671,16 +1670,11 @@ main .about .about-all-content {
 }
 .tea-type-swiper .tea-type-swiper-bg {
   position: absolute;
-  bottom: 0;
+  bottom: -70px;
   height: 259px;
   width: 100%;
   background-image: url(../img/home_product_introduc_bar.png);
   background-position: right;
-}
-@media (max-width: 767px) {
-  .tea-type-swiper .tea-type-swiper-bg {
-    bottom: -70px;
-  }
 }
 .tea-type-swiper .swiper .swiper-slide {
   width: 25%;
@@ -1711,16 +1705,11 @@ main .about .about-all-content {
 }
 .tea-type-swiper-mb .tea-type-swiper-bg {
   position: absolute;
-  bottom: 0;
+  bottom: 70px;
   height: 259px;
   width: 100%;
   background-image: url(../img/home_product_introduc_bar.png);
   background-position: right;
-}
-@media (max-width: 767px) {
-  .tea-type-swiper-mb .tea-type-swiper-bg {
-    bottom: -70px;
-  }
 }
 .tea-type-swiper-mb .swiper .swiper-slide {
   width: 25%;
@@ -1878,6 +1867,7 @@ main .about .about-all-content {
   left: 15%;
 }
 .news .news-main .news-main-card-group .news-main-card .news-card-title .news-card-date {
+  letter-spacing: 0;
   padding: 9px;
   width: 40.99px;
   height: 60.58px;
@@ -1950,7 +1940,6 @@ main .about .about-all-content {
   .news .news-title-group .news-arrow {
     padding: 0;
     justify-content: flex-end;
-    margin-top: 39px;
   }
 }
 .news .news-title-group .news-arrow img {
@@ -1958,6 +1947,7 @@ main .about .about-all-content {
 }
 .news .news-title-group .news-more {
   display: none;
+  letter-spacing: 0px;
   color: white;
   font-size: 28px;
 }

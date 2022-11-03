@@ -51,9 +51,9 @@ a:hover {
 }
 // global css
 // !!補助線
-// * {
-//   outline: 1px solid #000;
-// }
+* {
+  outline: 1px solid #000;
+}
 *,
 *:before,
 *:after {
@@ -168,7 +168,7 @@ a {
   transition: all 0.3s linear;
   font-family: "Noto Serif TC", serif;
   //!記得打開
-  display: none;
+  // display: none;
   .link-group {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -214,7 +214,7 @@ a {
   border-radius: 50%;
   position: fixed;
   bottom: 87px;
-  right: 76px;
+  right: 20px;
   z-index: 99999;
   border: 1px solid white;
   .menu-btn-text {
@@ -812,19 +812,19 @@ main {
   letter-spacing: 10px;
   font-family: "Noto Serif TC", serif;
   padding: 6px 15px;
-  justify-content:space-between;
-  
+  justify-content: space-between;
+
   @include mb767 {
     display: flex;
     flex-direction: column;
+    margin-top: 750px;
   }
-  .tea-type-title{
+  .tea-type-title {
     border-bottom: 3px solid white;
-
   }
-  .tea-type-title-arrow{
-    display:flex;
-    justify-content:flex-end;
+  .tea-type-title-arrow {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 // 類別選擇
@@ -840,25 +840,22 @@ main {
   position: relative;
   .tea-bg {
     .tea-bg-img {
-      position: absolute;
-      bottom: 100px;
-      left: 0;
-      max-width: 100%;
-      z-index: -1;
-      background-image: url("../img/home_product_introduc_bar.png");
     }
   }
   .tea-group {
     display: flex;
     position: relative;
+    width: 100%;
     .tea-bg-img {
       position: absolute;
       bottom: 0;
-      z-index: -2;
-      width: 100%;
-      img {
-        width: 100%;
-      }
+      left: 0;
+      width: 1400px;
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-position: right;
+      background-image: url(../img/home_product_introduc_bar.png);
+      height: 259px;
     }
   }
 
@@ -952,7 +949,7 @@ main {
 .tea-type-swiper {
   display: none;
   position: relative;
-  margin-top: 100px;
+  margin-top: 216px;
   @include pc1400 {
     display: block;
   }
@@ -970,10 +967,8 @@ main {
   }
   .tea-type-swiper-bg {
     position: absolute;
-    bottom: 0;
-    @include mb767 {
-      bottom: -70px;
-    }
+    bottom: -70px;
+   
     height: 259px;
     width: 100%;
     background-image: url(../img/home_product_introduc_bar.png);
@@ -997,7 +992,7 @@ main {
     display: none;
   }
   @include mb767 {
-    display:block;
+    display: block;
   }
 
   .swiper {
@@ -1010,10 +1005,8 @@ main {
   }
   .tea-type-swiper-bg {
     position: absolute;
-    bottom: 0;
-    @include mb767 {
-      bottom: -70px;
-    }
+    bottom: 70px;
+   
     height: 259px;
     width: 100%;
     background-image: url(../img/home_product_introduc_bar.png);
@@ -1029,8 +1022,8 @@ main {
     color: #ffffff;
   }
 }
-#mb-swiper{
-  img{
+#mb-swiper {
+  img {
     width: 200px;
   }
 }
@@ -1159,6 +1152,7 @@ main {
           top: 8.9%;
           left: 15%;
           .news-card-date {
+            letter-spacing: 0;
             padding: 9px;
             width: 40.99px;
             height: 60.58px;
@@ -1222,7 +1216,6 @@ main {
       @include mb767 {
         padding: 0;
         justify-content: flex-end;
-        margin-top: 39px;
       }
       padding-bottom: 25px;
       display: flex;
@@ -1240,6 +1233,7 @@ main {
     }
     .news-more {
       display: none;
+      letter-spacing: 0px;
       @include mb767 {
         display: flex;
         justify-content: flex-end;
