@@ -5,7 +5,6 @@
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: Inter;
   vertical-align: baseline;
 }
 article,
@@ -23,6 +22,7 @@ section {
 }
 body {
   line-height: 1;
+  position: relative;
 }
 ol,
 ul {
@@ -64,12 +64,7 @@ img {
   height: auto;
 }
 
-body {
-  max-width: 1903px;
-  // height: 2000px;
-  margin: 0 auto;
-  position: relative;
-}
+
 a {
   text-decoration: none;
 }
@@ -153,13 +148,89 @@ a {
     top: calc(-500px + -125px);
   }
 }
-@keyframes menuIn{
-  0%{
+@keyframes menuIn {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
+}
+@keyframes loading{
+  0%{
+    opacity:0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  // 
+  // height: 2000px;
+  margin: 0 auto;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+.loading-all{
+  max-width: 1903px;
+  height:auto;
+  overflow-x: unset;
+  overflow-y: unset;
+}
+.loading{
+  width: calc(100vw + 17px);
+  height: calc(100vh + 12px);
+  background-color: #154058;
+  display:flex;
+  // display: none;
+
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  flex-direction: column;
+  img{
+    @include mb767 {
+      width: 250px;
+    }
+  }
+  .loading-text-group{
+    padding-left: 80px;
+    @include mb767 {
+      padding: 45px;
+    }
+    margin-top: 30px;
+    display: flex;
+    font-size: 28px;
+    color:#F68B27;
+    font-family: "Noto Serif TC", serif;
+    letter-spacing: 4px;
+    .loading-text-1{
+      animation: loading 2s ease-in both;
+    }
+    .loading-text-2{
+      animation: loading 2s ease-in both;
+      animation-delay: 0.2s;
+    }
+    .loading-text-3{
+      animation: loading 2s ease-in both;
+      animation-delay: 0.4s;
+    }
+    .loading-text-4{
+      animation: loading 2s ease-in both;
+      animation-delay: 0.6s;
+    }
+    .loading-text-5{
+      animation: loading 2s ease-in both;
+      animation-delay: 0.8s;
+    }
+  }
+}
+.loading.loading-done{
+  display: none;
 }
 //nav bar
 .nav {
@@ -215,7 +286,7 @@ a {
     height: 65px;
   }
   display: none;
-transition: all 0.8 linear;
+  transition: all 0.8 linear;
   justify-content: center;
   align-items: center;
   color: white;
@@ -243,9 +314,9 @@ transition: all 0.8 linear;
     font-family: "Noto Serif TC", serif;
   }
 }
-.menu-fix-btn.menu-on{
+.menu-fix-btn.menu-on {
   display: flex;
-  animation: menuIn 2s ease-in both;
+  animation: menuIn 0.8s ease-in both;
 }
 //header
 
@@ -258,7 +329,10 @@ transition: all 0.8 linear;
   background-image: url("../img/banner.png");
   background-size: cover;
   position: relative;
-  background-position: center;
+  background-position: 75%;
+  @include mb768 {
+    background-position: 70%;
+  }
 
   .logoBig {
     width: 230px;
@@ -277,6 +351,25 @@ transition: all 0.8 linear;
   .logoBig.logoOut {
     animation: logoOut 2s ease-in both;
     animation-delay: 1.3s;
+  }
+  .logo-mb {
+    display: none;
+    @include mb767 {
+      display: flex;
+    }
+    padding: 34px 9px 9px 0;
+    color: #154058;
+    font-size: 28px;
+    font-family: "Noto Serif TC", serif;
+    left: 15px;
+    top: 17px;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    writing-mode: vertical-lr;
+    align-items: end;
+    background-color: rgba(234, 232, 232, 0.5);
+    letter-spacing: 10px;
   }
   .slogan {
     @include mb767 {
@@ -323,7 +416,35 @@ transition: all 0.8 linear;
 //main
 main {
   overflow: hidden;
-
+  .btn-style{
+    width: 180px;
+    height: 80px;
+    letter-spacing: 0px;
+    font-family: "Noto Sans TC", sans-serif;
+    letter-spacing: 4px;
+    @include pc1400 {
+      width: 140px;
+      height: 68px;
+    }
+    @include mb960 {
+      width: 117px;
+      height: 57px;
+    }
+    @include mb767 {
+      width: 150px;
+      height: 70px;
+    }
+    span {
+      margin-left: 0;
+    }
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 80px;
+    background-color: rgba(224, 224, 224, 0.5);
+  }
   .about {
     // display:none;
     top: 70px !important;
@@ -353,12 +474,15 @@ main {
     }
     position: relative;
     // about區塊
-   
+
     .about-bg-left {
       position: absolute;
+      @include mb767 {
+        display: none;
+      }
       // display: none;
       right: -251px;
-      bottom:-467px;
+      bottom: -467px;
     }
     .about-title-group {
       position: relative;
@@ -443,6 +567,26 @@ main {
             position: static;
           }
           opacity: 0;
+          .mb-about-bg {
+            display: none;
+            @include mb767 {
+              display: block;
+            }
+            position: absolute;
+            left: -226px;
+            z-index: -1;
+            top: 85px;
+          }
+          .mb-about-bg-sec {
+            display: none;
+            @include mb767 {
+              display: block;
+            }
+            position: absolute;
+            right: -226px;
+            z-index: -1;
+            top: 85px;
+          }
           img {
             @include pc1400 {
               width: 358px;
@@ -464,36 +608,9 @@ main {
           }
         }
         .about-more-btn {
-          width: 180px;
-          height: 80px;
-          letter-spacing: 0px;
-          font-family: "Noto Sans TC", sans-serif;
-          letter-spacing: 4px;
-
-          @include pc1400 {
-            width: 140px;
-            height: 68px;
-          }
-          @include mb960 {
-            width: 117px;
-            height: 57px;
-          }
-          @include mb767 {
-            width: 150px;
-            height: 70px;
-          }
-          span {
-            margin-left: 0;
-          }
-          position: absolute;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          line-height: 80px;
-          background-color: rgba(224, 224, 224, 0.5);
+        
           bottom: -16px;
-          left: -116px;
+          left: -71px;
           @include mb767 {
             left: unset;
             right: -26px;
@@ -503,7 +620,7 @@ main {
             color: #4a4a4a;
             font-size: 20px;
             @include mb960 {
-              font-size: 14px;
+              font-size: 18px;
             }
           }
           i {
@@ -649,14 +766,58 @@ main {
         img {
           margin-top: 26px;
         }
+        .spilt-content-img {
+          opacity: 0;
+          @include pc1400 {
+            width: 329px;
+            height: 376px;
+          }
+          // @include pc1200 {
+          //   width: 350px;
+          //   height: 320px;
+          // }
+          @include mb960 {
+            width: 275px;
+            height: 314px;
+          }
+          @include mb768 {
+            width: 227px;
+            height: 260px;
+          }
+          @include mb767 {
+            width: 300px;
+            height: unset;
+            margin-top: 92px !important;
+          }
+          .spilt-bg {
+            display: none;
+            @include mb767 {
+              display: block;
+            }
+            position: absolute;
+            top: 92px;
+            left: -229px;
+            z-index: -1;
+          }
+          .spilt-bg-sec {
+            display: none;
+            @include mb767 {
+              display: block;
+            }
+            position: absolute;
+            top: 92px;
+            right: -229px;
+            z-index: -1;
+          }
+        }
 
         .spilt-content {
           display: flex;
           flex-direction: column;
           white-space: nowrap;
-          width: 100%;
 
           .spilt-content-text-group {
+            margin-top: 40px;
             font-family: "Noto Sans TC", sans-serif;
             opacity: 0;
             width: 300px;
@@ -664,58 +825,13 @@ main {
               white-space: normal;
             }
           }
-          .spilt-content-img {
-            opacity: 0;
-            @include pc1400 {
-              width: 329px;
-              height: 376px;
-            }
-            // @include pc1200 {
-            //   width: 350px;
-            //   height: 320px;
-            // }
-            @include mb960 {
-              width: 275px;
-              height: 314px;
-            }
-            @include mb768 {
-              width: 227px;
-              height: 260px;
-            }
-            @include mb767 {
-              width: 100%;
-              height: unset;
-              margin-top: 92px !important;
-            }
-          }
+
           .spilt-content-text-group {
             position: relative;
             .spilt-more-btn {
-              width: 180px;
-              height: 80px;
-              font-family: "Noto Sans TC", sans-serif;
-              @include pc1400 {
-                width: 140px;
-                height: 68px;
-              }
-              @include mb960 {
-                width: 117px;
-                height: 57px;
-              }
-              @include mb767 {
-                width: 150px;
-                height: 70px;
-              }
-              position: absolute;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              line-height: 80px;
-              background-color: rgba(224, 224, 224, 0.5);
+             
               // opacity: 0;
               bottom: -81px;
-
               right: -130px;
               @include pc1400 {
                 right: -61px;
@@ -725,7 +841,21 @@ main {
               }
               @include mb767 {
                 bottom: unset;
-                top: -75px;
+                top: 212px;
+              }
+              span {
+                color: #4a4a4a;
+                font-size: 18px;
+                @include mb767{
+                  font-size: 18px;
+                }
+              }
+              i {
+                color: #4a4a4a;
+                font-size: 18px;
+                @include mb767{
+                  font-size: 18px;
+                }
               }
               p {
                 color: #4a4a4a;
@@ -733,6 +863,22 @@ main {
                 @include mb960 {
                   font-size: 14px;
                 }
+              }
+            }
+            .spilt-more-btn:hover {
+              background: linear-gradient(
+                to right,
+                rgba(224, 224, 224, 0.5) 43%,
+                #154058 43%
+              );
+              transition: all 0.8s linear;
+              .more-text {
+                color: white;
+                transition: all 0.8s linear;
+              }
+              i {
+                color: white;
+                transition: all 0.8s linear;
               }
             }
           }
@@ -832,18 +978,25 @@ main {
   font-family: "Noto Serif TC", serif;
   padding: 6px 15px;
   justify-content: space-between;
-
+  position: relative;
+  transition: all 0.8 linear;
   @include mb767 {
     display: flex;
     flex-direction: column;
-    margin-top: 800px;
+    margin-top: 950px;
   }
   .tea-type-title {
     border-bottom: 3px solid white;
   }
   .tea-type-title-arrow {
+    font-size: 18px;
     display: flex;
     justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .tea-type-title-bg {
+    position: absolute;
+    top: -104px;
   }
 }
 // 類別選擇
@@ -973,6 +1126,7 @@ main {
   margin-top: 216px;
   @include pc1400 {
     display: block;
+    margin-top: 288px;
   }
   @include mb767 {
     display: none;
@@ -1118,7 +1272,7 @@ main {
 
   width: 100%;
   margin-top: 245px;
-  @include mb767{
+  @include mb767 {
     margin-top: 150px;
   }
   display: flex;
@@ -1240,6 +1394,8 @@ main {
       @include mb767 {
         padding: 0;
         justify-content: flex-end;
+       
+        align-items: flex-end;
       }
       padding-bottom: 25px;
       display: flex;
@@ -1262,6 +1418,8 @@ main {
         display: flex;
         justify-content: flex-end;
         margin-top: 39px;
+        font-size: 18px;
+        letter-spacing: 7px;
       }
       color: white;
       font-size: 28px;

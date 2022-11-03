@@ -7,7 +7,6 @@
     <title>牧一春</title>
     <link rel="icon" href="./img/favicon.ico" />
     <link
-
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -22,6 +21,17 @@
     <link rel="stylesheet" href="./scss/all.css" />
   </head>
   <body>
+    <div class="loading">
+      <img src="./img/loadingLogo.png" alt="" />
+      <div class="loading-text-group">
+        <p class="loading-text-1">養</p>
+        <p class="loading-text-2">茶</p>
+        <p class="loading-text-3">的</p>
+        <p class="loading-text-4">人</p>
+        <p class="loading-text-5">。</p>
+      </div>
+    </div>
+
     <nav class="nav">
       <a href="index.html" class="logo-small"
         ><img src="./img/logoSmall.png" alt="" />
@@ -39,22 +49,22 @@
         <p class="menu-btn-text">菜單</p>
       </div>
     </a>
-    <!-- TOGO0 LOGO破版 -->
     <header>
       <!-- banner bg position -->
-      <!-- TODO 手機版左右定位 有兩張也沒差 -->
       <div class="banner">
         <div class="logoBig">
           <img src="./img/logoBig.png" alt="" />
         </div>
+        <div class="logo-mb">養茶的人</div>
         <div class="slogan">養茶的人</div>
       </div>
     </header>
 
     <main>
       <div class="about">
-        
-        <div class="about-bg-left"><img src="./img/home_grilles_right.png" alt=""></div>
+        <div class="about-bg-left">
+          <img src="./img/home_grilles_right.png" alt="" />
+        </div>
         <div class="about-group">
           <div class="about-title-group">
             <h2 class="about-title about-all-title">
@@ -70,9 +80,20 @@
               </p>
               <div class="about-content-img">
                 <img src="./img/aboutImg.png" alt="" />
-                <div class="about-more-btn">
+                <img
+                  src="./img/mobile_home_grilles_first.png"
+                  alt=""
+                  class="mb-about-bg"
+                />
+                <img
+                  src="./img/mobile_home_grilles_first.png"
+                  alt=""
+                  class="mb-about-bg-sec"
+                />
+                <div class="about-more-btn btn-style">
                   <a href="#">
-                    <span>查看</span><span class="more-text">更多</span><i class="fa-solid fa-arrow-right"></i>
+                    <span>查看</span><span class="more-text">更多</span
+                    ><i class="fa-solid fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -90,11 +111,19 @@
             <p class="spilt-slogan about-all-slogan">為茶飲找到最好的詮釋</p>
           </div>
           <div class="spilt-main">
-            <div class="spilt-content about-all-content">
+            <!-- TODO 要一張滿版的 跟重新定位 Nav修好-->
+
+            <div class="spilt-content about-all-content spilt-content-img">
+              <img src="./img/aboutImg-2.png" alt="" />
               <img
-                src="./img/aboutImg-2.png"
+                src="./img/mobile_home_grilles_second.png"
                 alt=""
-                class="spilt-content-img"
+                class="spilt-bg"
+              />
+              <img
+                src="./img/mobile_home_grilles_second.png"
+                alt=""
+                class="spilt-bg-sec"
               />
               <div class="spilt-content-text-group">
                 <p class="spilt-content-text">
@@ -108,10 +137,11 @@
                   <br />
                   是我們的使命，也是我們的自信。
                 </p>
-                <div class="spilt-more-btn">
-                  <a href=""
-                    ><p>查看更多<i class="fa-solid fa-arrow-right"></i></p
-                  ></a>
+                <div class="spilt-more-btn btn-style">
+                  <a href="#">
+                    <span>查看</span><span class="more-text">更多</span
+                    ><i class="fa-solid fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -119,15 +149,21 @@
         </div>
       </div>
       <div class="tea-type-title-group">
+        <img
+          src="./img/mobile_home_grilles_third.png"
+          alt=""
+          class="tea-type-title-bg"
+        />
         <p class="tea-type-title">產品介紹</p>
         <a href="#" class="tea-type-title-arrow">
           <p>查看更多</p>
-          <img src="./img/arrow.png" alt="">
+          <img src="./img/arrow.png" alt="" />
         </a>
       </div>
       <div class="tea-type">
-        <div class="about-bg-right"><img src="./img/home_grilles_left.png" alt=""></div>
-       <!-- TODO 飲料太大看能不能修小 -->
+        <div class="about-bg-right">
+          <img src="./img/home_grilles_left.png" alt="" />
+        </div>
         <div class="tea-group">
           <div class="tea-bg-img">
             <!-- <img src="./img/home_product_introduc_bar.png" alt="" /> -->
@@ -178,7 +214,6 @@
       <!-- <div class="tea-type-bg-right">
           <img src="./img/home_grilles_left.png" alt="" />
         </div> -->
-      <!-- TODO zindex後還是被遮到 -->
       <!-- <div class="tea-type-bg-left">
           <img src="./img/home_grilles_right.png" alt="" />
         </div> -->
@@ -300,7 +335,6 @@
         <div class="news-title-group">
           <p class="news-title">最新消息</p>
           <div class="news-title-line"></div>
-          <!-- <p class="news-more">查看更多</p> -->
 
           <a href="#" class="news-arrow">
             <p class="news-more">查看更多</p>
@@ -380,11 +414,7 @@
           modifier: 1,
           slideShadows: false,
         },
-
-    
       });
-
-      
     </script>
     <script src="./js/mainGroup.js"></script>
     <script src="./js/all.js"></script>

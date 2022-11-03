@@ -58,3 +58,95 @@ aboutTitleAnimation.to(".spilt-content-text-group", {
   duration: "20",
   opacity: "1",
 });
+
+const teaTypeTitleAnimation = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".tea-type-title-group", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+    markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+    start: "top 35%", // 決定動畫開始點的位置
+    end: "top 1%", // 決定動畫結束點的位置
+    // scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+  },
+});
+
+teaTypeTitleAnimation.fromTo(
+  ".tea-type-title-group",
+  { autoAlpha: 0 },
+  { autoAlpha: 1, duration: 0.5 }
+);
+
+const teaTypeAnimation = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".tea-type", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+    markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+    start: "top 35%", // 決定動畫開始點的位置
+    end: "top 1%", // 決定動畫結束點的位置
+    // scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+  },
+});
+
+teaTypeAnimation.fromTo(
+  ".tea-type",
+  { autoAlpha: 0 },
+  { autoAlpha: 1, duration: 0.5 }
+);
+const teaTypeSwiperPcAnimation = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".tea-type-swiper", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+    markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+    start: "top 35%", // 決定動畫開始點的位置
+    end: "top 1%", // 決定動畫結束點的位置
+    // scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+  },
+});
+
+teaTypeSwiperPcAnimation.fromTo(
+  ".tea-type-swiper",
+  { autoAlpha: 0 },
+  { autoAlpha: 1, duration: 0.5 }
+);
+const teaTypeSwiperMbAnimation = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".tea-type-swiper-mb", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+    markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+    start: "top 35%", // 決定動畫開始點的位置
+    end: "top 1%", // 決定動畫結束點的位置
+    // scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+  },
+});
+
+teaTypeSwiperMbAnimation.fromTo(
+  ".tea-type-swiper-mb",
+  { autoAlpha: 0 },
+  { autoAlpha: 1, duration: 0.5 }
+);
+const newsAnimation = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".news", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+    markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+    start: "top 35%", // 決定動畫開始點的位置
+    end: "top 1%", // 決定動畫結束點的位置
+    // scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+  },
+});
+
+newsAnimation.fromTo(
+  ".news",
+  { autoAlpha: 0 },
+  { autoAlpha: 1, duration: 0.5 }
+);
+const footerPcAnimation = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".footer-pc", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+    markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+    start: "top 85%", // 決定動畫開始點的位置
+    end: "top 35%", // 決定動畫結束點的位置
+    // scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+  },
+});
+
+newsAnimation.fromTo(
+  ".footer-pc",
+  { autoAlpha: 0 },
+  { autoAlpha: 1, duration: 0.5 }
+);

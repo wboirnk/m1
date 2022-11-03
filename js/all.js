@@ -1,9 +1,25 @@
+
+// loading
+
+window.onload=()=>{
+  const body=document.querySelector("body");
+  const bodyMask=document.querySelector(".loading")
+  body.classList.add("loading-all");
+  bodyMask.classList.add("loading-done");
+
+}
+
+
+
+// nav動畫
+
+
 const nav = document.querySelector("nav");
 const logoBig = document.querySelector(".logoBig");
 const slogan=document.querySelector(".slogan")
 const menuBtn=document.querySelector(".menu-fix-btn")
 function navOn() {
-  if (window.scrollY > 0) {
+  if (window.scrollY > 30) {
     nav.classList.add("navOn");
     // logoBig.classList.add("logoOut");
     // slogan.classList.add("sloganOut");
@@ -18,4 +34,3 @@ function navOn() {
 
 window.addEventListener("scroll", navOn);
 
-// console.log(nav);
