@@ -51,9 +51,9 @@ a:hover {
 }
 // global css
 // !!補助線
-* {
-  outline: 1px solid #000;
-}
+// * {
+//   outline: 1px solid #000;
+// }
 *,
 *:before,
 *:after {
@@ -153,6 +153,14 @@ a {
     top: calc(-500px + -125px);
   }
 }
+@keyframes menuIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 //nav bar
 .nav {
   width: 100%;
@@ -206,7 +214,8 @@ a {
     width: 65px;
     height: 65px;
   }
-  display: flex;
+  display: none;
+transition: all 0.8 linear;
   justify-content: center;
   align-items: center;
   color: white;
@@ -233,6 +242,10 @@ a {
     border-bottom: 1px solid white;
     font-family: "Noto Serif TC", serif;
   }
+}
+.menu-fix-btn.menu-on{
+  display: flex;
+  animation: menuIn 2s ease-in both;
 }
 //header
 
@@ -340,7 +353,13 @@ main {
     }
     position: relative;
     // about區塊
-
+   
+    .about-bg-left {
+      position: absolute;
+      // display: none;
+      right: -251px;
+      bottom:-467px;
+    }
     .about-title-group {
       position: relative;
     }
@@ -838,9 +857,11 @@ main {
   margin: 0 auto;
   margin-top: 300px;
   position: relative;
-  .tea-bg {
-    .tea-bg-img {
-    }
+  .about-bg-right {
+    position: absolute;
+    left: -249px;
+    bottom: 200px;
+    z-index: -1;
   }
   .tea-group {
     display: flex;
@@ -968,7 +989,7 @@ main {
   .tea-type-swiper-bg {
     position: absolute;
     bottom: -70px;
-   
+
     height: 259px;
     width: 100%;
     background-image: url(../img/home_product_introduc_bar.png);
@@ -1006,7 +1027,7 @@ main {
   .tea-type-swiper-bg {
     position: absolute;
     bottom: 70px;
-   
+
     height: 259px;
     width: 100%;
     background-image: url(../img/home_product_introduc_bar.png);

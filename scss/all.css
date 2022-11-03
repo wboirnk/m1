@@ -56,10 +56,6 @@ a:hover {
   color: white;
 }
 
-* {
-  outline: 1px solid #000;
-}
-
 *,
 *:before,
 *:after {
@@ -791,6 +787,14 @@ button.swiper-pagination-bullet {
     top: -625px;
   }
 }
+@keyframes menuIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .nav {
   width: 100%;
   position: fixed;
@@ -829,7 +833,8 @@ button.swiper-pagination-bullet {
 .menu-fix-btn {
   width: 160px;
   height: 160px;
-  display: flex;
+  display: none;
+  transition: all 0.8 linear;
   justify-content: center;
   align-items: center;
   color: white;
@@ -880,6 +885,11 @@ button.swiper-pagination-bullet {
   .menu-fix-btn .menu-btn-text {
     font-size: 14px;
   }
+}
+
+.menu-fix-btn.menu-on {
+  display: flex;
+  animation: menuIn 2s ease-in both;
 }
 
 .banner {
@@ -980,6 +990,11 @@ main .about {
   main .about {
     display: block;
   }
+}
+main .about .about-bg-left {
+  position: absolute;
+  right: -251px;
+  bottom: -467px;
 }
 main .about .about-title-group {
   position: relative;
@@ -1549,6 +1564,12 @@ main .about .about-all-content {
   .tea-type {
     display: none;
   }
+}
+.tea-type .about-bg-right {
+  position: absolute;
+  left: -249px;
+  bottom: 200px;
+  z-index: -1;
 }
 .tea-type .tea-group {
   display: flex;
