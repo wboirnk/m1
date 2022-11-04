@@ -1494,6 +1494,9 @@ main .about .spilt-group .spilt-main .spilt-content-img {
     margin-top: 92px !important;
   }
 }
+main .about .spilt-group .spilt-main .spilt-content-img .orange-img {
+  height: 343px;
+}
 main .about .spilt-group .spilt-main .spilt-content-img .spilt-bg {
   display: none;
   position: absolute;
