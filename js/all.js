@@ -32,11 +32,12 @@ window.addEventListener("scroll", navOn);
 // footer動畫
 const footerPc = document.querySelector(".footer-pc");
 const footerMb= document.querySelector(".footer-mb")
-window.onscroll = () => {
-  
   let cHeight = document.documentElement.clientHeight;
   let sHeight = document.documentElement.scrollHeight;
   let sTop = document.documentElement.scrollTop;
+window.onscroll = () => {
+  
+
   console.log(cHeight);
   console.log(sHeight);
   console.log(sTop);
