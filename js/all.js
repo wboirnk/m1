@@ -37,9 +37,7 @@ window.onscroll = () => {
   let cHeight = document.documentElement.clientHeight;
   let sHeight = document.documentElement.scrollHeight;
   let sTop = document.documentElement.scrollTop;
-  console.log(cHeight);
-  console.log(sHeight);
-  console.log(sTop);
+
   
   if (sTop>5328||sHeight == cHeight + sTop) {
     footerPc.classList.add("footer-on");

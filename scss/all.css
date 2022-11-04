@@ -975,7 +975,7 @@ body {
 .banner {
   width: 100%;
   height: 1011px;
-  background-image: url("../img/banner.png");
+  background-image: url("../img/banner1.png");
   background-size: cover;
   position: relative;
   background-position: 75%;
@@ -1106,6 +1106,11 @@ main .about {
   margin-bottom: 640px;
   display: flex;
   position: relative;
+}
+@media (max-width: 767px) {
+  main .about {
+    margin-bottom: 383px;
+  }
 }
 @media (max-width: 1400px) {
   main .about {
@@ -1455,6 +1460,11 @@ main .about .spilt-group .spilt-main {
 }
 main .about .spilt-group .spilt-main img {
   margin-top: 26px;
+}
+@media (max-width: 767px) {
+  main .about .spilt-group .spilt-main img {
+    height: 343px;
+  }
 }
 main .about .spilt-group .spilt-main .spilt-content-img {
   opacity: 0;
