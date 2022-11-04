@@ -793,8 +793,11 @@ button.swiper-pagination-bullet {
   0% {
     opacity: 0;
   }
-  100% {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 body {
@@ -802,7 +805,6 @@ body {
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
-  width: 100vw;
   height: 100vh;
 }
 
@@ -811,6 +813,7 @@ body {
   height: auto;
   overflow-x: unset;
   overflow-y: unset;
+  max-width: 1903px;
 }
 
 .loading {
@@ -821,7 +824,7 @@ body {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 999;
+  z-index: 999999999;
   flex-direction: column;
 }
 @media (max-width: 767px) {
@@ -845,22 +848,27 @@ body {
 }
 .loading .loading-text-group .loading-text-1 {
   animation: loading 2s ease-in both;
+  animation-iteration-count: infinite;
 }
 .loading .loading-text-group .loading-text-2 {
   animation: loading 2s ease-in both;
   animation-delay: 0.2s;
+  animation-iteration-count: infinite;
 }
 .loading .loading-text-group .loading-text-3 {
   animation: loading 2s ease-in both;
   animation-delay: 0.4s;
+  animation-iteration-count: infinite;
 }
 .loading .loading-text-group .loading-text-4 {
   animation: loading 2s ease-in both;
   animation-delay: 0.6s;
+  animation-iteration-count: infinite;
 }
 .loading .loading-text-group .loading-text-5 {
   animation: loading 2s ease-in both;
   animation-delay: 0.8s;
+  animation-iteration-count: infinite;
 }
 
 .loading.loading-done {
@@ -1091,10 +1099,11 @@ main .btn-style span {
 }
 main .about {
   top: 70px !important;
-  height: 80vh;
+  height: 100%;
   margin: 0 auto;
   max-width: 1400px;
   padding-left: 5.3%;
+  margin-bottom: 640px;
   display: flex;
   position: relative;
 }
@@ -1685,7 +1694,6 @@ main .about .about-all-content {
   background-color: #154058;
   height: 120px;
   display: none;
-  margin-top: 700px;
   color: white;
   font-size: 28px;
   letter-spacing: 10px;
@@ -1699,7 +1707,6 @@ main .about .about-all-content {
   .tea-type-title-group {
     display: flex;
     flex-direction: column;
-    margin-top: 950px;
   }
 }
 .tea-type-title-group .tea-type-title {
@@ -1714,6 +1721,10 @@ main .about .about-all-content {
 .tea-type-title-group .tea-type-title-bg {
   position: absolute;
   top: -104px;
+  width: 100%;
+  height: 70px;
+  left: 0;
+  background-image: url("../img/mobile_home_grilles_third.png");
 }
 
 .tea-type {
@@ -1920,7 +1931,7 @@ main .about .about-all-content {
 .out:hover > .box {
   width: 390px;
   height: 859px;
-  transition: all 0.8s linear;
+  transition: all 0.5s linear;
   border-radius: 0;
   justify-content: baseline;
   align-items: baseline;
@@ -1961,7 +1972,12 @@ main .about .about-all-content {
 .news-bottom-bg {
   position: absolute;
   right: 0;
-  bottom: 119px;
+  bottom: 112px;
+}
+@media (max-width: 1200px) {
+  .news-bottom-bg {
+    bottom: 16px;
+  }
 }
 @media (max-width: 767px) {
   .news-bottom-bg {
@@ -2154,13 +2170,16 @@ main .about .about-all-content {
 
 footer {
   font-family: "Noto Sans TC", sans-serif;
-  transition: all 0.8s linear;
+  transition: all 1s linear;
 }
 footer .footer-pc {
-  margin-top: 183px;
+  transform: translate(0, 40px);
+  opacity: 0;
+  transition: 0.9s;
+  margin-top: 102px;
   width: 100%;
   height: 120px;
-  padding: 0 23.8%;
+  padding: 0 23.8% 50px 23.8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2232,7 +2251,30 @@ footer .footer-pc .footer-icon i {
   font-size: 28px;
   color: white;
 }
+footer .footer-pc.footer-on {
+  opacity: 1;
+  transform: translate(0, 0);
+  padding: 0 23.8% 0px 23.8%;
+}
+@media (max-width: 1400px) {
+  footer .footer-pc.footer-on {
+    padding: 1.1% 15.7%;
+  }
+}
+@media (max-width: 1200px) {
+  footer .footer-pc.footer-on {
+    padding: 1.1% 12.7%;
+  }
+}
+@media (max-width: 960px) {
+  footer .footer-pc.footer-on {
+    padding: 1.1% 3.1% 1.1% 9.7%;
+  }
+}
 footer .footer-mb {
+  transform: translate(0, 40px);
+  opacity: 0;
+  transition: 0.9s;
   display: none;
   position: relative;
   flex-direction: column;
@@ -2242,7 +2284,7 @@ footer .footer-mb {
   background-image: url(../img/mobile_footer.png);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 17px 4.7%;
+  padding: 17px 4.7% 40px 4.7%;
 }
 @media (max-width: 767px) {
   footer .footer-mb {
@@ -2287,4 +2329,9 @@ footer .footer-mb .footer-end-text {
   -webkit-transform: scale(0.8);
   white-space: nowrap;
   margin-top: 123px;
+}
+footer .footer-mb.footerMb-on {
+  opacity: 1;
+  transform: translate(0, 0);
+  padding: 17px 4.7% 0px 4.7%;
 }/*# sourceMappingURL=all.css.map */
