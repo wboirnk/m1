@@ -41,10 +41,9 @@ window.onscroll = () => {
   console.log(sHeight);
   console.log(sTop);
   
-  if (sTop>5000) {
+  if (sTop>5237||sHeight == cHeight + sTop) {
     footerPc.classList.add("footer-on");
     footerMb.classList.add("footerMb-on");
-    console.log("a");
   }
 //   else if(sHeight == cHeight + sTop){
 // footerPc.classList.add("footer-on");
