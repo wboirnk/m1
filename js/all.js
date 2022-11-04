@@ -37,10 +37,25 @@ window.onscroll = () => {
   let cHeight = document.documentElement.clientHeight;
   let sHeight = document.documentElement.scrollHeight;
   let sTop = document.documentElement.scrollTop;
-  if (sHeight == cHeight + sTop) {
+  // console.log(cHeight);
+  // console.log(sHeight);
+  console.log(sTop);
+  
+  if (sTop>6930) {
     footerPc.classList.add("footer-on");
     footerMb.classList.add("footerMb-on");
+    
+  }else if(sHeight == cHeight + sTop){
+footerPc.classList.add("footer-on");
+    footerMb.classList.add("footerMb-on");
   }
+  
+//   if (sHeight == cHeight + sTop) {
+//     footerPc.classList.add("footer-on");
+//     footerMb.classList.add("footerMb-on");
+//   }else if(sTop>7806){
+// console.log("a");
+//   }
 };
 // if(scrollHeight==clientHeight+scrollTop){
 //   footerPc.classList.add("footer-on");
