@@ -45,10 +45,11 @@ window.onscroll = () => {
     footerPc.classList.add("footer-on");
     footerMb.classList.add("footerMb-on");
     console.log("a");
-  }else if(sHeight == cHeight + sTop){
-footerPc.classList.add("footer-on");
-    footerMb.classList.add("footerMb-on");
   }
+//   else if(sHeight == cHeight + sTop){
+// footerPc.classList.add("footer-on");
+//     footerMb.classList.add("footerMb-on");
+//   }
   
 //   if (sHeight == cHeight + sTop) {
 //     footerPc.classList.add("footer-on");
