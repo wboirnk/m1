@@ -31,20 +31,100 @@
         <p class="loading-text-5">。</p>
       </div>
     </div>
-<!-- TODO更換nav -->
+    <!-- TODO更換nav -->
     <nav class="nav">
-      <a href="index.html" class="logo-small"
+      <a href="./index.html" class="logo-small"
         ><img src="./img/logoSmall.png" alt="" />
       </a>
       <ul class="link-group">
-        <li class="link-group-btn">菜單</li>
-        <li class="link-group-btn">最新消息</li>
-        <li class="link-group-btn">關於我們</li>
-        <li class="link-group-btn">嚴選食材</li>
-        <li class="link-group-btn link-group-btn-end">聯絡我們</li>
+        <a href="./src/menu.html">
+          <li class="link-group-btn">菜單</li>
+        </a>
+        <a href="./src/news.html">
+          <li class="link-group-btn">最新消息</li>
+        </a>
+        <a href="./src/about-us.html">
+          <li class="link-group-btn">關於我們</li>
+        </a>
+        <a href="./src/material.html">
+          <li class="link-group-btn">嚴選食材</li>
+        </a>
+        <a href="./src/contact-us.html">
+          <li class="link-group-btn link-group-btn-end">聯絡我們</li>
+        </a>
+      </ul>
+      <!-- ham-menu start -->
+      <input type="checkbox" id="ham-bar" hidden />
+      <label for="ham-bar" id="ham-bar-icon">
+        <svg
+          style="fill: white; width: 40px; height: 40px; cursor: pointer"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="ham-three"
+        >
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+        <svg
+          viewBox="0 0 24 24"
+          preserveAspectRatio="xMidYMid meet"
+          focusable="false"
+          class="cancel"
+          style="
+            fill: white;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+          "
+        >
+          <g class="style-scope yt-icon">
+            <path
+              d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"
+              class="style-scope yt-icon"
+            ></path>
+          </g></svg
+      ></label>
+      <ul class="ham-submenu">
+        <a href="./src/menu.html">
+          <li class="ham-submenu-btn">
+            <span> 菜單</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="./src/news.html">
+          <li class="ham-submenu-btn">
+            <span> 最新消息</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="./src/about-us.html">
+          <li class="ham-submenu-btn">
+            <span> 關於我們</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="./src/material.html">
+          <li class="ham-submenu-btn">
+            <span> 嚴選食材</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="./src/contact-us.html">
+          <li class="ham-submenu-btn">
+            <span> 聯絡我們</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
       </ul>
     </nav>
-    <a href="#">
+
+    <a href="./src/menu.html">
       <div class="menu-fix-btn">
         <p class="menu-btn-text">菜單</p>
       </div>
@@ -113,7 +193,7 @@
           </div>
           <div class="spilt-main">
             <div class="spilt-content about-all-content spilt-content-img">
-              <img src="./img/aboutImg-2.png" alt="" class="orange-img"/>
+              <img src="./img/aboutImg-2.png" alt="" class="orange-img" />
               <img
                 src="./img/mobile_home_grilles_second.png"
                 alt=""

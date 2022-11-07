@@ -15,8 +15,103 @@
     <link rel="stylesheet" href="../scss/about-us.css" />
   </head>
   <body>
-    <!-- TODO等到時候偷過來 -->
-    <nav></nav>
+    <nav class="nav">
+      <a href="../index.html" class="logo-small"
+        ><img src="../img/logoSmall.png" alt="" />
+      </a>
+      <ul class="link-group">
+        <a href="../src/menu.html">
+          <li class="link-group-btn">菜單</li>
+        </a>
+        <a href="../src/news.html">
+          <li class="link-group-btn">最新消息</li>
+        </a>
+        <a href="../src/about-us.html">
+          <li class="link-group-btn">關於我們</li>
+        </a>
+        <a href="../src/material.html">
+          <li class="link-group-btn">嚴選食材</li>
+        </a>
+        <a href="../src/contact-us.html">
+          <li class="link-group-btn link-group-btn-end">聯絡我們</li>
+        </a>
+      </ul>
+      <!-- ham-menu start -->
+      <input type="checkbox" id="ham-bar" hidden />
+      <label for="ham-bar" id="ham-bar-icon">
+        <svg
+          style="fill: white; width: 40px; height: 40px; cursor: pointer"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="ham-three"
+        >
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+        <svg
+          viewBox="0 0 24 24"
+          preserveAspectRatio="xMidYMid meet"
+          focusable="false"
+          class="cancel"
+          style="
+            fill: white;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+          "
+        >
+          <g class="style-scope yt-icon">
+            <path
+              d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"
+              class="style-scope yt-icon"
+            ></path>
+          </g></svg
+      ></label>
+      <ul class="ham-submenu">
+        <a href="../src/menu.html">
+          <li class="ham-submenu-btn">
+            <span> 菜單</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="../src/news.html">
+          <li class="ham-submenu-btn">
+            <span> 最新消息</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="../src/about-us.html">
+          <li class="ham-submenu-btn">
+            <span> 關於我們</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="../src/material.html">
+          <li class="ham-submenu-btn">
+            <span> 嚴選食材</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="../src/contact-us.html">
+          <li class="ham-submenu-btn">
+            <span> 聯絡我們</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+      </ul>
+    </nav>
+
+    <a href="./src/menu.html">
+      <div class="menu-fix-btn">
+        <p class="menu-btn-text">菜單</p>
+      </div>
+    </a>
     <header>
       <div class="banner-text-group">
         <div class="banner-text">
@@ -24,10 +119,9 @@
           <p class="banner-text-1">願景</p>
           <p class="banner-text-2">緣起</p>
         </div>
-       
+
         <!-- <p>願景</p>
         <p>緣起</p> -->
-        
       </div>
     </header>
     <!-- TODO 窗花定位 訂在偏右讓他被往右切 -->
@@ -42,7 +136,7 @@
             <p>
               『喜歡，最純粹的那種。』
               <br />
-              <br>
+              <br />
               這是牧一春誕生的初衷。
               <br />
               喜歡喝飲料的創始人從大學時代便喝遍不同的飲料，也因為喜歡而在飲料店打工。過程中他發現，大部分的飲料店基於成本考量，免不了會使用化學或濃縮的原物料。
@@ -87,13 +181,13 @@
           <div class="logo-mean-title-text">
             <h3 class="logo-mean-title">品牌意象</h3>
             <p class="logo-mean-text">
-                Logo下方以象徵地球的圓並加上線條來呈現田園的意象，
-                <br>
-                上方輔以茶葉特色：一心 二葉來作為設計基礎。
-                <br>
-                藉此體現牧一春對食材的堅持—
-                <br>
-                從田園摘取無添加防腐劑的新鮮水果及嚴選的天然茶葉。
+              Logo下方以象徵地球的圓並加上線條來呈現田園的意象，
+              <br />
+              上方輔以茶葉特色：一心 二葉來作為設計基礎。
+              <br />
+              藉此體現牧一春對食材的堅持—
+              <br />
+              從田園摘取無添加防腐劑的新鮮水果及嚴選的天然茶葉。
             </p>
           </div>
         </div>
@@ -110,17 +204,52 @@
           <div class="logo-hope-title-text">
             <h3 class="logo-hope-title">品牌願景</h3>
             <p class="logo-hope-text">
-                在能力裡做到最好，是我們的信念。
-                <br>
-                目前已有高達80%的原物料由我們自己生產，剩下的20%牧一春也只選擇老字號、品質可信任的品牌。而這樣的程度尚未達到我們的目標。
-                <br>
-                我們仍在努力精進做原物料的技術，期望能早日將所有原物料製程拉回牧一春。未來，我們自己做，品質自己把關，只求將最好的獻給您。
-
+              在能力裡做到最好，是我們的信念。
+              <br />
+              目前已有高達80%的原物料由我們自己生產，剩下的20%牧一春也只選擇老字號、品質可信任的品牌。而這樣的程度尚未達到我們的目標。
+              <br />
+              我們仍在努力精進做原物料的技術，期望能早日將所有原物料製程拉回牧一春。未來，我們自己做，品質自己把關，只求將最好的獻給您。
             </p>
           </div>
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer-pc">
+        <img src="../img/menu-img/logoSmall.png" alt="" />
+        <div class="footer-text-group">
+          <div class="footer-phone-business">
+            <p class="footer-phone">電話：0965 656 865</p>
+            <p class="footer-business">營業時間：10：00~22：00</p>
+          </div>
+          <p class="footer-address">地址：台中市北屯區遼寧路一段148號</p>
+          <p>
+            牧一春 2022 © Copyright All Rights Reserved.
+            <a href=""> 網頁設計‧JaZz SEA</a>
+          </p>
+        </div>
+        <div class="footer-icon">
+          <a href="#"><i class="fa-solid fa-phone-flip"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-mb">
+        <div class="footer-mb-text-group">
+          <p class="footer-mb-text">地址：台中市北屯區遼寧路一段148號</p>
+          <p class="footer-mb-text">營業時間：10:00 ~ 22:00</p>
+          <p class="footer-mb-text">電話： 0965 656 865</p>
+          <div class="footer-mb-icon-group">
+            <i class="fa-solid fa-phone-flip phone-icon"></i>
+            <i class="fa-brands fa-facebook fb-icon"></i>
+            <i class="fa-brands fa-instagram ig-icon"></i>
+          </div>
+          <p class="footer-end-text">
+            牧一春 2022 © Copyright All Rights Reserved. 網頁設計‧JaZz SEA
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/nav.js"></script>
   </body>
 </html>

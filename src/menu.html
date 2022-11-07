@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜單</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../scss/menu.css">
+    <link rel="stylesheet" href="../scss/swiper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"
+          href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="../index.html" class="logo-small"><img src="../img/logoSmall.png" alt="" />
+        </a>
+        <ul class="link-group">
+            <a href="../src/menu.html">
+                <li class="link-group-btn">菜單</li>
+            </a>
+            <a href="../src/news.html">
+                <li class="link-group-btn">最新消息</li>
+            </a>
+            <a href="../src/about-us.html">
+                <li class="link-group-btn">關於我們</li>
+            </a>
+            <a href="../src/material.html">
+                <li class="link-group-btn">嚴選食材</li>
+            </a>
+            <a href="../src/contact-us.html">
+                <li class="link-group-btn link-group-btn-end">聯絡我們</li>
+            </a>
+        </ul>
+        <!-- ham-menu start -->
+        <input type="checkbox" id="ham-bar" hidden>
+        <label for="ham-bar" id="ham-bar-icon">
+            <svg style="fill:white;width:40px;height:40px;cursor: pointer;" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" class="ham-three">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </svg>
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="cancel"
+                style="fill:white;width:40px;height:40px;cursor: pointer;width:40px; height:40px;">
+                <g class="style-scope yt-icon">
+                    <path
+                        d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"
+                        class="style-scope yt-icon"></path>
+                </g>
+            </svg></label>
+        <ul class="ham-submenu">
+            <a href="../src/menu.html">
+                <li class="ham-submenu-btn">
+                    <span> 菜單</span>
+                    <div class="horizontal-line"></div>
+                </li>
+            </a>
+
+            <a href="../src/news.html">
+                <li class="ham-submenu-btn">
+                    <span> 最新消息</span>
+                    <div class="horizontal-line"></div>
+                </li>
+            </a>
+
+            <a href="../src/about-us.html">
+                <li class="ham-submenu-btn">
+                    <span> 關於我們</span>
+                    <div class="horizontal-line"></div>
+                </li>
+            </a>
+
+            <a href="../src/material.html">
+                <li class="ham-submenu-btn">
+                    <span> 嚴選食材</span>
+                    <div class="horizontal-line"></div>
+                </li>
+            </a>
+
+            <a href="../src/contact-us.html">
+                <li class="ham-submenu-btn">
+                    <span> 聯絡我們</span>
+                    <div class="horizontal-line"></div>
+                </li>
+            </a>
+        </ul>
+
+    </nav>
+
+    <!-- banner -->
+
+    <div class="banner">
+        <img src="../img/menu-img/beverage_intro.png" alt="">
+        <img src="../img/menu-img/mobile_banner.png" alt="">
+    </div>
+
+
+    <!-- the classification of drink section-->
+
+    <main>
+        <div class="menu">
+        <div class="menu-bar">
+            <ul class="menu-bar-btn-group">
+                <li class="menu-bar-btn" id="recommend">熱銷推薦</li>
+                <li class="menu-bar-btn" id="tea">醇味茶</li>
+                <li class="menu-bar-btn" id="fruit">果調茶</li>
+                <li class="menu-bar-btn" id="mellow">純輕飲</li>
+                <li class="menu-bar-btn" id="milk-tea">鮮奶茶</li>
+            </ul>
+        </div>
+
+        <!-- Swiper -->
+
+        <picture class="totem-up">
+            <source media="(min-width: 1400px)" srcset="../img/menu-img/totem_up.png">
+            <source media="(min-width: 1084px)" srcset="../img/menu-img/menu_totem_up_960.png">
+            <source media="(min-width: 860px)" srcset="../img/menu-img/menu_totem_up_960.png">
+            <source media="(min-width: 540px)" srcset="../img/menu-img/menu_totem_up_768.png">
+            <img class="" alt="" src="../img/menu-img/menu_totem_up_768.png">
+        </picture>
+        <picture class="totem-bottom">
+            <source media="(min-width: 1400px)" srcset="../img/menu-img/totem_bottom.png">
+            <source media="(min-width: 1084px)" srcset="../img/menu-img/menu_totem_bottom_960.png">
+            <source media="(min-width: 860px)" srcset="../img/menu-img/menu_totem_bottom_960.png">
+            <source media="(min-width: 540px)" srcset="../img/menu-img/menu_totem_bottom_768.png">
+            <img class="" alt="" src="../img/menu-img/menu_totem_bottom_768.png">
+        </picture>
+<!-- pc swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bestseller">
+                    <img src="../img/menu-img/black_tea_latte.png" alt="">
+                    <div class="bestseller-border">
+                        <img src="../img/menu-img/swiper_border.png" alt="">
+
+                        <div class="bestseller-content">
+                            <div class="bestseller-title">
+                                <h3>熱銷推薦</h3>
+                                <div class="title-slash"></div>
+                                <h4 id="heavy-milk">極濃紅拿鐵</h4>
+                            </div>
+                            <div class="bestseller-intro">
+                                <p>搭配嚴選濃郁瑞穗鮮乳。</p>
+                                <p> 茶與奶等比例調整，奶厚茶濃，經典全新詮釋。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="swiper-slide bestseller">
+                    <img src="../img/menu-img/wax_gourd.png" alt="">
+                    <div class="bestseller-border">
+                        <img src="../img/menu-img/swiper_border.png" alt="">
+                        <div class="bestseller-content">
+                            <div class="bestseller-title">
+                                <h3>熱銷推薦</h3>
+                                <div class="title-slash"></div>
+                                <h4>青檸冬瓜</h4>
+                            </div>
+                            <div class="bestseller-intro">
+                                <p>選用台南百年老店-義豐冬瓜磚。</p>
+                                <p>遵循古法，以手工熬煮，搭配鮮榨檸檬，</p>
+                                <p>酸甜滋味交錯席捲味蕾。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide bestseller">
+                    <img src="../img/menu-img/guava_green_tea.png" alt="">
+                    <div class="bestseller-border">
+
+                        <img src="../img/menu-img/swiper_border.png" alt="">
+                        <div class="bestseller-content">
+                            <div class="bestseller-title">
+                                <h3>熱銷推薦</h3>
+                                <div class="title-slash"></div>
+                                <h4>芭樂綠茶</h4>
+                            </div>
+                            <div class="bestseller-intro">
+                                <p>招牌主打鮮榨芭樂。</p>
+                                <p>佐以些微酸梅入茶，回甘爽口。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide bestseller">
+                    <img src="../img/menu-img/tea.png" alt="">
+                    <div class="bestseller-border">
+                        <img src="../img/menu-img/swiper_border.png" alt="">
+
+                        <div class="bestseller-content">
+                            <div class="bestseller-title">
+                                <h3>熱銷推薦</h3>
+                                <div class="title-slash bestseller-slash"></div>
+                                <h4>冷杉青茶</h4>
+                            </div>
+                            <div class="bestseller-intro">
+                                <p>使用台灣高海拔茶葉 — 杉林溪初夏摘小葉烏龍。</p>
+                                <p>一入口，濃韻回甘醇淨，茶香四溢。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+      
+        <!-- menu tea-intro start -->
+        <div class="menu-frame">
+            <img src="../img/menu-img/mobilemenu_mellow_title.png" alt="">
+            <!-- <img src="../img/menu-img/menu_totem_768.png" alt=""> -->
+        </div>
+    </div>
+
+  <!-- mobile-swiper -->
+  <div class="tea-type-swiper">
+    <div class="swiper-mobile-totem"></div>
+    <img src="../img/menu-img/swiper_menu_totem.png" alt="" class="swiper-mobile-totem">
+    <div id="mobile-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="../img/menu-img/menu_cards_darktea.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/menu-img/menu_cards_guavagreentea.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/menu-img/menu_cards_blacktealatte.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/menu-img/menu_cards_lemon.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+    <!-- footer start -->
+    <footer>
+        <div class="footer-pc">
+          <img src="../img/menu-img/logoSmall.png" alt="" />
+          <div class="footer-text-group">
+            <div class="footer-phone-business">
+              <p class="footer-phone">電話：0965 656 865</p>
+              <p class="footer-business">營業時間：10：00~22：00</p>
+            </div>
+            <p class="footer-address">地址：台中市北屯區遼寧路一段148號</p>
+            <p>
+              牧一春 2022 © Copyright All Rights Reserved.
+              <a href=""> 網頁設計‧JaZz SEA</a>
+            </p>
+          </div>
+          <div class="footer-icon">
+            <a href="#"><i class="fa-solid fa-phone-flip"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-mb">
+          <div class="footer-mb-text-group">
+            <p class="footer-mb-text">地址：台中市北屯區遼寧路一段148號</p>
+            <p class="footer-mb-text">營業時間：10:00 ~ 22:00</p>
+            <p class="footer-mb-text">電話： 0965 656 865</p>
+            <div class="footer-mb-icon-group">
+              <i class="fa-solid fa-phone-flip phone-icon"></i>
+              <i class="fa-brands fa-facebook fb-icon"></i>
+              <i class="fa-brands fa-instagram ig-icon"></i>
+            </div>
+            <p class="footer-end-text">
+              牧一春 2022 © Copyright All Rights Reserved. 網頁設計‧JaZz SEA
+            </p>
+          </div>
+        </div>
+      </footer>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var menuPcSwiper = new Swiper(".mySwiper", {
+            disableOnInteraction: false,
+            // autoplay: {
+            //     delay: 5000,
+            // },
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    
+
+     <script>
+ 
+         const meneMobileSwiper = new Swiper('#mobile-swiper', {
+             effect: 'coverflow',
+             // loop: true,
+             grabCursor: true,
+             centeredSlides: true,
+             slidesPerView: 'auto',
+             initialSlide: 1,
+             coverflowEffect: {
+                 rotate: 0,
+                 stretch:80,
+                 depth: 300,
+                 modifier: 1,
+                 slideShadows: false,
+             },
+         });
+     </script>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

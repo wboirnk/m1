@@ -1,0 +1,14 @@
+$font-title: 24px;
+$font-content: 20px;
+$color-blue:#154058;
+
+@mixin flex($flex, $jus, $ali) {
+    display: $flex;
+    justify-content: $jus;
+    align-items: $ali;
+  }
+  
+  @mixin size($w, $h) {
+    width: $w;
+    height: $h;
+  }

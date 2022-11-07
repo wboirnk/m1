@@ -877,17 +877,20 @@ body {
 
 .nav {
   width: 100%;
-  position: fixed;
   height: 70px;
-  padding: 0px 231px;
-  background-color: #154058;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 0px 11%;
+  background-color: #154058;
   z-index: 9999;
-  top: -70px;
   transition: all 0.3s linear;
-  font-family: "Noto Serif TC", serif;
+}
+@media (max-width: 1200px) {
+  .nav {
+    padding: 0 5%;
+  }
 }
 .nav .link-group {
   border-top: 1px solid white;
@@ -897,13 +900,72 @@ body {
   z-index: 99999;
 }
 .nav .link-group .link-group-btn {
-  color: white;
-  font-size: 24px;
+  font-size: 20px;
   margin-left: 27px;
   font-weight: bold;
+  color: white;
 }
 .nav .link-group .link-group-btn-end {
   margin-right: 27px;
+}
+.nav #ham-bar-icon {
+  display: none;
+}
+.nav #ham-bar-icon .cancel {
+  display: none;
+}
+.nav .ham-submenu {
+  width: 100%;
+  color: white;
+  background-color: #154058;
+  position: absolute;
+  left: 0%;
+  top: 100%;
+  display: none;
+  padding: 20px 0;
+}
+.nav .ham-submenu .ham-submenu-btn {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.nav .ham-submenu .ham-submenu-btn span {
+  display: block;
+  padding: 5px;
+}
+.nav .ham-submenu .horizontal-line {
+  width: 5%;
+  height: 1px;
+  background-color: white;
+  transition: all 0.3s linear;
+  margin: auto;
+}
+.nav .ham-submenu .ham-submenu-btn:hover {
+  color: #ED892B;
+  font-weight: bold;
+}
+.nav .ham-submenu .ham-submenu-btn:hover .horizontal-line {
+  background-color: #ED892B;
+  width: 35%;
+  margin-top: 10px;
+}
+
+@media (max-width: 769px) {
+  .nav .link-group {
+    display: none;
+  }
+  .nav #ham-bar:checked + label svg:nth-of-type(1) {
+    display: none;
+  }
+  .nav #ham-bar-icon,
+.nav #ham-bar:checked + label svg:nth-of-type(2),
+.nav #ham-bar:checked ~ .ham-submenu {
+    display: block;
+  }
+}
+.nav.navOn {
+  top: 0;
 }
 
 .nav.navOn {
@@ -1103,7 +1165,7 @@ main .about {
   margin: 0 auto;
   max-width: 1400px;
   padding-left: 5.3%;
-  margin-bottom: 640px;
+  margin-bottom: 400px;
   display: flex;
   position: relative;
 }

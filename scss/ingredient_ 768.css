@@ -1,0 +1,598 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .banner {
+  width: 100%;
+  height: 592px;
+  background-image: url(../img/banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 430px) {
+  main .banner {
+    width: 100%;
+    height: 328px;
+    background-image: url(../img/banner.png);
+  }
+}
+main .middle {
+  width: 100%;
+  height: 950px;
+  display: flex;
+  flex-direction: column;
+}
+main .middle .middle-ingredient-title {
+  height: 305px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+main .middle .middle-ingredient-title .middle-ingredient-title-line {
+  background-color: #154058;
+  width: 2.55px;
+  height: 95px;
+  transform: rotate(45deg);
+}
+main .middle .ingredient {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+main .middle .ingredient .ingredient-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+}
+main .middle .ingredient .ingredient-container-heading {
+  width: 135px;
+  display: flex;
+}
+main .middle .ingredient .ingredient-container-heading .ingredient-container-heading-text {
+  margin: 20px;
+  padding: 10px;
+  width: 50px;
+  height: 105px;
+  font-size: 28px;
+  background-color: #154058;
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
+  border-right: 2px solid #FFF;
+}
+main .middle .ingredient-container-1 {
+  background-image: url(../img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
+}
+main .middle .ingredient-container-2 {
+  background-image: url(../img/IMG_1051.jpg);
+}
+main .middle .ingredient-container-3 {
+  background-image: url(../img/IMG_3998.jpg);
+}
+main .middle .ingredient-container-4 {
+  background-image: url(../img/IMG_4086.jpg);
+}
+main .middle .ingredient-contents {
+  width: 700px;
+  overflow: hidden;
+  transition: 1s ease;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .middle .ingredient-contents .ingredient-contents-text {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.705);
+  border-bottom: 5px solid #154058;
+  border-right: 5px solid #154058;
+  color: #154058;
+  width: 80%;
+}
+main .middle .ingredient-contents .ingredient-contents-text p {
+  text-indent: 50px;
+  letter-spacing: 5px;
+}
+
+@media (max-width: 1440px) {
+  .middle {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+  .middle .middle-ingredient-title {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+  }
+  .middle .middle-ingredient-title .middle-ingredient-title-line {
+    background-color: #154058;
+    width: 2.55px;
+    height: 95px;
+    transform: rotate(45deg);
+  }
+  .middle .ingredient {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 450px;
+  }
+  .middle .ingredient .ingredient-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+  }
+  .middle .ingredient .ingredient-container .ingredient-container-heading {
+    width: 105px;
+    display: flex;
+  }
+  .middle .ingredient .ingredient-container .ingredient-container-heading .ingredient-container-heading-text {
+    margin: 20px;
+    padding: 10px;
+    width: 50px;
+    height: 105px;
+    font-size: 28px;
+    background-color: #154058;
+    color: #FFF;
+    border-bottom: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+  }
+  .middle .ingredient .ingredient-container-title {
+    width: 100px;
+    display: flex;
+  }
+  .middle .ingredient .ingredient-container-img {
+    width: 57px;
+    height: 147px;
+  }
+  .middle .ingredient .ingredient-container-1 {
+    background-image: url(../img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
+  }
+  .middle .ingredient .ingredient-container-2 {
+    background-image: url(../img/IMG_1051.jpg);
+  }
+  .middle .ingredient .ingredient-container-3 {
+    background-image: url(../img/IMG_3998.jpg);
+  }
+  .middle .ingredient .ingredient-container-4 {
+    background-image: url(../img/IMG_4086.jpg);
+  }
+  .middle .ingredient .ingredient-contents {
+    width: 600px;
+    overflow: hidden;
+    border-top: none;
+    transition: width 0.3s ease;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .middle .ingredient .ingredient-contents .ingredient-contents-text {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.705);
+    color: #154058;
+    width: 80%;
+  }
+  .middle .ingredient .ingredient-contents .ingredient-contents-text p {
+    text-indent: 50px;
+    letter-spacing: 5px;
+  }
+}
+@media (max-width: 1150px) {
+  .middle {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+  }
+  .middle .middle-ingredient-title {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+  }
+  .middle .middle-ingredient-title .middle-ingredient-title-line {
+    background-color: #154058;
+    width: 2.55px;
+    height: 95px;
+    transform: rotate(45deg);
+  }
+  .middle .ingredient {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 420px;
+  }
+  .middle .ingredient .ingredient-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+  }
+  .middle .ingredient .ingredient-container-title {
+    width: 90px;
+    display: flex;
+  }
+  .middle .ingredient .ingredient-container-img {
+    width: 52px;
+    height: 142px;
+  }
+  .middle .ingredient .ingredient-container-1 {
+    background-image: url(../img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
+  }
+  .middle .ingredient .ingredient-container-2 {
+    background-image: url(../img/IMG_1051.jpg);
+  }
+  .middle .ingredient .ingredient-container-3 {
+    background-image: url(../img/IMG_3998.jpg);
+  }
+  .middle .ingredient .ingredient-container-4 {
+    background-image: url(../img/IMG_4086.jpg);
+  }
+  .middle .ingredient .ingredient-contents {
+    width: 530px;
+    overflow: hidden;
+    border-top: none;
+    transition: 0.3s ease;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .middle .ingredient .ingredient-contents .ingredient-contents-text {
+    padding: 35px;
+    background-color: rgba(255, 255, 255, 0.705);
+    color: #154058;
+    width: 80%;
+  }
+  .middle .ingredient .ingredient-contents .ingredient-contents-text p {
+    text-indent: 50px;
+    letter-spacing: 5px;
+  }
+}
+@media (max-width: 990px) {
+  .middle {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+  }
+  .middle .middle-ingredient-title {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+  }
+  .middle .middle-ingredient-title .middle-ingredient-title-line {
+    background-color: #154058;
+    width: 2.55px;
+    height: 95px;
+    transform: rotate(45deg);
+  }
+  .middle .ingredient {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 420px;
+  }
+  .middle .ingredient .ingredient-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+  }
+  .middle .ingredient .ingredient-container-title {
+    width: 80px;
+    display: flex;
+  }
+  .middle .ingredient .ingredient-container-img {
+    width: 52px;
+    height: 142px;
+  }
+  .middle .ingredient .ingredient-container-1 {
+    background-image: url(../img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
+  }
+  .middle .ingredient .ingredient-container-2 {
+    background-image: url(../img/IMG_1051.jpg);
+  }
+  .middle .ingredient .ingredient-container-3 {
+    background-image: url(../img/IMG_3998.jpg);
+  }
+  .middle .ingredient .ingredient-container-4 {
+    background-image: url(../img/IMG_4086.jpg);
+  }
+  .middle .ingredient .ingredient-contents {
+    width: 70%;
+    overflow: hidden;
+    border-top: none;
+    transition: 0.3s ease;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .middle .ingredient .ingredient-contents .ingredient-contents-text {
+    padding: 27px;
+    background-color: rgba(255, 255, 255, 0.705);
+    color: #154058;
+    width: 80%;
+  }
+  .middle .ingredient .ingredient-contents .ingredient-contents-text p {
+    text-indent: 50px;
+    letter-spacing: 2.5px;
+  }
+}
+@media (max-width: 768px) {
+  .middle {
+    width: 100%;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .middle .middle-ingredient-title {
+    height: 305px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+  }
+  .middle .middle-ingredient-title .middle-ingredient-title-line {
+    background-color: #154058;
+    width: 2.55px;
+    height: 95px;
+    transform: rotate(45deg);
+  }
+  .middle .ingredient {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .middle .ingredient .ingredient-container-1 {
+    background-image: url(../img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
+  }
+  .middle .ingredient .ingredient-container-2 {
+    background-image: url(../img/IMG_1051.jpg);
+  }
+  .middle .ingredient .ingredient-container-3 {
+    background-image: url(../img/IMG_3998.jpg);
+  }
+  .middle .ingredient .ingredient-container-4 {
+    background-image: url(../img/IMG_4086.jpg);
+  }
+  .middle .ingredient .ingredient-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: antiquewhite;
+  }
+  .middle .ingredient .ingredient-container .ingredient-container-heading {
+    height: 100px;
+  }
+  .middle .ingredient .ingredient-container .ingredient-container-heading .ingredient-container-heading-text {
+    width: 100px;
+    height: 40px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #154058;
+    color: #FFF;
+    border-bottom: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+  }
+  .middle .ingredient .ingredient-contents {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    transition: 1s ease;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .middle .ingredient .ingredient-contents .ingredient-contents-text {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.705);
+    color: #154058;
+  }
+}
+.brandpersistence-content {
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.brandpersistence-content .brandpersistence-text {
+  width: 200px;
+  height: 130px;
+  display: flex;
+  margin: auto;
+}
+.brandpersistence-content .brandpersistence-text .bq-text-line {
+  width: 2.5px;
+  height: 95px;
+  background-color: #154058;
+  transform: rotate(45deg);
+}
+.brandpersistence-content .brandpersistences {
+  display: flex;
+  width: 1305px;
+  height: 1500px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.brandpersistence-content .brandpersistences .bp-line-img {
+  width: 400px;
+  height: 400px;
+  background-color: seashell;
+  border: 0;
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line1 {
+  width: 400px;
+  height: 1300px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line1 .bp-line1-img1 {
+  background-image: url(../img/brandpersistence-01.png);
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line1 .bp-line1-img2 {
+  background-image: url(../img/brandpersistence-02.png);
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line1 .bp-line1-img3 {
+  background-image: url(../img/brandpersistence-03.png);
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line2 {
+  padding-top: 200px;
+  width: 400px;
+  height: 1300px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line2 .bp-line2-img1 {
+  background-image: url(../img/brandpersistence-04.png);
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line2 .bp-line2-img2 {
+  background-image: url(../img/brandpersistence-05.png);
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line2 .bp-line2-img3 {
+  background-image: url(../img/brandpersistence-06.png);
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line3 {
+  width: 400px;
+  height: 1300px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line3 .bp-line3-img1 {
+  background-image: url(../img/brandpersistence-07.png);
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line3 .bp-line3-img2 {
+  background-image: url(../img/brandpersistence-08.png);
+}
+.brandpersistence-content .brandpersistences .brandpersistence-line3 .bp-line3-img3 {
+  background-image: url(../img/brandpersistence-09.png);
+}
+@media (max-width: 1440px) {
+  .brandpersistence-content .brandpersistences {
+    display: flex;
+    width: 950px;
+    height: 1000px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .brandpersistence-content .brandpersistences .brandpersistence-text {
+    width: 200px;
+    height: 130px;
+    display: flex;
+    margin: auto;
+  }
+  .brandpersistence-content .brandpersistences .brandpersistence-text .bq-text-line {
+    width: 2.5px;
+    height: 95px;
+    background-color: #154058;
+    transform: rotate(45deg);
+  }
+  .brandpersistence-content .brandpersistences .brandpersistence-line2 {
+    padding-top: 225px;
+  }
+  .brandpersistence-content .brandpersistences .bp-line-img {
+    transition: 1s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    background-color: seashell;
+    border: 0;
+  }
+}
+@media (max-width: 960px) {
+  .brandpersistence-content .brandpersistences {
+    display: flex;
+    width: 650px;
+    height: 700px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .brandpersistence-content .brandpersistences .brandpersistence-line2 {
+    padding-top: 150px;
+  }
+  .brandpersistence-content .brandpersistences .bp-line-img {
+    transition: 1s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    background-color: seashell;
+    border: 0;
+  }
+}
+@media (max-width: 768px) {
+  .brandpersistence-content .brandpersistences {
+    display: flex;
+    width: 470px;
+    height: 500px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .brandpersistence-content .brandpersistences .brandpersistence-line2 {
+    padding-top: 112.5px;
+  }
+  .brandpersistence-content .brandpersistences .bp-line-img {
+    transition: 1s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    background-color: seashell;
+    border: 0;
+  }
+}
+@media (max-width: 430px) {
+  .brandpersistence-content .brandpersistences {
+    display: flex;
+    width: 320px;
+    height: 400px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .brandpersistence-content .brandpersistences .brandpersistence-line2 {
+    padding-top: 75px !important;
+  }
+  .brandpersistence-content .brandpersistences .bp-line-img {
+    transition: 1s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    background-color: seashell;
+    border: 0;
+  }
+}/*# sourceMappingURL=ingredient_ 768.css.map */

@@ -1,0 +1,522 @@
+// @media (max-width:1440px) {
+// }
+// @media (max-width:960px) {
+// }
+// @media (max-width:700px) {
+// }
+// @media (max-width:430px) {
+// }
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+$color-blue:#154058;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+main{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+.banner{
+  @include size(100%, 592px);
+  background-image: url(../img/banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+  @media (max-width:430px) {
+    .banner{
+      @include size(100%, 328px);
+    background-image: url(../img/banner.png);
+  }}
+
+.middle{
+  @include size(100%, 950px);
+  display: flex;
+  flex-direction:column;
+  .middle-ingredient-title{
+    height: 305px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 28px;
+    .middle-ingredient-title-line{
+      background-color: #154058;
+      @include size(2.55px, 95px);
+      transform: rotate(45deg);
+    }
+  }
+.ingredient{
+  justify-content:center;
+   display: flex;
+   @include size(100%, 500px);
+   .ingredient-container{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: row;
+    }
+    .ingredient-container-heading{
+      width: 135px;
+      display: flex;
+      .ingredient-container-heading-text{
+        margin: 20px;
+        padding: 10px;
+        @include size(50px, 105px);
+        font-size: 28px;
+        background-color:#154058;
+        color: #FFF;
+        border-bottom: 2px solid #FFF;
+        border-right: 2px solid #FFF;
+      }
+      }
+    }
+      .ingredient-container-1{background-image: url(../img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);}
+      .ingredient-container-2{background-image: url(../img/IMG_1051.jpg);}
+      .ingredient-container-3{background-image: url(../img/IMG_3998.jpg);}
+      .ingredient-container-4{background-image: url(../img/IMG_4086.jpg);}
+
+  .ingredient-contents{
+    width: 700px;
+    overflow: hidden;
+    transition: 1s ease;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ingredient-contents-text{
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.705);
+      border-bottom: 5px solid #154058;
+      border-right: 5px solid #154058;
+      color: #154058;
+      width: 80%;
+      p{
+        text-indent: 50px;
+        letter-spacing: 5px;
+      }
+    }
+  }
+}}
+
+@media (max-width:1440px) {
+  .middle{
+    @include size(100%, 800px);
+    display: flex;
+    flex-direction:column;
+    .middle-ingredient-title{
+      height: 250px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      font-size: 22px;
+      .middle-ingredient-title-line{
+        background-color: #154058;
+        @include size(2.55px, 95px);
+        transform: rotate(45deg);
+      }
+    }
+  .ingredient{
+    justify-content:center;
+     display: flex;
+     @include size(100%, 450px);
+    .ingredient-container{
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size:cover;
+      display: flex;
+      flex-direction: row;
+      .ingredient-container-heading{
+        width: 105px;
+        display: flex;
+        .ingredient-container-heading-text{
+          margin: 20px;
+          padding: 10px;
+          @include size(50px, 105px);
+          font-size: 28px;
+          background-color:#154058;
+          color: #FFF;
+          border-bottom: 2px solid #FFF;
+          border-right: 2px solid #FFF;
+        }
+        }
+      }
+    .ingredient-container-title{
+      width: 100px;
+      display: flex;
+  }
+      .ingredient-container-img{@include size(57px, 147px);}
+        .ingredient-container-1{background-image: url(../img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);}
+        .ingredient-container-2{background-image: url(../img/IMG_1051.jpg);}
+        .ingredient-container-3{background-image: url(../img/IMG_3998.jpg);}
+        .ingredient-container-4{background-image: url(../img/IMG_4086.jpg);}
+        
+    .ingredient-contents{
+      width: 600px;
+      overflow: hidden;
+      border-top: none;
+      transition: width .3s ease;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ingredient-contents-text{
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.705);
+        color: #154058;
+        width: 80%;
+        p{
+          text-indent: 50px;
+          letter-spacing: 5px;
+        }
+  
+      }
+    }
+  }}
+}
+@media (max-width:1150px) {
+  
+  .middle{
+    @include size(100%, 750px);
+    display: flex;
+    flex-direction:column;
+    .middle-ingredient-title{
+      height: 220px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      font-size: 22px;
+      .middle-ingredient-title-line{
+        background-color: #154058;
+        @include size(2.55px, 95px);
+        transform: rotate(45deg);
+      }
+    }
+  .ingredient{
+    justify-content:center;
+     display: flex;
+     @include size(100%, 420px);
+    .ingredient-container{
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size:cover;
+      display: flex;
+      flex-direction: row;
+      }
+    .ingredient-container-title{
+      width: 90px;
+      display: flex;
+  }
+      .ingredient-container-img{@include size(52px, 142px);}
+        .ingredient-container-1{background-image: url(../img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);}
+        .ingredient-container-2{background-image: url(../img/IMG_1051.jpg);}
+        .ingredient-container-3{background-image: url(../img/IMG_3998.jpg);}
+        .ingredient-container-4{background-image: url(../img/IMG_4086.jpg);}
+        
+    .ingredient-contents{
+      width: 530px;
+      overflow: hidden;
+      border-top: none;
+      transition: .3s ease;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ingredient-contents-text{
+        padding: 35px;
+        background-color: rgba(255, 255, 255, 0.705);
+        color: #154058;
+        width: 80%;
+        p{
+          text-indent: 50px;
+          letter-spacing: 5px;
+        }
+      }
+    }
+  }}
+}
+@media (max-width:990px) {
+  .middle{
+    @include size(100%, 750px);
+    display: flex;
+    flex-direction:column;
+    .middle-ingredient-title{
+      height: 220px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      font-size: 22px;
+      .middle-ingredient-title-line{
+        background-color: #154058;
+        @include size(2.55px, 95px);
+        transform: rotate(45deg);
+      }
+    }
+  .ingredient{
+    justify-content:center;
+     display: flex;
+     @include size(100%, 420px);
+    .ingredient-container{
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size:cover;
+      display: flex;
+      flex-direction: row;
+      }
+    .ingredient-container-title{
+      width: 80px;
+      display: flex;
+  }
+      .ingredient-container-img{@include size(52px, 142px);}
+        .ingredient-container-1{background-image: url(../img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);}
+        .ingredient-container-2{background-image: url(../img/IMG_1051.jpg);}
+        .ingredient-container-3{background-image: url(../img/IMG_3998.jpg);}
+        .ingredient-container-4{background-image: url(../img/IMG_4086.jpg);}
+        
+    .ingredient-contents{
+      width: 70%;
+      overflow: hidden;
+      border-top: none;
+      transition: .3s ease;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ingredient-contents-text{
+        padding: 27px;
+        background-color: rgba(255, 255, 255, 0.705);
+        color: #154058;
+        width: 80%;
+        p{
+          text-indent: 50px;
+          letter-spacing: 2.5px;
+        }
+      }
+    }
+  }}
+}
+@media (max-width:768px) {
+  .middle{
+    @include size(100%, 1300px);
+    display: flex;
+    flex-direction:column;
+    .middle-ingredient-title{
+      height: 305px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      font-size: 22px;
+      .middle-ingredient-title-line{
+        background-color: #154058;
+        @include size(2.55px, 95px);
+        transform: rotate(45deg);
+      }
+    }
+  .ingredient{
+     display: flex;
+     flex-direction:column;
+     @include size(100%, 600px);
+     background-position: center;
+      background-repeat: no-repeat;
+      background-size:cover;
+        .ingredient-container-1{background-image: url(../img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);}
+        .ingredient-container-2{background-image: url(../img/IMG_1051.jpg);}
+        .ingredient-container-3{background-image: url(../img/IMG_3998.jpg);}
+        .ingredient-container-4{background-image: url(../img/IMG_4086.jpg);}
+  
+     //一片手風琴
+    .ingredient-container{
+      background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      background-color: antiquewhite;
+      .ingredient-container-heading{
+      height: 100px;
+      .ingredient-container-heading-text{
+        @include size(100px, 40px);
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#154058;
+        color: #FFF;
+        border-bottom: 2px solid #FFF;
+        border-right: 2px solid #FFF;
+      }
+      }
+      }
+      .ingredient-contents{
+        @include size(100%, 250px);
+        overflow: hidden;
+        transition:  1s ease;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .ingredient-contents-text{
+          padding: 40px;
+          background-color: rgba(255, 255, 255, 0.705);
+          color: #154058;
+        }
+      }
+  }}
+}
+
+
+
+
+.brandpersistence-content{
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+.brandpersistence-text{
+  @include size(200px, 130px);
+  display: flex;
+  margin: auto;
+  .bq-text-line{
+    @include size(2.5px, 95px);
+    background-color:$color-blue;
+    transform: rotate(45deg);
+  }
+}
+.brandpersistences{
+  display: flex;
+  @include size(1305px, 1500px);
+  flex-direction: row;
+  justify-content: space-between;
+  .bp-line-img{
+    @include size(400px, 400px);
+    background-color:seashell;
+    border: 0;
+  }
+  .brandpersistence-line1{
+    @include size(400px, 1300px);
+    flex-direction: row;
+    justify-content: space-between;
+    .bp-line1-img1{
+      background-image: url(../img/brandpersistence-01.png);}
+    .bp-line1-img2{
+      background-image: url(../img/brandpersistence-02.png);}
+    .bp-line1-img3{
+      background-image: url(../img/brandpersistence-03.png);}
+  }
+  .brandpersistence-line2{
+    padding-top: 200px;
+    @include size(400px, 1300px);
+    flex-direction: row;
+    justify-content: space-between;
+    .bp-line2-img1{
+      background-image: url(../img/brandpersistence-04.png);}
+    .bp-line2-img2{
+      background-image: url(../img/brandpersistence-05.png);}
+    .bp-line2-img3{
+      background-image: url(../img/brandpersistence-06.png);}
+  }
+  .brandpersistence-line3{
+    @include size(400px, 1300px);
+    flex-direction: row;
+    justify-content: space-between;
+    .bp-line3-img1{
+      background-image: url(../img/brandpersistence-07.png);}
+    .bp-line3-img2{
+      background-image: url(../img/brandpersistence-08.png);}
+    .bp-line3-img3{
+      background-image: url(../img/brandpersistence-09.png);}
+  }
+}
+@media (max-width:1440px) {
+  .brandpersistences{
+    display: flex;
+    @include size(950px, 1000px);
+    flex-direction: row;
+    justify-content: space-between;
+    .brandpersistence-text{
+      @include size(200px, 130px);
+      display: flex;
+      margin: auto;
+      .bq-text-line{
+        @include size(2.5px, 95px);
+        background-color:$color-blue;
+        transform: rotate(45deg);
+      }
+    }
+    .brandpersistence-line2{
+      padding-top: 225px;
+      }
+    .bp-line-img{
+      transition: 1s;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      @include size(300px, 300px);
+      background-color:seashell;
+      border: 0;
+    }}
+}
+@media (max-width:960px) {
+  .brandpersistences{
+    display: flex;
+    @include size(650px, 700px);
+    flex-direction: row;
+    justify-content: space-between;
+    .brandpersistence-line2{
+      padding-top:150px;
+      }
+    .bp-line-img{
+      transition: 1s;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      @include size(200px, 200px);
+      background-color:seashell;
+      border: 0;
+    }}
+}
+@media (max-width:768px) {
+  .brandpersistences{
+    display: flex;
+    @include size(470px, 500px);
+    flex-direction: row;
+    justify-content: space-between;
+    .brandpersistence-line2{
+      padding-top: 112.5px;
+      }
+    .bp-line-img{
+      transition: 1s;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      @include size(150px, 150px);
+      background-color:seashell;
+      border: 0;
+    }}
+}
+@media (max-width:430px) {
+  .brandpersistences{
+    display: flex;
+    @include size(320px, 400px);
+    flex-direction: row;
+    justify-content: space-between;
+    .brandpersistence-line2{
+      padding-top: 75px !important;
+      }
+    .bp-line-img{
+      transition: 1s;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      @include size(100px, 100px);
+      background-color:seashell;
+      border: 0;
+    }}
+}
+}
+
+
+
