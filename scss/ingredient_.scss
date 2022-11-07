@@ -82,7 +82,9 @@
   @include pc1200 {
     padding: 0 5%;
   }
-
+a{
+  text-decoration:none;
+}
   //!記得打開
   // display: none;
   .link-group {
@@ -231,6 +233,7 @@ $color-blue: #154058;
   margin: 0;
 }
 main {
+  padding-top:70px;
   overflow-x: hidden;
   
   position: relative;
@@ -276,14 +279,14 @@ main {
   .ingredient_grilles_1 {
     z-index: -999;
     background-position: bottom;
-    @include position(0, none, 0, none);
+    @include position(70px, none, 0, none);
     @include size(40%, 1452px);
     background-image: url(../img/material/ingredient_grilles_1.png);
   }
   .ingredient_grilles_2 {
     z-index: -999;
     @include position(600px, none, none, 0);
-    @include size(60%, 100px);
+    @include size(60%, 170px);
     @include background(center, no-repeat, row);
     background-image: url(../img/material/ingredient_grilles_2.png);
   }
@@ -1075,7 +1078,7 @@ main {
   }
   @media (max-width: 360px) {
     .brandpersistences {
-      display: none;
+      // display: none;
     }
     .brandpersistence-text {
       @include size(200px, 90px);

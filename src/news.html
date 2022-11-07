@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>最新消息</title>
+    <link rel="icon" href="../img/favicon.ico" />
+    <link rel="stylesheet" href="../scss/news.css" />
+    <!-- <link rel="stylesheet" href="../秋冬新品/nav.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <a href="../index.html" class="logo-small"
+        ><img src="../img/logoSmall.png" alt="" />
+      </a>
+      <ul class="link-group">
+        <a href="../src/menu.html">
+          <li class="link-group-btn">菜單</li>
+        </a>
+        <a href="../src/news.html">
+          <li class="link-group-btn">最新消息</li>
+        </a>
+        <a href="../src/about-us.html">
+          <li class="link-group-btn">關於我們</li>
+        </a>
+        <a href="../src/material.html">
+          <li class="link-group-btn">嚴選食材</li>
+        </a>
+        <a href="../src/contact-us.html">
+          <li class="link-group-btn link-group-btn-end">聯絡我們</li>
+        </a>
+      </ul>
+      <!-- ham-menu start -->
+      <input type="checkbox" id="ham-bar" hidden />
+      <label for="ham-bar" id="ham-bar-icon">
+        <svg
+          style="fill: white; width: 40px; height: 40px; cursor: pointer"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="ham-three"
+        >
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+        <svg
+          viewBox="0 0 24 24"
+          preserveAspectRatio="xMidYMid meet"
+          focusable="false"
+          class="cancel"
+          style="
+            fill: white;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+          "
+        >
+          <g class="style-scope yt-icon">
+            <path
+              d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"
+              class="style-scope yt-icon"
+            ></path>
+          </g></svg
+      ></label>
+      <ul class="ham-submenu">
+        <a href="../src/menu.html">
+          <li class="ham-submenu-btn">
+            <span> 菜單</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="../src/news.html">
+          <li class="ham-submenu-btn">
+            <span> 最新消息</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="../src/about-us.html">
+          <li class="ham-submenu-btn">
+            <span> 關於我們</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="../src/material.html">
+          <li class="ham-submenu-btn">
+            <span> 嚴選食材</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+
+        <a href="../src/contact-us.html">
+          <li class="ham-submenu-btn">
+            <span> 聯絡我們</span>
+            <div class="horizontal-line"></div>
+          </li>
+        </a>
+      </ul>
+    </nav>
+
+    <a href="./src/menu.html">
+      <div class="menu-fix-btn">
+        <p class="menu-btn-text">菜單</p>
+      </div>
+    </a>
+    <!-- banner -->
+
+    <div class="news-banner">
+      <img src="../img/news/banner.png" alt="" />
+      <img src="../img/news/mobile_others_banner.png" alt="" />
+    </div>
+
+    <!--pc  container  start-->
+
+    <div class="news-container">
+      <div class="news-container-topbg">
+        <img src="../img/news/news-bg.png" alt="" />
+      </div>
+      <div class="news-container-topbox">
+        <a href="#" class="news-container-topbox-fristmsg">
+          <div class="news-container-topbox-fristmsg-img">
+            <img src="../img/news/newImg-3.png" alt="" />
+          </div>
+          <div class="news-container-topbox-fristmsg-textbox">
+            <div class="news-container-topbox-fristmsg-textbox-date">
+              <p>
+                04.<br />
+                12
+              </p>
+            </div>
+            <div class="news-container-topbox-fristmsg-textbox-line"></div>
+            <div class="news-container-topbox-fristmsg-textbox-topic">
+              <p>滿百玩轉。</p>
+            </div>
+            <div class="news-container-topbox-fristmsg-textbox-text">
+              <img src="../img/news/msg.png" alt="" />
+              <p>
+                全店消費滿百元即可幸<br />
+                運轉盤一次。
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="news-container-topbox-secondmsg">
+          <div class="news-container-topbox-secondmsg-img">
+            <img src="../img/news/newImg-2.png" alt="" />
+          </div>
+          <div class="news-container-topbox-secondmsg-textbox">
+            <div class="news-container-topbox-secondmsg-textbox-date">
+              <p>
+                04.<br />
+                12
+              </p>
+            </div>
+            <div class="news-container-topbox-secondmsg-textbox-line"></div>
+            <div class="news-container-topbox-secondmsg-textbox-topic">
+              <p>愛玉上市。</p>
+            </div>
+            <div class="news-container-topbox-secondmsg-textbox-text">
+              <img src="../img/news/msg.png" alt="" />
+              <p>手洗愛玉全面上市。</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="news-container-midbox">
+        <a href="#" class="news-container-midbox-fristmsg">
+          <div class="news-container-midbox-fristmsg-img">
+            <img src="../img/news/newImg-1.png" alt="" />
+          </div>
+          <div class="news-container-midbox-fristmsg-textbox">
+            <div class="news-container-midbox-fristmsg-textbox-date">
+              <p>
+                04.<br />
+                12
+              </p>
+            </div>
+            <div class="news-container-midbox-fristmsg-textbox-line"></div>
+            <div class="news-container-midbox-fristmsg-textbox-topic">
+              <p>公休公告。</p>
+            </div>
+            <div class="news-container-midbox-fristmsg-textbox-text">
+              <img src="../img/news/msg.png" alt="" />
+              <p>
+                11.17小店全體員工被餵食<br />
+                營業至下午5點。
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="news-container-midbox-secondmsg">
+          <div class="news-bg">
+            <!-- <img src="../img/news/news-bg2.png" alt="" /> -->
+          </div>
+          <div class="news-container-midbox-secondmsg-img">
+            <img src="../img/news/newImg-4.png" alt="" />
+          </div>
+          <div class="news-container-midbox-secondmsg-textbox">
+            <div class="news-container-midbox-secondmsg-textbox-date">
+              <p>
+                04.<br />
+                12
+              </p>
+            </div>
+            <div class="news-container-midbox-secondmsg-textbox-line"></div>
+            <div class="news-container-midbox-secondmsg-textbox-topic">
+              <p>草莓來襲。</p>
+            </div>
+            <div class="news-container-midbox-secondmsg-textbox-text">
+              <img src="../img/news/msg.png" alt="" />
+              <p>
+                新品草莓牛奶不同於別<br />
+                家使用冰沙呈現<br />
+                小店只加<br />
+                手工熬煮草莓醬<br />
+                瑞穗鮮乳
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="news-container-botbox">
+        <a  href="./winter.html" class="news-container-botbox-fristmsg">
+          <div class="news-container-botbox-fristmsg-img">
+            <img src="../img/news/newImg-5.png" alt="" />
+          </div>
+          <div class="news-container-botbox-fristmsg-textbox">
+            <div class="news-container-botbox-fristmsg-textbox-date">
+              <p>
+                04.<br />
+                12
+              </p>
+            </div>
+            <div class="news-container-botbox-fristmsg-textbox-line"></div>
+            <div class="news-container-botbox-fristmsg-textbox-topic">
+              <p>秋冬新品。</p>
+            </div>
+            <div class="news-container-botbox-fristmsg-textbox-text">
+              <img src="../img/news/msg.png" alt="" />
+              <p>
+                總算，千呼萬喚始出來啦<br />
+                撒花各位。
+              </p>
+            </div>
+          </div>
+        </a>
+        <a  href="#"class="news-container-botbox-secondmsg">
+          <div class="news-container-botbox-secondmsg-img">
+            <img src="../img/news/newImg-6.png" alt="" />
+          </div>
+          <div class="news-container-botbox-secondmsg-textbox">
+            <div class="news-container-botbox-secondmsg-textbox-date">
+              <p>
+                04.<br />
+                12
+              </p>
+            </div>
+            <div class="news-container-botbox-secondmsg-textbox-line"></div>
+            <div class="news-container-botbox-secondmsg-textbox-topic">
+              <p>濃芭樂飲。</p>
+            </div>
+            <div class="news-container-botbox-secondmsg-textbox-text">
+              <img src="../img/news/msg.png" alt="" />
+              <p>
+                全店消費滿百元即可幸<br />
+                運轉盤一次。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--pc container end -->
+
+    <!-- mobile container start -->
+    <div class="mobile-container">
+      <a href="#" class="mobile-container-firstmsg">
+        <img src="../img/news/mobile_news_img_background.png" alt="" />
+        <div class="mobile-container-firstmsg-date">
+          <p>
+            04.<br />
+            12
+          </p>
+        </div>
+        <div class="mobile-container-firstmsg-line"></div>
+        <div class="mobile-container-firstmsg-topic">
+          <p>滿百玩轉。</p>
+        </div>
+        <div class="mobile-container-firstmsg-text">
+          <p>
+            全店消費滿百元即可<br />
+            幸運轉盤一次。
+          </p>
+        </div>
+        <div class="mobile-container-firstmsg-button">
+          <div class="mobile-container-firstmsg-button-lefticon"></div>
+          <button type="button">
+            <span>查看詳情</span>
+          </button>
+          <div class="mobile-container-firstmsg-button-righticon"></div>
+        </div>
+      </a>
+      <div class="mobile-container-firstbg">
+        <img src="../img/news/mobile_biggest_grilles_o.png" alt="" />
+      </div>
+      <a href="#" class="mobile-container-secondmsg">
+        <img src="../img/news/mobile_news_img_background.png" alt="" />
+        <div class="mobile-container-secondmsg-date">
+          <p>
+            04.<br />
+            12
+          </p>
+        </div>
+        <div class="mobile-container-secondmsg-line"></div>
+        <div class="mobile-container-secondmsg-topic">
+          <p>滿百玩轉。</p>
+        </div>
+        <div class="mobile-container-secondmsg-text">
+          <p>手洗愛玉全面上市。</p>
+        </div>
+        <div class="mobile-container-secondmsg-button">
+          <div class="mobile-container-secondmsg-button-lefticon"></div>
+          <button type="button">
+            <span>查看詳情</span>
+          </button>
+          <div class="mobile-container-secondmsg-button-righticon"></div>
+        </div>
+      </a>
+      <a href="#" class="mobile-container-thirdmsg">
+        <img src="../img/news/mobile_news_img_background.png" alt="" />
+        <div class="mobile-container-thirdmsg-date">
+          <p>
+            04.<br />
+            12
+          </p>
+        </div>
+        <div class="mobile-container-thirdmsg-line"></div>
+        <div class="mobile-container-thirdmsg-topic">
+          <p>滿百玩轉。</p>
+        </div>
+        <div class="mobile-container-thirdmsg-text">
+          <p>
+            新品草莓牛奶不同於<br />
+            別家使用冰沙呈現<br />
+            小店只加<br />
+            手工熬煮草莓醬<br />
+            瑞穗鮮乳<br />
+          </p>
+        </div>
+        <div class="mobile-container-thirdmsg-button">
+          <div class="mobile-container-thirdmsg-button-lefticon"></div>
+          <button type="button">
+            <span>查看詳情</span>
+          </button>
+          <div class="mobile-container-thirdmsg-button-righticon"></div>
+        </div>
+      </a>
+      <a href="#" class="mobile-container-fourthmsg">
+        <img src="../img/news/mobile_news_img_background.png" alt="" />
+        <div class="mobile-container-fourthmsg-date">
+          <p>
+            04.<br />
+            12
+          </p>
+        </div>
+        <div class="mobile-container-fourthmsg-line"></div>
+        <div class="mobile-container-fourthmsg-topic">
+          <p>滿百玩轉。</p>
+        </div>
+        <div class="mobile-container-fourthmsg-text">
+          <p>
+            11.17小店全體員工<br />
+            被餵食<br />
+            營業至下午5點。。<br />
+          </p>
+        </div>
+        <div class="mobile-container-fourthmsg-button">
+          <div class="mobile-container-fourthmsg-button-lefticon"></div>
+          <button type="button">
+            <span>查看詳情</span>
+          </button>
+          <div class="mobile-container-fourthmsg-button-righticon"></div>
+        </div>
+      </a>
+      <div class="mobile-container-secondbg">
+        <img src="../img/news/mobile_biggest_grilles_o.png" alt="" />
+      </div>
+      <a href="#" class="mobile-container-fifthmsg">
+        <img src="../img/news/mobile_news_img_background.png" alt="" />
+        <div class="mobile-container-fifthmsg-date">
+          <p>
+            04.<br />
+            12
+          </p>
+        </div>
+        <div class="mobile-container-fifthmsg-line"></div>
+        <div class="mobile-container-fifthmsg-topic">
+          <p>滿百玩轉。</p>
+        </div>
+        <div class="mobile-container-fifthmsg-text">
+          <p>
+            總算，千呼萬喚始<br />
+            出來啦<br />
+            撒花各位。
+          </p>
+        </div>
+        <div class="mobile-container-fifthmsg-button">
+          <div class="mobile-container-fifthmsg-button-lefticon"></div>
+          <button type="button">
+            <span>查看詳情</span>
+          </button>
+          <div class="mobile-container-fifthmsg-button-righticon"></div>
+        </div>
+      </a>
+      <a href="#" class="mobile-container-sixthmsg">
+        <img src="../img/news/mobile_news_img_background.png" alt="" />
+        <div class="mobile-container-sixthmsg-date">
+          <p>
+            04.<br />
+            12
+          </p>
+        </div>
+        <div class="mobile-container-sixthmsg-line"></div>
+        <div class="mobile-container-sixthmsg-topic">
+          <p>滿百玩轉。</p>
+        </div>
+        <div class="mobile-container-sixthmsg-text">
+          <p>
+            全店消費滿百元即可<br />
+            幸運轉盤一次。
+          </p>
+        </div>
+        <div class="mobile-container-sixthmsg-button">
+          <div class="mobile-container-sixthmsg-button-lefticon"></div>
+          <button type="button">
+            <span>查看詳情</span>
+          </button>
+          <div class="mobile-container-sixthmsg-button-righticon"></div>
+        </div>
+      </a>
+    </div>
+
+    <!-- mobile container end -->
+
+    <footer>
+      <div class="footer-pc">
+        <img src="../img/menu-img/logoSmall.png" alt="" />
+        <div class="footer-text-group">
+          <div class="footer-phone-business">
+            <p class="footer-phone">電話：0965 656 865</p>
+            <p class="footer-business">營業時間：10：00~22：00</p>
+          </div>
+          <p class="footer-address">地址：台中市北屯區遼寧路一段148號</p>
+          <p>
+            牧一春 2022 © Copyright All Rights Reserved.
+            <a href=""> 網頁設計‧JaZz SEA</a>
+          </p>
+        </div>
+        <div class="footer-icon">
+          <a href="#"><i class="fa-solid fa-phone-flip"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-mb">
+        <div class="footer-mb-text-group">
+          <p class="footer-mb-text">地址：台中市北屯區遼寧路一段148號</p>
+          <p class="footer-mb-text">營業時間：10:00 ~ 22:00</p>
+          <p class="footer-mb-text">電話： 0965 656 865</p>
+          <div class="footer-mb-icon-group">
+            <i class="fa-solid fa-phone-flip phone-icon"></i>
+            <i class="fa-brands fa-facebook fb-icon"></i>
+            <i class="fa-brands fa-instagram ig-icon"></i>
+          </div>
+          <p class="footer-end-text">
+            牧一春 2022 © Copyright All Rights Reserved. 網頁設計‧JaZz SEA
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+
+    <script src="../js/news.js"></script>
+
+    <script src="../js/nav.js"></script>
+  </body>
+</html>

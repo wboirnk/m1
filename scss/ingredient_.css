@@ -81,6 +81,9 @@ a:hover {
     padding: 0 5%;
   }
 }
+.nav a {
+  text-decoration: none;
+}
 .nav .link-group {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
@@ -225,6 +228,7 @@ a:hover {
 }
 
 main {
+  padding-top: 70px;
   overflow-x: hidden;
   position: relative;
   display: flex;
@@ -279,7 +283,7 @@ main .ingredient_grilles_1 {
   z-index: -999;
   background-position: bottom;
   position: absolute;
-  top: 0;
+  top: 70px;
   bottom: none;
   right: 0;
   left: none;
@@ -295,7 +299,7 @@ main .ingredient_grilles_2 {
   right: none;
   left: 0;
   width: 60%;
-  height: 100px;
+  height: 170px;
   display: flex;
   background-position: center;
   background-repeat: no-repeat;
@@ -1162,9 +1166,6 @@ main .middle .ingredient1 .ingredient1-contents .ingredient1-contents-text p {
   }
 }
 @media (max-width: 360px) {
-  .brandpersistence-content .brandpersistences {
-    display: none;
-  }
   .brandpersistence-content .brandpersistence-text {
     width: 200px;
     height: 90px;
