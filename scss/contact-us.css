@@ -265,8 +265,25 @@ body {
 }
 
 .contact-us-banner {
-  width: 100%;
   padding-top: 70px;
+}
+.contact-us-banner .banner-normal {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 576px) {
+  .contact-us-banner .banner-normal {
+    display: none;
+  }
+}
+.contact-us-banner .banner-phone {
+  width: 100%;
+  display: none;
+}
+@media (max-width: 576px) {
+  .contact-us-banner .banner-phone {
+    display: block;
+  }
 }
 
 main .totem-up {

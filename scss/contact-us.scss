@@ -262,8 +262,21 @@ body {
 }
 
 .contact-us-banner {
-  width: 100%;
   padding-top: 70px;
+  .banner-normal{
+    width: 100%;
+    display: block;
+    @include size576{
+      display: none;
+    }
+  }
+  .banner-phone{
+    width: 100%;
+    display: none;
+    @include size576{
+      display: block;
+    }
+  }
 }
 
 main {
