@@ -967,6 +967,7 @@ body {
 }
 .nav.navOn {
   top: 0;
+  opacity: 1;
 }
 
 .nav.navOn {
