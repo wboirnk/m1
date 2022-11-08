@@ -1,3 +1,5 @@
+@import "reset";
+
 // @media (max-width:1440px) {
 // }
 // @media (max-width:960px) {
@@ -6,8 +8,9 @@
 // }
 // @media (max-width:430px) {
 // }
-@import "function";
-@import "reset";
+$font-title: 24px;
+$font-content: 20px;
+$color-blue:#154058;
 @mixin pc1400 {
   @media (max-width: 1400px) {
     @content;
@@ -43,33 +46,43 @@
     @content;
   }
 }
+@mixin flex($flex, $jus, $ali) {
+    display: $flex;
+    justify-content: $jus;
+    align-items: $ali;
+  }
+  
+  @mixin size($w, $h) {
+    width: $w;
+    height: $h;
+  }
 @mixin size($w, $h) {
   width: $w;
   height: $h;
 }
-@mixin background($p, $r, $s) {
+@mixin background ($p, $r, $s) {
   display: flex;
   background-position: $p;
   background-repeat: $r;
   background-size: $s;
 }
 
-@mixin position($t, $b, $r, $l) {
+@mixin position($t, $b, $r,$l) {
   position: absolute;
   top: $t;
   bottom: $b;
   right: $r;
   left: $l;
 }
-@keyframes menuIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+
+$color-blue:#154058;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
 .nav {
+
   @include size(100%, 70px);
   @include flex(flex, space-between, center);
   position: fixed;
@@ -82,9 +95,7 @@
   @include pc1200 {
     padding: 0 5%;
   }
-a{
-  text-decoration:none;
-}
+
   //!記得打開
   // display: none;
   .link-group {
@@ -100,6 +111,8 @@ a{
       font-weight: bold;
       color: white;
     }
+
+
 
     .link-group-btn-end {
       margin-right: 27px;
@@ -142,1022 +155,964 @@ a{
       background-color: white;
       transition: all 0.3s linear;
       margin: auto;
+
     }
 
     .ham-submenu-btn:hover {
-      color: #ed892b;
+      color: #ED892B;
       font-weight: bold;
     }
 
     .ham-submenu-btn:hover .horizontal-line {
-      background-color: #ed892b;
+      background-color: #ED892B;
       width: 35%;
       margin-top: 10px;
     }
+
   }
 }
 
-@media (max-width: 769px) {
+
+
+@media(max-width:769px) {
   .nav {
     .link-group {
       display: none;
     }
 
-    #ham-bar:checked + label svg:nth-of-type(1) {
+    #ham-bar:checked+label svg:nth-of-type(1) {
       display: none;
     }
 
     #ham-bar-icon,
-    #ham-bar:checked + label svg:nth-of-type(2),
-    #ham-bar:checked ~ .ham-submenu {
+    #ham-bar:checked+label svg:nth-of-type(2),
+    #ham-bar:checked~.ham-submenu {
       display: block;
     }
   }
+
 }
 
 .nav.navOn {
   top: 0;
 }
+
 .menu-fix-btn {
-    width: 160px;
-    height: 160px;
+  width: 160px;
+  height: 160px;
+  @include pc1400 {
+    width: 120px;
+    height: 120px;
+  }
+  @include mb960 {
+    width: 85px;
+    height: 85px;
+  }
+  @include mb767 {
+    width: 65px;
+    height: 65px;
+  }
+  display: none;
+  transition: all 0.8 linear;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #154058;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 87px;
+  right: 20px;
+  z-index: 99999;
+  border: 1px solid white;
+  .menu-btn-text {
+    font-size: 32px;
     @include pc1400 {
-      width: 120px;
-      height: 120px;
+      font-size: 28px;
     }
     @include mb960 {
-      width: 85px;
-      height: 85px;
+      font-size: 20px;
     }
     @include mb767 {
-      width: 65px;
-      height: 65px;
+      font-size: 14px;
     }
-    display: none;
-    transition: all 0.8 linear;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: #154058;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 87px;
-    right: 20px;
-    z-index: 99999;
-    border: 1px solid white;
-    .menu-btn-text {
-      font-size: 32px;
-      @include pc1400 {
-        font-size: 28px;
-      }
-      @include mb960 {
-        font-size: 20px;
-      }
-      @include mb767 {
-        font-size: 14px;
-      }
-      font-weight: bold;
-      border-top: 1px solid white;
-      border-bottom: 1px solid white;
-      font-family: "Noto Serif TC", serif;
-    }
+    font-weight: bold;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    font-family: "Noto Serif TC", serif;
   }
-  .menu-fix-btn.menu-on {
-    display: flex;
-    animation: menuIn 0.8s ease-in both;
-  }
-$color-blue: #154058;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
 }
-main {
-  padding-top:70px;
-  overflow-x: hidden;
-  
+.menu-fix-btn.menu-on {
+  display: flex;
+  animation: menuIn 0.8s ease-in both;
+}
+
+@keyframes menuIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+main{
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   justify-content: center;
-  .banner {
-    @include size(100%, 592px);
+.banner{
+  @include size(100%, 592px);
+  background-image: url(../img/material/banner.png);
+  @include background(center, no-repeat, cover);
+}
+@media (max-width:1400px) {
+  .banner{
+    @include size(100%, 508px);
     background-image: url(../img/material/banner.png);
-    @include background(center, no-repeat, cover);
-  }
-  @media (max-width: 1400px) {
-    .banner {
-      @include size(100%, 508px);
-      background-image: url(../img/material/banner.png);
-    }
-  }
-  @media (max-width: 960px) {
-    .banner {
+  }}
+  @media (max-width:960px) {
+    .banner{
       @include size(100%, 366.13px);
       background-image: url(../img/material/banner.png);
-    }
-  }
-  @media (max-width: 768px) {
-    .banner {
+  }}
+  @media (max-width:768px) {
+    .banner{
       @include size(100%, 291.89px);
-      background-image: url(../img/material/banner.png);
-    }
-  }
-  @media (max-width: 431px) {
-    .banner {
+    background-image: url(../img/material/banner.png);
+  }}
+  @media (max-width:431px) {
+    .banner{
       @include size(100%, 328px);
       background-image: url(../img/material/mobile_banner.png);
-    }
-  }
-  @media (max-width: 360px) {
-    .banner {
+  }}
+  @media (max-width:360px) {
+    .banner{
       @include size(100%, 327px);
-      background-image: url(../img/material/mobile_banner.png);
-    }
-  }
-
-  .ingredient_grilles_1 {
-    z-index: -999;
+    background-image: url(../img/material/mobile_banner.png);
+  }}
+  
+  .ingredient_grilles_1{
+    z-index: 	-999;
     background-position: bottom;
-    @include position(70px, none, 0, none);
+    @include position(0, none, 0, none);
     @include size(40%, 1452px);
     background-image: url(../img/material/ingredient_grilles_1.png);
   }
-  .ingredient_grilles_2 {
-    z-index: -999;
+  .ingredient_grilles_2{
+    z-index: 	-999;
     @include position(600px, none, none, 0);
-    @include size(60%, 170px);
-    @include background(center, no-repeat, row);
+    @include size(60%, 100px);
+    @include background(center, no-repeat,row);
     background-image: url(../img/material/ingredient_grilles_2.png);
   }
-  .ingredient_grilles_3 {
-    z-index: -999;
+  .ingredient_grilles_3{
+    z-index: 	-999;
     @include size(33%, 800px);
     @include position(none, 850px, none, 0);
-    @include background(center, repeat, row);
+    @include background(center,repeat,row);
     background-image: url(../img/material/ingredient_grilles_1.png);
   }
-  .ingredient_grilles_4 {
-    z-index: -999;
+  .ingredient_grilles_4{
+    z-index: 	-999;
     position: absolute;
     @include size(63.5%, 775px);
-    bottom: 0;
+    bottom:0;
     right: 0;
-    @include background(center, repeat, row);
+    @include background(center,repeat,row);
     background-image: url(../img/material/ingredient_grilles_1.png);
   }
-  .ingredient_grilles_5 {
+  .ingredient_grilles_5{
     opacity: 0;
-    z-index: -999;
+    z-index: 	-999;
     position: absolute;
     @include size(100%, 80px);
-    bottom: 700px;
+    bottom:700px;
     right: 0;
-    @include background(center, no-repeat, row);
+    @include background(center,no-repeat,row);
     background-image: url(../img/material/ingredient_grilles_2.png);
   }
-  @media (max-width: 1400px) {
-    .ingredient_grilles_1 {
+  @media(max-width:1400px){
+    .ingredient_grilles_1{
       @include size(40%, 1385px);
     }
-    .ingredient_grilles_2 {
+    .ingredient_grilles_2{
       @include size(60%, 100px);
       top: 500px;
       left: 0;
     }
-    .ingredient_grilles_3 {
+    .ingredient_grilles_3{
       @include size(32%, 660px);
-      bottom: 490px;
+      bottom:490px;
       left: 0;
     }
-    .ingredient_grilles_4 {
+    .ingredient_grilles_4{
       @include size(63.5%, 775px);
-      bottom: 0;
+      bottom:0;
       right: 0;
     }
   }
-  @media (max-width: 1100px) {
-    .ingredient_grilles_1 {
+  @media (max-width:1100px) {
+    .ingredient_grilles_1{
       @include size(40%, 1258px);
     }
-    .ingredient_grilles_2 {
+    .ingredient_grilles_2{
       @include size(60%, 100px);
       top: 500px;
       left: 0;
     }
-    .ingredient_grilles_3 {
+    .ingredient_grilles_3{
       @include size(32%, 470px);
-      bottom: 380px;
+      bottom:380px;
       left: 0;
     }
-    .ingredient_grilles_4 {
+    .ingredient_grilles_4{
       @include size(63.5%, 775px);
-      bottom: 0;
+      bottom:0;
       right: 0;
     }
   }
-  @media (max-width: 960px) {
-    .ingredient_grilles_1 {
+  @media (max-width:960px) {
+    .ingredient_grilles_1{
       @include size(40%, 975px);
     }
-    .ingredient_grilles_2 {
+    .ingredient_grilles_2{
       @include size(60%, 100px);
       top: 350px;
       left: 0;
     }
-    .ingredient_grilles_4 {
+    .ingredient_grilles_4{
       @include size(61%, 580px);
-      bottom: 0;
+      bottom:0;
       right: 0;
     }
   }
-  @media (max-width: 768px) {
-    .ingredient_grilles_2 {
+  @media (max-width:768px) {
+    .ingredient_grilles_2{
       display: none;
     }
-    .ingredient_grilles_3 {
+    .ingredient_grilles_3{
       display: none;
     }
-    .ingredient_grilles_4 {
+    .ingredient_grilles_4{
       @include size(100%, 300px);
-      bottom: 200px;
+      bottom:200px;
       right: 0;
     }
-    .ingredient_grilles_5 {
+    .ingredient_grilles_5{
       opacity: 1;
     }
+
   }
-  @media (max-width: 360px) {
-    .ingredient_grilles_5 {
+  @media (max-width:360px) {
+    .ingredient_grilles_5{
       bottom: 630px;
     }
+
   }
 
-  .middle {
-    @include size(1240px, 950px);
-    overflow: hidden;
+.middle{
+  @include size(1240px, 950px);
+  overflow: hidden;
+  display: flex;
+  flex-direction:column;
+  margin: auto;
+  .middle-ingredient-title{
+    padding-top: 120px;
+    height: 270px;
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    .middle-ingredient-title {
-      padding-top: 120px;
-      height: 270px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 28px;
-      letter-spacing: 5px;
-      .middle-ingredient-title-line {
-        background-color: #154058;
-        @include size(2.55px, 95px);
-        transform: rotate(45deg);
-      }
-    }
-    .ingredient {
-      display: flex;
-      margin: auto;
-      flex-direction: row;
-      @include size(100%, 500px);
-      overflow: hidden;
-      .ingredient-container {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: row;
-        //heading
-        .ingredient-container-heading {
-          width: 135px;
-          display: flex;
-          .ingredient-container-heading-text {
-            margin: 20px;
-            padding: 10px;
-            @include size(50px, 105px);
-            font-size: 28px;
-            background-color: #154058;
-            color: #fff;
-            border-bottom: 2px solid #fff;
-            border-right: 2px solid #fff;
-            letter-spacing: 5px;
-          }
-        }
-      }
-      .ingredient-container-1 {
-        background-image: url(../img/material/black-tea.jpg);
-      }
-      .ingredient-container-2 {
-        background-image: url(../img/material/oriento-8bIwzXRosfk-unsplash.jpg);
-      }
-      .ingredient-container-3 {
-        background-image: url(../img/material/IMG_3998.jpg);
-      }
-      .ingredient-container-4 {
-        background-image: url(../img/material/IMG_4086.jpg);
-      }
-
-      .ingredient-contents {
-        width: 700px;
-        overflow: hidden;
-        transition: 1s ease;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .ingredient-contents-text {
-          padding: 40px;
-          background-color: rgba(255, 255, 255, 0.705);
-          border-bottom: 5px solid #154058;
-          border-right: 5px solid #154058;
-          color: #154058;
-          width: 80%;
-          p {
-            text-indent: 50px;
-            letter-spacing: 5px;
-            line-height: 1.5;
-          }
-        }
-      }
-    }
-    .ingredient1 {
-      display: flex;
-      flex-direction: column;
-      @include size(100%, 520px);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      .ingredient1-container {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: column !important;
-        background-color: antiquewhite;
-        .ingredient1-container-heading {
-          @include size(100%, 70px);
-          display: flex;
-          justify-content: space-between;
-          .ingredient1-container-heading-text {
-            margin: 10px 10px;
-            @include size(100px, 40px);
-            font-size: 22px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #154058;
-            color: #fff;
-            border-bottom: 2px solid #fff;
-            border-right: 2px solid #fff;
-          }
-        }
-      }
-      .ingredient1-container-1 {
-        background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
-      }
-      .ingredient1-container-2 {
-        background-image: url(../img/material/IMG_1051.jpg);
-      }
-      .ingredient1-container-3 {
-        background-image: url(../img/material/IMG_3998.jpg);
-      }
-      .ingredient1-container-4 {
-        background-image: url(../img/material/IMG_4086.jpg);
-      }
-
-      .ingredient1-contents {
-        @include size(100%, 250px);
-        overflow: hidden;
-        transition: 1s ease;
-        font-size: 14px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .ingredient1-contents-text {
-          padding: 5%;
-          background-color: rgba(255, 255, 255, 0.705);
-          color: #154058;
-          width: 90%;
-          p {
-            text-indent: 25px;
-            letter-spacing: 7px;
-            line-height: 1.5;
-          }
-        }
-      }
-      display: none;
+    justify-content:center;
+    align-items: center;
+    font-size: 28px;
+    letter-spacing: 5px;
+    .middle-ingredient-title-line{
+      background-color: #154058;
+      @include size(2.55px, 95px);
+      transform: rotate(45deg);
     }
   }
-  @media (max-width: 1440px) {
-    .middle {
-      @include size(1050px, 950px);
-      overflow: hidden;
+.ingredient{
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+   @include size(100%, 500px);
+   overflow: hidden;
+   .ingredient-container{
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: row;
+    //heading
+    .ingredient-container-heading{
+      width: 135px;
       display: flex;
-      flex-direction: column;
-      margin: auto;
-      .middle-ingredient-title {
-        height: 305px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .ingredient-container-heading-text{
+        margin: 20px;
+        padding: 10px;
+        @include size(50px, 105px);
         font-size: 28px;
+        background-color:#154058;
+        color: #FFF;
+        border-bottom: 2px solid #FFF;
+        border-right: 2px solid #FFF;
         letter-spacing: 5px;
-        .middle-ingredient-title-line {
-          background-color: #154058;
-          @include size(2.55px, 85px);
-          transform: rotate(45deg);
-        }
       }
-      .ingredient {
-        display: flex;
-        margin: auto;
-        flex-direction: row;
-        @include size(100%, 500px);
-        overflow: hidden;
-        .ingredient-container {
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          display: flex;
-          flex-direction: row;
-          //heading
-          .ingredient-container-heading {
-            width: 95px;
-            display: flex;
-            .ingredient-container-heading-text {
-              margin: 20px;
-              padding: 10px;
-              @include size(50px, 105px);
-              font-size: 28px;
-              background-color: #154058;
-              color: #fff;
-              border-bottom: 2px solid #fff;
-              border-right: 2px solid #fff;
-            }
-          }
-        }
-
-        .ingredient-contents {
-          width: 670px;
-          overflow: hidden;
-          transition: 1.5s ease;
-          font-size: 18px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .ingredient-contents-text {
-            padding: 40px;
-            background-color: rgba(255, 255, 255, 0.705);
-            border-bottom: 5px solid #154058;
-            border-right: 5px solid #154058;
-            color: #154058;
-            width: 80%;
-            p {
-              text-indent: 50px;
-              letter-spacing: 5px;
-              line-height: 1.5;
-            }
-          }
-        }
       }
     }
-  }
-  @media (max-width: 1100px) {
-    .middle {
-      @include size(850px, 800px);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-      .middle-ingredient-title {
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 26px;
-        letter-spacing: 5px;
-        .middle-ingredient-title-line {
-          background-color: #154058;
-          @include size(2.55px, 80px);
-          transform: rotate(45deg);
-        }
-      }
-      .ingredient {
-        display: flex;
-        flex-direction: row;
-        @include size(100%, 500px);
-        overflow: hidden;
-        .ingredient-container {
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          display: flex;
-          flex-direction: row;
-          //heading
-          .ingredient-container-heading {
-            width: 87px;
-            display: flex;
-            .ingredient-container-heading-text {
-              margin: 15px;
-              padding: 10px;
-              @include size(50px, 100px);
-              font-size: 26px;
-              background-color: #154058;
-              color: #fff;
-              border-bottom: 2px solid #fff;
-              border-right: 2px solid #fff;
-            }
-          }
-        }
-        .ingredient-container-1 {
-          background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
-        }
-        .ingredient-container-2 {
-          background-image: url(../img/material/IMG_1051.jpg);
-        }
-        .ingredient-container-3 {
-          background-image: url(../img/material/IMG_3998.jpg);
-        }
-        .ingredient-container-4 {
-          background-image: url(../img/material/IMG_4086.jpg);
-        }
+      .ingredient-container-1{background-image: url(../img/material/black-tea.jpg);}
+      .ingredient-container-2{background-image: url(../img/material/oriento-8bIwzXRosfk-unsplash.jpg);}
+      .ingredient-container-3{background-image: url(../img/material/IMG_3998.jpg);}
+      .ingredient-container-4{background-image: url(../img/material/IMG_4086.jpg);}
 
-        .ingredient-contents {
-          width: 502px;
-          overflow: hidden;
-          transition: 1.5s ease;
-          font-size: 16px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .ingredient-contents-text {
-            padding: 40px;
-            background-color: rgba(255, 255, 255, 0.705);
-            border-bottom: 5px solid #154058;
-            border-right: 5px solid #154058;
-            color: #154058;
-            width: 80%;
-            p {
-              text-indent: 50px;
-              letter-spacing: 5px;
-              line-height: 1.5;
-            }
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: 960px) {
-    .middle {
-      @include size(768px, 700px);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-      padding-bottom: 90px;
-      .middle-ingredient-title {
-        height: 180px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 22px;
+  .ingredient-contents{
+    width: 700px;
+    overflow: hidden;
+    transition: 1s ease;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ingredient-contents-text{
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.705);
+      border-bottom: 5px solid #154058;
+      border-right: 5px solid #154058;
+      color: #154058;
+      width: 80%;
+      p{
+        text-indent: 50px;
         letter-spacing: 5px;
-        .middle-ingredient-title-line {
-          background-color: #154058;
-          @include size(2px, 70px);
-          transform: rotate(45deg);
-        }
-      }
-      .ingredient {
-        display: flex;
-        flex-direction: row;
-        @include size(100%, 450px);
-        overflow: hidden;
-        .ingredient-container {
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          display: flex;
-          flex-direction: row;
-          //heading
-          .ingredient-container-heading {
-            width: 68px;
-            display: flex;
-            .ingredient-container-heading-text {
-              padding: 8px;
-              letter-spacing: 5px;
-              @include size(50px, 100px);
-              font-size: 22px;
-              background-color: #154058;
-              color: #fff;
-              border-bottom: 2px solid #fff;
-              border-right: 2px solid #fff;
-            }
-          }
-        }
-        .ingredient-container-1 {
-          background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
-        }
-        .ingredient-container-2 {
-          background-image: url(../img/material/IMG_1051.jpg);
-        }
-        .ingredient-container-3 {
-          background-image: url(../img/material/IMG_3998.jpg);
-        }
-        .ingredient-container-4 {
-          background-image: url(../img/material/IMG_4086.jpg);
-        }
-
-        .ingredient-contents {
-          width: 496px;
-          overflow: hidden;
-          transition: 1.2s ease;
-          font-size: 16px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .ingredient-contents-text {
-            transition: 1.2s;
-            padding: 40px;
-            background-color: rgba(255, 255, 255, 0.705);
-            border-bottom: 5px solid #154058;
-            border-right: 5px solid #154058;
-            color: #154058;
-            width: 80%;
-            p {
-              transition: 1.2s ease;
-              text-indent: 50px;
-              letter-spacing: 5px;
-              line-height: 1.5;
-            }
-          }
-        }
+        line-height: 1.5;
       }
     }
   }
 }
+  .ingredient1{
+    display: flex;
+    flex-direction:column;
+    @include size(100%, 520px);
+    background-position: center;
+     background-repeat: no-repeat;
+     background-size:cover;
+     .ingredient1-container{
+        background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       display: flex;
+       flex-direction: column !important;
+       background-color: antiquewhite;
+       .ingredient1-container-heading{
+         @include size(100%, 70px );
+         display: flex;
+         justify-content:space-between;
+         .ingredient1-container-heading-text{
+          margin:10px 10px;
+           @include size(100px, 40px);
+           font-size: 22px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           background-color:#154058;
+           color: #FFF;
+           border-bottom: 2px solid #FFF;
+           border-right: 2px solid #FFF;
+         }
+         }
+     }
+       .ingredient1-container-1{background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);}
+       .ingredient1-container-2{background-image: url(../img/material/IMG_1051.jpg);}
+       .ingredient1-container-3{background-image: url(../img/material/IMG_3998.jpg);}
+       .ingredient1-container-4{background-image: url(../img/material/IMG_4086.jpg);}
+  
+  
+     .ingredient1-contents{
+       @include size(100%, 250px);
+       overflow: hidden;
+       transition:  1s ease;
+       font-size: 14px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       .ingredient1-contents-text{
+         padding: 5%;
+         background-color: rgba(255, 255, 255, 0.705);
+         color: #154058;
+         width: 90%;
+         p{
+          text-indent: 25px;
+          letter-spacing: 7px;
+          line-height: 1.5;
+        }
+       }
+     }
+    display: none;
+    }
+}
+@media (max-width:1440px) {
+  .middle{
+  @include size(1050px, 950px);
+  overflow: hidden;
+  display: flex;
+  flex-direction:column;
+  margin: auto;
+  .middle-ingredient-title{
+    height: 305px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 28px;
+    letter-spacing: 5px;
+    .middle-ingredient-title-line{
+      background-color: #154058;
+      @include size(2.55px, 85px);
+      transform: rotate(45deg);
+    }
+  }
+.ingredient{
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+   @include size(100%, 500px);
+   overflow: hidden;
+   .ingredient-container{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: row;
+    //heading
+    .ingredient-container-heading{
+      width: 95px;
+      display: flex;
+      .ingredient-container-heading-text{
+        margin: 20px;
+        padding: 10px;
+        @include size(50px, 105px);
+        font-size: 28px;
+        background-color:#154058;
+        color: #FFF;
+        border-bottom: 2px solid #FFF;
+        border-right: 2px solid #FFF;
+      }
+      }
+    }
 
-@media (max-width: 768px) {
-  .middle {
+  .ingredient-contents{
+    width: 670px;
+    overflow: hidden;
+    transition: 1.5s ease;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ingredient-contents-text{
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.705);
+      border-bottom: 5px solid #154058;
+      border-right: 5px solid #154058;
+      color: #154058;
+      width: 80%;
+      p{
+        text-indent: 50px;
+        letter-spacing: 5px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+}
+}
+@media (max-width:1100px) {
+  .middle{
+  @include size(850px, 800px);
+  overflow: hidden;
+  display: flex;
+  flex-direction:column;
+  margin: auto;
+  .middle-ingredient-title{
+    height: 200px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 26px;
+    letter-spacing: 5px;
+    .middle-ingredient-title-line{
+      background-color: #154058;
+      @include size(2.55px, 80px);
+      transform: rotate(45deg);
+    }
+  }
+.ingredient{
+  display: flex;
+  flex-direction: row;
+   @include size(100%, 500px);
+   overflow: hidden;
+   .ingredient-container{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: row;
+    //heading
+    .ingredient-container-heading{
+      width: 87px;
+      display: flex;
+      .ingredient-container-heading-text{
+        margin: 15px;
+        padding: 10px;
+        @include size(50px, 100px);
+        font-size: 26px;
+        background-color:#154058;
+        color: #FFF;
+        border-bottom: 2px solid #FFF;
+        border-right: 2px solid #FFF;
+      }
+      }
+    }
+      .ingredient-container-1{background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);}
+      .ingredient-container-2{background-image: url(../img/material/IMG_1051.jpg);}
+      .ingredient-container-3{background-image: url(../img/material/IMG_3998.jpg);}
+      .ingredient-container-4{background-image: url(../img/material/IMG_4086.jpg);}
+
+  .ingredient-contents{
+    width: 502px;
+    overflow: hidden;
+    transition: 1.5s ease;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ingredient-contents-text{
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.705);
+      border-bottom: 5px solid #154058;
+      border-right: 5px solid #154058;
+      color: #154058;
+      width: 80%;
+      p{
+        text-indent: 50px;
+        letter-spacing: 5px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+}
+}
+@media (max-width:960px) {
+  .middle{
+  @include size(768px, 700px);
+  overflow: hidden;
+  display: flex;
+  flex-direction:column;
+  margin: auto;
+  padding-bottom: 90px;
+  .middle-ingredient-title{
+    height: 180px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 22px;
+    letter-spacing: 5px;
+    .middle-ingredient-title-line{
+      background-color: #154058;
+      @include size(2px, 70px);
+      transform: rotate(45deg);
+    }
+  }
+.ingredient{
+  display: flex;
+  flex-direction: row;
+   @include size(100%, 450px);
+   overflow: hidden;
+   .ingredient-container{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: row;
+    //heading
+    .ingredient-container-heading{
+      width: 68px;
+      display: flex;
+      .ingredient-container-heading-text{
+        padding: 8px;
+        letter-spacing: 5px;
+        @include size(50px, 100px);
+        font-size:22px;
+        background-color:#154058;
+        color: #FFF;
+        border-bottom: 2px solid #FFF;
+        border-right: 2px solid #FFF;
+      }
+      }
+    }
+      .ingredient-container-1{background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);}
+      .ingredient-container-2{background-image: url(../img/material/IMG_1051.jpg);}
+      .ingredient-container-3{background-image: url(../img/material/IMG_3998.jpg);}
+      .ingredient-container-4{background-image: url(../img/material/IMG_4086.jpg);}
+
+  .ingredient-contents{
+    width: 496px;
+    overflow: hidden;
+    transition: 1.2s ease;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ingredient-contents-text{
+      transition: 1.2s ;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.705);
+      border-bottom: 5px solid #154058;
+      border-right: 5px solid #154058;
+      color: #154058;
+      width: 80%;
+      p{
+        transition: 1.2s ease;
+        text-indent: 50px;
+        letter-spacing: 5px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+}
+}
+}
+
+
+
+@media (max-width:768px) {
+  .middle{
     width: 100% !important;
     height: 850px !important;
-    .middle-ingredient-title {
+    .middle-ingredient-title{
       height: 200px !important;
       display: flex;
-      justify-content: center;
+      justify-content:center;
       align-items: center;
       font-size: 22px;
-      .middle-ingredient-title-line {
+      .middle-ingredient-title-line{
         background-color: #154058;
         @include size(2.55px, 95px);
         transform: rotate(45deg);
-      }
-    }
-    .ingredient {
-      display: none !important;
-    }
-    .ingredient1 {
-      width: 100% !important;
-      display: block !important;
-    }
+      }}
+  .ingredient{
+    display: none !important;
   }
-
-  .ingredient_grilles_1 {
-    width: 100% !important;
-    height: 80;
-  }
-  .ingredient_grilles_2 {
-    display: none;
-  }
+.ingredient1{
+  width: 100% !important;
+  display: block !important;
+}}
+  
+.ingredient_grilles_1{
+  width: 100% !important;
+  height: 80;
 }
+.ingredient_grilles_2{
+  display: none;
+}}
 
-.brandpersistence-content {
+
+
+.brandpersistence-content{
   font-size: 28px;
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-bottom: 160px;
-@include mb960{
-  margin-bottom: 7px;
-}
-  @include mb768{
-    margin-bottom: 100px;
+.brandpersistence-text{
+  @include size(200px, 130px);
+  letter-spacing: 5px;
+  display: flex;
+  margin: auto;
+  .bq-text-line{
+    @include size(2.5px, 70px);
+    background-color:$color-blue;
+    transform: rotate(45deg);
   }
-  .brandpersistence-text {
-    @include size(200px, 130px);
+}
+.brandpersistences{
+  display: flex;
+  @include size(1305px, 1500px);
+  flex-direction: row;
+  justify-content: space-between;
+  .bp-line-img{
+    @include size(400px, 400px);
+    background-color:seashell;
+    border: 0;
+  }
+  .brandpersistence-line1{
+    @include size(400px, 1300px);
+    flex-direction: row;
+    justify-content: space-between;
+    .bp-line1-img1{
+      background-image: url(../img/material/brandpersistence-01.png);}
+    .bp-line1-img2{
+      background-image: url(../img/material/brandpersistence-02.png);}
+    .bp-line1-img3{
+      background-image: url(../img/material/brandpersistence-03.png);}
+  }
+  .brandpersistence-line2{
+    padding-top: 200px;
+    @include size(400px, 1300px);
+    flex-direction: row;
+    justify-content: space-between;
+    .bp-line2-img1{
+      background-image: url(../img/material/brandpersistence-04.png);}
+    .bp-line2-img2{
+      background-image: url(../img/material/brandpersistence-05.png);}
+    .bp-line2-img3{
+      background-image: url(../img/material/brandpersistence-06.png);}
+  }
+  .brandpersistence-line3{
+    @include size(400px, 1300px);
+    flex-direction: row;
+    justify-content: space-between;
+    .bp-line3-img1{
+      background-image: url(../img/material/brandpersistence-07.png);}
+    .bp-line3-img2{
+      background-image: url(../img/material/brandpersistence-08.png);}
+    .bp-line3-img3{
+      background-image: url(../img/material/brandpersistence-09.png);}
+  }
+}
+@media (max-width:1440px) {
+  .brandpersistences{
+    display: flex;
+    @include size(950px, 1000px);
+    flex-direction: row;
+    justify-content: space-between;
+    .brandpersistence-text{
+      @include size(200px, 130px);
+      display: flex;
+      margin: auto;
+      .bq-text-line{
+        @include size(2.5px, 95px);
+        background-color:$color-blue;
+        transform: rotate(45deg);
+      }
+    }
+    .brandpersistence-line1{
+      @include size(300px, 1000px);}
+    .brandpersistence-line2{
+      @include size(300px, 1150px);
+      padding-top: 225px;
+      }
+      .brandpersistence-line3{
+        @include size(300px, 1000px);}
+    .bp-line-img{
+      transition: 1s;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      @include size(300px, 300px);
+      background-color:seashell;
+      border: 0;
+    }}
+}
+@media (max-width:960px) {
+  .brandpersistences{
+    display: flex;
+    @include size(650px, 800px);
+    flex-direction: row;
+    justify-content: space-between;
+    .brandpersistence-line1{
+      @include size(200px, 650px);}
+    .brandpersistence-line2{
+      @include size(200px, 700px);
+      padding-top:150px;
+      }
+      .brandpersistence-line3{
+        @include size(200px, 650px);}
+    .bp-line-img{
+      transition: 1s;
+      @include size(200px, 200px);
+      background-color:seashell;
+      border: 0;
+    }}
+}
+
+
+@media (max-width:768px) {
+  .brandpersistence-text{
+    @include size(200px, 100px);
     letter-spacing: 5px;
     display: flex;
     margin: auto;
-    .bq-text-line {
+    font-size: 22px;
+    align-items: center;
+    padding-left: 20px;
+    .bq-text-line{
       @include size(2.5px, 70px);
-      background-color: $color-blue;
+      background-color:$color-blue;
       transform: rotate(45deg);
     }
   }
-  .brandpersistences {
+  .brandpersistences{
+    margin-top: 30px;
     display: flex;
-    @include size(1305px, 1500px);
+    @include size(470px, 500px);
     flex-direction: row;
     justify-content: space-between;
-    .bp-line-img {
-      @include size(400px, 400px);
-      background-color: seashell;
+    .brandpersistence-line1{
+      @include size(150px, 500px);}
+    .brandpersistence-line2{
+      @include size(150px, 500px);
+      padding-top: 112.5px;
+      }
+      .brandpersistence-line3{
+        @include size(150px, 500px);}
+    .bp-line-img{
+      @include size(150px, 150px);
+      background-color:seashell;
+      border: 0;
+    }}
+}
+@media (max-width:500px) {
+  .brandpersistence-text{
+    @include size(200px, 100px);
+    letter-spacing: 5px;
+    display: flex;
+    margin: auto;
+    font-size: 22px;
+    align-items: center;
+    padding-left: 10%;
+    .bq-text-line{
+      @include size(2.5px, 70px);
+      background-color:$color-blue;
+      transform: rotate(45deg);
+    }
+  }
+  .brandpersistences{
+    margin-top: 30px;
+    display: flex;
+    @include size(100%, 500px);
+    padding: 0px 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .bp-line-img{
+      @include size(160px, 160px);
+      background-color:seashell;
       border: 0;
     }
-    .brandpersistence-line1 {
-      @include size(400px, 1300px);
+    .brandpersistence-line1{
+      @include size(170px, 465px);
       flex-direction: row;
       justify-content: space-between;
-      .bp-line1-img1 {
-        background-image: url(../img/material/brandpersistence-01.png);
-      }
-      .bp-line1-img2 {
-        background-image: url(../img/material/brandpersistence-02.png);
-      }
-      .bp-line1-img3 {
-        background-image: url(../img/material/brandpersistence-03.png);
-      }
+      .bp-line1-img1{
+        background-image: url(../img/material/brandpersistence-01.png);}
+      .bp-line1-img2{
+        background-image: url(../img/material/brandpersistence-02.png);}
+      .bp-line1-img3{
+        background-image: url(../img/material/brandpersistence-03.png);}
     }
-    .brandpersistence-line2 {
-      padding-top: 200px;
-      @include size(400px, 1300px);
+    .brandpersistence-line2{
+      padding-top: 0px;
+      @include size(150px, 465px);
       flex-direction: row;
       justify-content: space-between;
-      .bp-line2-img1 {
-        background-image: url(../img/material/brandpersistence-04.png);
-      }
-      .bp-line2-img2 {
-        background-image: url(../img/material/brandpersistence-05.png);
-      }
-      .bp-line2-img3 {
-        background-image: url(../img/material/brandpersistence-06.png);
-      }
+      .bp-line2-img1{
+        background-image: url(../img/material/brandpersistence-04.png);}
+      .bp-line2-img2{
+        background-image: url(../img/material/brandpersistence-05.png);}
+      .bp-line2-img3{
+        background-image: url(../img/material/brandpersistence-06.png);}
     }
-    .brandpersistence-line3 {
-      @include size(400px, 1300px);
-      flex-direction: row;
-      justify-content: space-between;
-      .bp-line3-img1 {
-        background-image: url(../img/material/brandpersistence-07.png);
-      }
-      .bp-line3-img2 {
-        background-image: url(../img/material/brandpersistence-08.png);
-      }
-      .bp-line3-img3 {
-        background-image: url(../img/material/brandpersistence-09.png);
-      }
-    }
-  }
-  @media (max-width: 1440px) {
-    .brandpersistences {
-      display: flex;
-      @include size(950px, 1000px);
-      flex-direction: row;
-      justify-content: space-between;
-      .brandpersistence-text {
-        @include size(200px, 130px);
-        display: flex;
-        margin: auto;
-        .bq-text-line {
-          @include size(2.5px, 95px);
-          background-color: $color-blue;
-          transform: rotate(45deg);
-        }
-      }
-      .brandpersistence-line1 {
-        @include size(300px, 1000px);
-      }
-      .brandpersistence-line2 {
-        @include size(300px, 1150px);
-        padding-top: 225px;
-      }
-      .brandpersistence-line3 {
-        @include size(300px, 1000px);
-      }
-      .bp-line-img {
-        transition: 1s;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        @include size(300px, 300px);
-        background-color: seashell;
-        border: 0;
-      }
-    }
-  }
-  @media (max-width: 960px) {
-    .brandpersistences {
-      display: flex;
-      @include size(650px, 800px);
-      flex-direction: row;
-      justify-content: space-between;
-      .brandpersistence-line1 {
-        @include size(200px, 650px);
-      }
-      .brandpersistence-line2 {
-        @include size(200px, 700px);
-        padding-top: 150px;
-      }
-      .brandpersistence-line3 {
-        @include size(200px, 650px);
-      }
-      .bp-line-img {
-        transition: 1s;
-        @include size(200px, 200px);
-        background-color: seashell;
-        border: 0;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .brandpersistence-text {
-      @include size(200px, 100px);
-      letter-spacing: 5px;
-      display: flex;
-      margin: auto;
-      font-size: 22px;
-      align-items: center;
-      padding-left: 20px;
-      .bq-text-line {
-        @include size(2.5px, 70px);
-        background-color: $color-blue;
-        transform: rotate(45deg);
-      }
-    }
-    .brandpersistences {
+    .brandpersistence-line3{
+      @include size(150px, 500px);
       margin-top: 30px;
-      display: flex;
-      @include size(470px, 500px);
       flex-direction: row;
       justify-content: space-between;
-      .brandpersistence-line1 {
-        @include size(150px, 500px);
-      }
-      .brandpersistence-line2 {
-        @include size(150px, 500px);
-        padding-top: 112.5px;
-      }
-      .brandpersistence-line3 {
-        @include size(150px, 500px);
-      }
-      .bp-line-img {
-        @include size(150px, 150px);
-        background-color: seashell;
-        border: 0;
-      }
-    }
-  }
-  @media (max-width: 500px) {
-    .brandpersistence-text {
-      @include size(200px, 100px);
-      letter-spacing: 5px;
-      display: flex;
-      margin: auto;
-      font-size: 22px;
-      align-items: center;
-      padding-left: 10%;
-      .bq-text-line {
-        @include size(2.5px, 70px);
-        background-color: $color-blue;
-        transform: rotate(45deg);
-      }
-    }
-    .brandpersistences {
-      margin-top: 30px;
-      display: flex;
-      @include size(100%, 500px);
-      padding: 0px 20px;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      .bp-line-img {
-        @include size(160px, 160px);
-        background-color: seashell;
-        border: 0;
-      }
-      .brandpersistence-line1 {
-        @include size(170px, 465px);
-        flex-direction: row;
-        justify-content: space-between;
-        .bp-line1-img1 {
-          background-image: url(../img/material/brandpersistence-01.png);
-        }
-        .bp-line1-img2 {
-          background-image: url(../img/material/brandpersistence-02.png);
-        }
-        .bp-line1-img3 {
-          background-image: url(../img/material/brandpersistence-03.png);
-        }
-      }
-      .brandpersistence-line2 {
-        padding-top: 0px;
-        @include size(150px, 465px);
-        flex-direction: row;
-        justify-content: space-between;
-        .bp-line2-img1 {
-          background-image: url(../img/material/brandpersistence-04.png);
-        }
-        .bp-line2-img2 {
-          background-image: url(../img/material/brandpersistence-05.png);
-        }
-        .bp-line2-img3 {
-          background-image: url(../img/material/brandpersistence-06.png);
-        }
-      }
-      .brandpersistence-line3 {
-        @include size(150px, 500px);
-        margin-top: 30px;
-        flex-direction: row;
-        justify-content: space-between;
-        .bp-line3-img2 {
-          background-image: url(../img/material/brandpersistence-08.png);
-        }
-        .bp-line3-img3 {
-          background-image: url(../img/material/brandpersistence-09.png);
-        }
-      }
-    }
-  }
-  @media (max-width: 360px) {
-    .brandpersistences {
-      // display: none;
-    }
-    .brandpersistence-text {
-      @include size(200px, 90px);
-      letter-spacing: 5px;
-      display: flex;
-      margin: auto;
-      font-size: 22px;
-      align-items: center;
-      padding-left: 13%;
-      .bq-text-line {
-        @include size(2.5px, 70px);
-        background-color: $color-blue;
-        transform: rotate(45deg);
-      }
-    }
-    .brandpersistences2 {
-      margin-top: 30px;
-      display: flex;
-      @include size(100%, 500px);
-      padding: 0px 20px;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      .bp2-line-img {
-        transition: 1s;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        @include size(120px, 120px);
-        background-color: seashell;
-        border: 0;
-      }
-      .brandpersistence2-line1 {
-        @include size(120px, 500px);
-        flex-direction: row;
-        justify-content: space-between;
-        .bp2-line1-img1 {
-          background-image: url(../img/material/brandpersistence-01.png);
-        }
-        .bp2-line1-img2 {
-          background-image: url(../img/material/brandpersistence-02.png);
-        }
-        .bp2-line1-img3 {
-          background-image: url(../img/material/brandpersistence-03.png);
-        }
-        .bp2-line1-img4 {
-          background-image: url(../img/material/brandpersistence-07.png);
-        }
-      }
-      .brandpersistence2-line2 {
-        padding-top: 0px;
-        @include size(120px, 400px);
-        flex-direction: row;
-        justify-content: space-between;
-        .bp2-line2-img1 {
-          background-image: url(../img/material/brandpersistence-04.png);
-        }
-        .bp2-line2-img2 {
-          background-image: url(../img/material/brandpersistence-05.png);
-        }
-        .bp2-line2-img3 {
-          background-image: url(../img/material/brandpersistence-06.png);
-        }
-        .bp2-line2-img4 {
-          background-image: url(../img/material/brandpersistence-08.png);
-        }
-      }
-      .brandpersistence2-line3 {
-        @include size(120px, 130px);
-        flex-direction: row;
-        justify-content: space-between;
-        .bp2-line3-img1 {
-          background-image: url(../img/material/brandpersistence-09.png);
-        }
-      }
+      .bp-line3-img2{
+        background-image: url(../img/material/brandpersistence-08.png);}
+      .bp-line3-img3{
+        background-image: url(../img/material/brandpersistence-09.png);}
     }
   }
 }
+@media (max-width:360px) {
+  .brandpersistences{
+    // display: none;
+  }
+  .brandpersistence-text{
+    @include size(200px, 90px);
+    letter-spacing: 5px;
+    display: flex;
+    margin: auto;
+    font-size: 22px;
+    align-items: center;
+    padding-left: 13%;
+    .bq-text-line{
+      @include size(2.5px, 70px);
+      background-color:$color-blue;
+      transform: rotate(45deg);
+    }
+  }
+  .brandpersistences2{
+    margin-top: 30px;
+    display: flex;
+    @include size(100%, 500px);
+    padding: 0px 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .bp2-line-img{
+      transition: 1s;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      @include size(120px, 120px);
+      background-color:seashell;
+      border: 0;
+    }
+    .brandpersistence2-line1{
+      @include size(120px, 500px);
+      flex-direction: row;
+      justify-content: space-between;
+      .bp2-line1-img1{
+        background-image: url(../img/material/brandpersistence-01.png);}
+      .bp2-line1-img2{
+        background-image: url(../img/material/brandpersistence-02.png);}
+      .bp2-line1-img3{
+        background-image: url(../img/material/brandpersistence-03.png);}
+      .bp2-line1-img4{
+        background-image: url(../img/material/brandpersistence-07.png);}
+    }
+    .brandpersistence2-line2{
+      padding-top: 0px;
+      @include size(120px, 400px);
+      flex-direction: row;
+      justify-content: space-between;
+      .bp2-line2-img1{
+        background-image: url(../img/material/brandpersistence-04.png);}
+      .bp2-line2-img2{
+        background-image: url(../img/material/brandpersistence-05.png);}
+      .bp2-line2-img3{
+        background-image: url(../img/material/brandpersistence-06.png);}
+      .bp2-line2-img4{
+        background-image: url(../img/material/brandpersistence-08.png);}
+    }
+    .brandpersistence2-line3{
+      @include size(120px, 130px);
+      flex-direction: row;
+      justify-content: space-between;
+      .bp2-line3-img1{
+        background-image: url(../img/material/brandpersistence-09.png);}
+    }
+  }
+  
+}
+
+}
+
+
+
 footer {
   font-family: "Noto Sans TC", sans-serif;
+  margin-top: 333px;
+  @media (max-width:500px){
+    margin-top: 500px;
+  }
   transition: all 1s linear;
   .footer-pc {
     transform: translate(0,40px);

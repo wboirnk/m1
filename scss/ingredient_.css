@@ -56,14 +56,11 @@ a:hover {
   color: white;
 }
 
-@keyframes menuIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
+
 .nav {
   width: 100%;
   height: 70px;
@@ -80,9 +77,6 @@ a:hover {
   .nav {
     padding: 0 5%;
   }
-}
-.nav a {
-  text-decoration: none;
 }
 .nav .link-group {
   border-top: 1px solid white;
@@ -134,11 +128,11 @@ a:hover {
   margin: auto;
 }
 .nav .ham-submenu .ham-submenu-btn:hover {
-  color: #ed892b;
+  color: #ED892B;
   font-weight: bold;
 }
 .nav .ham-submenu .ham-submenu-btn:hover .horizontal-line {
-  background-color: #ed892b;
+  background-color: #ED892B;
   width: 35%;
   margin-top: 10px;
 }
@@ -222,14 +216,15 @@ a:hover {
   animation: menuIn 0.8s ease-in both;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
+@keyframes menuIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 main {
-  padding-top: 70px;
-  overflow-x: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -283,7 +278,7 @@ main .ingredient_grilles_1 {
   z-index: -999;
   background-position: bottom;
   position: absolute;
-  top: 70px;
+  top: 0;
   bottom: none;
   right: 0;
   left: none;
@@ -299,7 +294,7 @@ main .ingredient_grilles_2 {
   right: none;
   left: 0;
   width: 60%;
-  height: 170px;
+  height: 100px;
   display: flex;
   background-position: center;
   background-repeat: no-repeat;
@@ -485,9 +480,9 @@ main .middle .ingredient .ingredient-container .ingredient-container-heading .in
   height: 105px;
   font-size: 28px;
   background-color: #154058;
-  color: #fff;
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
+  border-right: 2px solid #FFF;
   letter-spacing: 5px;
 }
 main .middle .ingredient .ingredient-container-1 {
@@ -557,9 +552,9 @@ main .middle .ingredient1 .ingredient1-container .ingredient1-container-heading 
   justify-content: center;
   align-items: center;
   background-color: #154058;
-  color: #fff;
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
+  border-right: 2px solid #FFF;
 }
 main .middle .ingredient1 .ingredient1-container-1 {
   background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
@@ -643,9 +638,9 @@ main .middle .ingredient1 .ingredient1-contents .ingredient1-contents-text p {
     height: 105px;
     font-size: 28px;
     background-color: #154058;
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
+    color: #FFF;
+    border-bottom: 2px solid #FFF;
+    border-right: 2px solid #FFF;
   }
   main .middle .ingredient .ingredient-contents {
     width: 670px;
@@ -718,9 +713,9 @@ main .middle .ingredient1 .ingredient1-contents .ingredient1-contents-text p {
     height: 100px;
     font-size: 26px;
     background-color: #154058;
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
+    color: #FFF;
+    border-bottom: 2px solid #FFF;
+    border-right: 2px solid #FFF;
   }
   main .middle .ingredient .ingredient-container-1 {
     background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
@@ -806,9 +801,9 @@ main .middle .ingredient1 .ingredient1-contents .ingredient1-contents-text p {
     height: 100px;
     font-size: 22px;
     background-color: #154058;
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
+    color: #FFF;
+    border-bottom: 2px solid #FFF;
+    border-right: 2px solid #FFF;
   }
   main .middle .ingredient .ingredient-container-1 {
     background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
@@ -886,17 +881,6 @@ main .middle .ingredient1 .ingredient1-contents .ingredient1-contents-text p {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-bottom: 160px;
-}
-@media (max-width: 960px) {
-  .brandpersistence-content {
-    margin-bottom: 7px;
-  }
-}
-@media (max-width: 768px) {
-  .brandpersistence-content {
-    margin-bottom: 100px;
-  }
 }
 .brandpersistence-content .brandpersistence-text {
   width: 200px;
@@ -1251,7 +1235,13 @@ main .middle .ingredient1 .ingredient1-contents .ingredient1-contents-text p {
 
 footer {
   font-family: "Noto Sans TC", sans-serif;
+  margin-top: 333px;
   transition: all 1s linear;
+}
+@media (max-width: 500px) {
+  footer {
+    margin-top: 500px;
+  }
 }
 footer .footer-pc {
   transform: translate(0, 40px);
