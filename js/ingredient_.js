@@ -13,8 +13,6 @@ Array.prototype.forEach.call(titles, (titles) => {
   titles.addEventListener("click", (click) => {
     //開啟一個就關閉前一個
     const active = document.querySelectorAll(".active");
-    console.log(active);
-    console.log(titles);
     Array.prototype.forEach.call(active, (act) => {
       act.classList.remove("active");
      
@@ -34,7 +32,6 @@ Array.prototype.forEach.call(titles, (titles) => {
       content.setAttribute("style", "width: " + width + "px");
     } else {
       // 沒有，高度歸 0
-      console.log("d");
       content.setAttribute("style", "width:0");
     }
   });

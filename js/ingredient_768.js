@@ -17,7 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
     heading.addEventListener("click", (click) => {
       //開啟一個就關閉前一個
       const active1 = document.querySelectorAll(".active1");
-      console.log(active1);
       Array.prototype.forEach.call(active1, (act1) => {
         act1.classList.remove("active1");
         
