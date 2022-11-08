@@ -316,6 +316,7 @@ body {
 }
 //固定菜單按鈕
 .menu-fix-btn {
+  // animation: rotate x5s liner;
   width: 160px;
   height: 160px;
   @include pc1400 {
@@ -359,10 +360,22 @@ body {
     font-family: "Noto Serif TC", serif;
   }
 }
+// @keyframes rotate{
+//   0%{
+//     transform: rotateY(0deg);
+//   }
+//   100%{
+//     transform: rotateY(360deg);
+//   }
+// }
 .menu-fix-btn.menu-on {
   display: flex;
   animation: menuIn 0.8s ease-in both;
+  
 }
+// .menu-fix-btn.menu-on:hover{
+ 
+// }
 //header
 
 .banner {
