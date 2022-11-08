@@ -15,11 +15,13 @@ const slogan = document.querySelector(".slogan");
 const menuBtn = document.querySelector(".menu-fix-btn");
 function navOn() {
   if (window.scrollY > 30) {
+    console.log("navOn");
     nav.classList.add("navOn");
     // logoBig.classList.add("logoOut");
     // slogan.classList.add("sloganOut");
     menuBtn.classList.add("menu-on");
   } else {
+    console.log("navOff");
     nav.classList.remove("navOn");
     // logoBig.classList.remove("logoOut");
     // slogan.classList.remove("sloganOut")
@@ -38,8 +40,10 @@ window.onscroll = () => {
   let sHeight = document.documentElement.scrollHeight;
   let sTop = document.documentElement.scrollTop;
 
+  console.log(sTop);
   
   if (sTop>5328||sHeight == cHeight + sTop) {
+    console.log("scrollOn");
     footerPc.classList.add("footer-on");
     footerMb.classList.add("footerMb-on");
   }
