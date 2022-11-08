@@ -40,13 +40,13 @@ window.onscroll = () => {
   let sHeight = document.documentElement.scrollHeight;
   let sTop = document.documentElement.scrollTop;
 
-  console.log(sTop);
+  console.log(Math.floor(sTop));
   console.log(`sHeight: ${sHeight}`);
   console.log(`cHeight: ${cHeight}`);
   console.log(`sTop: ${Math.floor(sTop)}`);
   
-  if (sTop>5328||sHeight == cHeight + sTop) {
-    if(sHeight == cHeight + sTop.floor){
+  if (sTop>5328||sHeight == cHeight + Math.floor(sTop)) {
+    if(sHeight == cHeight + Math.floor(sTop)){
       console.log("done");
     }
     console.log("scrollOn");
