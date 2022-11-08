@@ -64,7 +64,6 @@ a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid black;
 }
 
 .nav {
@@ -134,11 +133,11 @@ a {
   margin: auto;
 }
 .nav .ham-submenu .ham-submenu-btn:hover {
-  color: #ed892b;
+  color: #ED892B;
   font-weight: bold;
 }
 .nav .ham-submenu .ham-submenu-btn:hover .horizontal-line {
-  background-color: #ed892b;
+  background-color: #ED892B;
   width: 35%;
   margin-top: 10px;
 }
@@ -263,64 +262,62 @@ body {
     max-width: 576px;
   }
 }
-
-main {
-  overflow-x: hidden;
-  padding-top: 70px;
-}
-@media (max-width: 576px) {
-  main {
-    margin-bottom: 300px;
+@media (max-width: 360px) {
+  body {
+    max-width: 360px;
   }
 }
-main .winter-banner {
+
+.winter-banner {
+  padding-top: 70px;
   position: relative;
-  background-image: url(../img/news/banner.png);
+  background-image: url(../img/news/winter/banner.png);
   height: 592px;
   background-size: cover;
   display: block;
 }
-main .winter-banner img {
+.winter-banner img {
   display: none;
 }
 @media (max-width: 1400px) {
-  main .winter-banner {
+  .winter-banner {
     height: 552px;
   }
 }
 @media (max-width: 960px) {
-  main .winter-banner {
+  .winter-banner {
     height: 366px;
   }
 }
 @media (max-width: 768px) {
-  main .winter-banner {
+  .winter-banner {
     height: 292px;
   }
 }
 @media (max-width: 576px) {
-  main .winter-banner {
+  .winter-banner {
     height: 356px;
     background-image: none;
   }
-  main .winter-banner img {
-    display: block;
+  .winter-banner img {
     width: 100%;
+    display: block;
   }
 }
-main .mobile-winter-container {
+
+.mobile-winter-container {
   display: none;
 }
 @media (max-width: 576px) {
-  main .mobile-winter-container {
+  .mobile-winter-container {
     display: block;
-    margin-top: 100px;
+    margin-top: 35%;
     width: 100%;
     display: flex;
     position: relative;
     flex-direction: column;
   }
-  main .mobile-winter-container .mobile-winter-container-date {
+  .mobile-winter-container .mobile-winter-container-date {
     width: 13.5%;
     height: 21%;
     background-color: #154058;
@@ -329,7 +326,7 @@ main .mobile-winter-container {
     top: 1.5%;
     left: 5%;
   }
-  main .mobile-winter-container .mobile-winter-container-date p {
+  .mobile-winter-container .mobile-winter-container-date p {
     font-size: 22px;
     color: white;
     margin-left: 20%;
@@ -337,7 +334,7 @@ main .mobile-winter-container {
     margin-top: 10%;
     margin: 0 auto;
   }
-  main .mobile-winter-container .mobile-winter-container-line {
+  .mobile-winter-container .mobile-winter-container-line {
     position: absolute;
     display: flex;
     height: 61%;
@@ -348,87 +345,90 @@ main .mobile-winter-container {
     top: 25%;
     left: 12%;
   }
-  main .mobile-winter-container .mobile-winter-container-topic p {
+  .mobile-winter-container .mobile-winter-container-topic p {
     top: 25%;
     left: 3%;
     position: absolute;
     writing-mode: vertical-lr;
     letter-spacing: 11px;
-    font-size: 22px;
+    font-size: 20px;
     color: #4A5D68;
     font-family: Noto serif TC;
   }
-  main .mobile-winter-container .mobile-winter-container-img img {
+  .mobile-winter-container .mobile-winter-container-img .img-pic {
     position: absolute;
     top: 7%;
     left: 25%;
     width: 63%;
   }
-  main .mobile-winter-container .mobile-winter-container-bg {
+  .mobile-winter-container .mobile-winter-container-img .img-bg {
     position: relative;
-    left: 17%;
-    z-index: -2;
+    width: 60%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
   }
-  main .mobile-winter-container .mobile-winter-container-topborder {
+  .mobile-winter-container .mobile-winter-container-topborder {
     position: absolute;
-    width: 30%;
-    height: 30%;
+    width: 32%;
+    height: 25%;
     border: 1px black solid;
-    top: 95%;
+    top: 115%;
     left: 11%;
     border-bottom-style: hidden;
     border-right-style: hidden;
   }
-  main .mobile-winter-container .mobile-winter-container-text p {
+  .mobile-winter-container .mobile-winter-container-text p {
     position: absolute;
     font-size: 16px;
     color: black;
     font-family: Noto serif TC;
-    top: 105%;
+    top: 128%;
     left: 15%;
   }
-  main .mobile-winter-container button {
+  .mobile-winter-container button {
     background-color: #154058;
     position: absolute;
-    width: 22%;
-    height: 12%;
-    top: 128%;
-    left: 53%;
+    width: 11%;
+    height: 8%;
+    top: 145%;
+    left: 54%;
   }
-  main .mobile-winter-container button span {
+  .mobile-winter-container button .link {
     font-family: Noto serif TC;
-    font-size: 16px;
+    font-size: 12px;
     color: white;
   }
-  main .mobile-winter-container .mobile-winter-container-botborder {
+  .mobile-winter-container .mobile-winter-container-botborder {
     position: absolute;
     width: 32%;
-    height: 29%;
+    height: 25%;
     border: 1px black solid;
-    top: 118%;
+    top: 130%;
     left: 50%;
     border-top-style: hidden;
     border-left-style: hidden;
   }
 }
-main .winter-container {
+
+.winter-container {
   position: relative;
   width: 100%;
   display: flex;
   margin-top: 299px;
-  margin-bottom: 299px;
 }
 @media (max-width: 1150px) {
-  main .winter-container {
+  .winter-container {
     margin-top: 120px;
   }
 }
 @media (max-width: 576px) {
-  main .winter-container {
+  .winter-container {
     display: none;
   }
 }
-main .winter-container .winter-container-textbox {
+.winter-container .winter-container-textbox {
   position: relative;
   width: 350px;
   padding-left: 200px;
@@ -436,21 +436,21 @@ main .winter-container .winter-container-textbox {
   flex-direction: column;
 }
 @media (max-width: 1400px) {
-  main .winter-container .winter-container-textbox {
+  .winter-container .winter-container-textbox {
     padding-left: 100px;
   }
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-textbox {
+  .winter-container .winter-container-textbox {
     padding-left: 70px;
   }
 }
 @media (max-width: 860px) {
-  main .winter-container .winter-container-textbox {
+  .winter-container .winter-container-textbox {
     padding-left: 40px;
   }
 }
-main .winter-container .winter-container-textbox .winter-container-textbox-date {
+.winter-container .winter-container-textbox .winter-container-textbox-date {
   width: 96px;
   height: 96px;
   top: 861px;
@@ -458,36 +458,36 @@ main .winter-container .winter-container-textbox .winter-container-textbox-date 
   background-color: #154058;
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-textbox .winter-container-textbox-date {
+  .winter-container .winter-container-textbox .winter-container-textbox-date {
     width: 60px;
     height: 60px;
   }
 }
 @media (max-width: 860px) {
-  main .winter-container .winter-container-textbox .winter-container-textbox-date {
+  .winter-container .winter-container-textbox .winter-container-textbox-date {
     width: 56px;
     height: 56px;
   }
 }
-main .winter-container .winter-container-textbox .winter-container-textbox-date p {
+.winter-container .winter-container-textbox .winter-container-textbox-date p {
   font-size: 26px;
   color: white;
   margin-left: 22px;
   font-family: Noto Serif TC;
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-textbox .winter-container-textbox-date p {
+  .winter-container .winter-container-textbox .winter-container-textbox-date p {
     font-size: 18px;
     margin-left: 14px;
   }
 }
 @media (max-width: 860px) {
-  main .winter-container .winter-container-textbox .winter-container-textbox-date p {
+  .winter-container .winter-container-textbox .winter-container-textbox-date p {
     font-size: 16px;
     margin-left: 18px;
   }
 }
-main .winter-container .winter-container-textbox .winter-container-textbox-text {
+.winter-container .winter-container-textbox .winter-container-textbox-text {
   width: 43px;
   height: 379px;
   border: 10px solid #154058;
@@ -498,12 +498,12 @@ main .winter-container .winter-container-textbox .winter-container-textbox-text 
   border-top-style: hidden;
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-textbox .winter-container-textbox-text {
+  .winter-container .winter-container-textbox .winter-container-textbox-text {
     height: 244px;
     margin-left: 0;
   }
 }
-main .winter-container .winter-container-textbox .winter-container-textbox-text P {
+.winter-container .winter-container-textbox .winter-container-textbox-text P {
   padding-top: 13px;
   padding-right: 23px;
   font-size: 26px;
@@ -513,11 +513,11 @@ main .winter-container .winter-container-textbox .winter-container-textbox-text 
   font-family: Noto Serif TC;
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-textbox .winter-container-textbox-text P {
+  .winter-container .winter-container-textbox .winter-container-textbox-text P {
     font-size: 22px;
   }
 }
-main .winter-container .winter-container-imgbox {
+.winter-container .winter-container-imgbox {
   position: absolute;
   left: 20%;
   margin-top: 146px;
@@ -525,57 +525,57 @@ main .winter-container .winter-container-imgbox {
   flex-direction: row;
 }
 @media (max-width: 1400px) {
-  main .winter-container .winter-container-imgbox {
+  .winter-container .winter-container-imgbox {
     left: 15%;
   }
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-imgbox {
+  .winter-container .winter-container-imgbox {
     left: 10%;
     margin-top: 90px;
   }
 }
-main .winter-container .winter-container-imgbox img {
+.winter-container .winter-container-imgbox img {
   object-fit: cover;
   width: 70%;
   margin-left: 32px;
 }
 @media (max-width: 1400px) {
-  main .winter-container .winter-container-imgbox img {
+  .winter-container .winter-container-imgbox img {
     width: 60%;
   }
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-imgbox img {
+  .winter-container .winter-container-imgbox img {
     width: 55%;
   }
 }
 @media (max-width: 860px) {
-  main .winter-container .winter-container-imgbox img {
+  .winter-container .winter-container-imgbox img {
     width: 35%;
   }
 }
-main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox {
+.winter-container .winter-container-imgbox .winter-container-imgbox-textbox {
   position: absolute;
   left: 70%;
   margin-left: 84px;
 }
 @media (max-width: 1400px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox {
     left: 60%;
   }
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox {
     left: 50%;
   }
 }
 @media (max-width: 860px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox {
     left: 26%;
   }
 }
-main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-topborder {
+.winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-topborder {
   width: 418px;
   height: 80px;
   border: 5px solid #154058;
@@ -583,12 +583,12 @@ main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox
   border-bottom-style: hidden;
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-topborder {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-topborder {
     width: 284px;
     height: 54px;
   }
 }
-main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox p {
+.winter-container .winter-container-imgbox .winter-container-imgbox-textbox p {
   font-size: 16px;
   color: #154058;
   margin-left: 22px;
@@ -596,23 +596,23 @@ main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox
   margin-left: 105px;
 }
 @media (max-width: 1400px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox p {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox p {
     margin-left: 55px;
   }
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox p {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox p {
     font-size: 14px;
     margin-left: 30px;
   }
 }
 @media (max-width: 860px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox p {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox p {
     font-size: 12px;
     margin-left: 20px;
   }
 }
-main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder {
+.winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder {
   width: 418px;
   height: 80px;
   margin-left: 177px;
@@ -621,23 +621,23 @@ main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox
   border-left-style: hidden;
 }
 @media (max-width: 1400px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder {
     margin-left: 120px;
   }
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder {
     width: 284px;
     height: 54px;
     margin-left: 100px;
   }
 }
 @media (max-width: 860px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder {
     margin-left: 14px;
   }
 }
-main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder button {
+.winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder button {
   position: relative;
   width: 100px;
   height: 40px;
@@ -645,28 +645,29 @@ main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox
   margin-left: 224px;
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder button {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder button {
     width: 68px;
     height: 28px;
     margin-left: 187px;
   }
 }
-main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder button span {
+.winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder button span {
   font-size: 20px;
   color: white;
   font-family: Noto Serif TC;
 }
 @media (max-width: 1150px) {
-  main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder button span {
+  .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder button span {
     font-size: 14px;
   }
 }
-main .winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder button:hover {
+.winter-container .winter-container-imgbox .winter-container-imgbox-textbox .winter-container-imgbox-textbox-botborder button:hover {
   cursor: pointer;
 }
 
 footer {
   font-family: "Noto Sans TC", sans-serif;
+  margin-top: 333px;
   transition: all 1s linear;
 }
 footer .footer-pc {
