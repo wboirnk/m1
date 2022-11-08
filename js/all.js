@@ -45,7 +45,7 @@ window.onscroll = () => {
   console.log(`cHeight: ${cHeight}`);
   console.log(`sTop: ${sTop}`);
   
-  if (sTop>5328||sHeight == cHeight + sTop) {
+  if (sTop>5328||sHeight >= cHeight + sTop) {
     if(sHeight == cHeight + sTop){
       console.log("done");
     }
