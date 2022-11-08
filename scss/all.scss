@@ -201,6 +201,7 @@ body {
   @include size(100%, 70px);
   @include flex(flex, space-between, center);
   position: fixed;
+  opacity: 0;
   padding: 0px 11%;
   background-color: $color-blue;
   z-index: 9999;

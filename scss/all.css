@@ -882,6 +882,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  opacity: 0;
   padding: 0px 11%;
   background-color: #154058;
   z-index: 9999;
