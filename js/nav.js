@@ -19,6 +19,9 @@ window.onscroll = () => {
   let sHeight = document.documentElement.scrollHeight;
   let sTop = document.documentElement.scrollTop;
   console.log("scroll");
+  console.log(sTop);
+  console.log(cHeight);
+  console.log(sHeight);
   if (sTop > 5328 || sHeight == cHeight + Math.floor(sTop)) {
     if (sTop>5328) {
       console.log("5328");
