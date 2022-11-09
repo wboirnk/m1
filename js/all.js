@@ -37,9 +37,14 @@ window.onscroll = () => {
   let cHeight = document.documentElement.clientHeight;
   let sHeight = document.documentElement.scrollHeight;
   let sTop = document.documentElement.scrollTop;
-
+  console.log("scroll");
   
   if (sTop>5328||sHeight == cHeight + Math.floor(sTop)) {
+    if(sHeight == cHeight + Math.floor(sTop)){
+      console.log("same");
+    }else if(sTop>5328){
+      console.log("5328");
+    }
     
     footerPc.classList.add("footer-on");
     footerMb.classList.add("footerMb-on");
