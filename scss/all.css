@@ -906,6 +906,9 @@ body {
   font-weight: bold;
   color: white;
 }
+.nav .link-group .link-group-btn:hover {
+  color: #F68B27;
+}
 .nav .link-group .link-group-btn-end {
   margin-right: 27px;
 }
