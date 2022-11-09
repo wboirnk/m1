@@ -88,7 +88,7 @@ const teaTypeAnimation = gsap.timeline({
 teaTypeAnimation.fromTo(
   ".tea-type",
   { autoAlpha: 0 },
-  { autoAlpha: 1, duration: 0.5 }
+  { autoAlpha: 1, duration: 0.2 }
 );
 const teaTypeSwiperPcAnimation = gsap.timeline({
   scrollTrigger: {

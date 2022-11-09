@@ -1,11 +1,13 @@
 // loading
 
-window.onload = () => {
-  const body = document.querySelector("body");
+window.onload=()=>{
+  setTimeout(function(){
+    const body = document.querySelector("body");
   const bodyMask = document.querySelector(".loading");
   body.classList.add("loading-all");
   bodyMask.classList.add("loading-done");
-};
+  },1500)
+}
 
 // nav動畫
 
