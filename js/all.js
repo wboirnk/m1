@@ -18,6 +18,7 @@ const menuBtn = document.querySelector(".menu-fix-btn");
 function navOn() {
   if (window.scrollY > 30) {
     nav.classList.add("navOn");
+    
     // logoBig.classList.add("logoOut");
     // slogan.classList.add("sloganOut");
     menuBtn.classList.add("menu-on");
@@ -39,13 +40,10 @@ window.onscroll = () => {
   let cHeight = document.documentElement.clientHeight;
   let sHeight = document.documentElement.scrollHeight;
   let sTop = document.documentElement.scrollTop;
-  console.log("scroll");
   
   if (sTop>5328||sHeight == cHeight + Math.floor(sTop)) {
     if(sHeight == cHeight + Math.floor(sTop)){
-      console.log("same");
     }else if(sTop>5328){
-      console.log("5328");
     }
     
     footerPc.classList.add("footer-on");

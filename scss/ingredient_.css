@@ -113,7 +113,7 @@ body {
   margin-top: 30px;
   display: flex;
   font-size: 28px;
-  color: #F68B27;
+  color: #f68b27;
   font-family: "Noto Serif TC", serif;
   letter-spacing: 4px;
 }
@@ -218,11 +218,11 @@ body {
   margin: auto;
 }
 .nav .ham-submenu .ham-submenu-btn:hover {
-  color: #ED892B;
+  color: #ed892b;
   font-weight: bold;
 }
 .nav .ham-submenu .ham-submenu-btn:hover .horizontal-line {
-  background-color: #ED892B;
+  background-color: #ed892b;
   width: 35%;
   margin-top: 10px;
 }
@@ -572,6 +572,7 @@ main .middle .ingredient .ingredient-container {
   background-size: cover;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 main .middle .ingredient .ingredient-container .ingredient-container-heading {
   width: 135px;
@@ -584,9 +585,9 @@ main .middle .ingredient .ingredient-container .ingredient-container-heading .in
   height: 105px;
   font-size: 28px;
   background-color: #154058;
-  color: #FFF;
-  border-bottom: 2px solid #FFF;
-  border-right: 2px solid #FFF;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
   letter-spacing: 5px;
 }
 main .middle .ingredient .ingredient-container-1 {
@@ -656,9 +657,9 @@ main .middle .ingredient1 .ingredient1-container .ingredient1-container-heading 
   justify-content: center;
   align-items: center;
   background-color: #154058;
-  color: #FFF;
-  border-bottom: 2px solid #FFF;
-  border-right: 2px solid #FFF;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
 }
 main .middle .ingredient1 .ingredient1-container-1 {
   background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
@@ -742,9 +743,9 @@ main .middle .ingredient1 .ingredient1-contents .ingredient1-contents-text p {
     height: 105px;
     font-size: 28px;
     background-color: #154058;
-    color: #FFF;
-    border-bottom: 2px solid #FFF;
-    border-right: 2px solid #FFF;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
   }
   main .middle .ingredient .ingredient-contents {
     width: 670px;
@@ -817,9 +818,9 @@ main .middle .ingredient1 .ingredient1-contents .ingredient1-contents-text p {
     height: 100px;
     font-size: 26px;
     background-color: #154058;
-    color: #FFF;
-    border-bottom: 2px solid #FFF;
-    border-right: 2px solid #FFF;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
   }
   main .middle .ingredient .ingredient-container-1 {
     background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
@@ -905,9 +906,9 @@ main .middle .ingredient1 .ingredient1-contents .ingredient1-contents-text p {
     height: 100px;
     font-size: 22px;
     background-color: #154058;
-    color: #FFF;
-    border-bottom: 2px solid #FFF;
-    border-right: 2px solid #FFF;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
   }
   main .middle .ingredient .ingredient-container-1 {
     background-image: url(../img/material/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
