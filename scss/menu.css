@@ -798,13 +798,10 @@ footer {
   transition: all 1s linear;
 }
 footer .footer-pc {
-  transform: translate(0, 40px);
-  opacity: 0;
-  transition: 0.9s;
   margin-top: 102px;
   width: 100%;
   height: 120px;
-  padding: 0 23.8% 50px 23.8%;
+  padding: 50px 23.8% 50px 23.8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -897,9 +894,6 @@ footer .footer-pc.footer-on {
   }
 }
 footer .footer-mb {
-  transform: translate(0, 40px);
-  opacity: 0;
-  transition: 0.9s;
   display: none;
   position: relative;
   flex-direction: column;

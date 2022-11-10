@@ -33,34 +33,3 @@ function navOn() {
 window.addEventListener("scroll", navOn);
 
 // footer動畫
-const footerPc = document.querySelector(".footer-pc");
-const footerMb= document.querySelector(".footer-mb")
-window.onscroll = () => {
-  
-  let cHeight = document.documentElement.clientHeight;
-  let sHeight = document.documentElement.scrollHeight;
-  let sTop = document.documentElement.scrollTop;
-  
-  if (sTop>5328||sHeight == cHeight + Math.floor(sTop)) {
-    if(sHeight == cHeight + Math.floor(sTop)){
-    }else if(sTop>5328){
-    }
-    
-    footerPc.classList.add("footer-on");
-    footerMb.classList.add("footerMb-on");
-  }
-//   else if(sHeight == cHeight + sTop){
-// footerPc.classList.add("footer-on");
-//     footerMb.classList.add("footerMb-on");
-//   }
-  
-//   if (sHeight == cHeight + sTop) {
-//     footerPc.classList.add("footer-on");
-//     footerMb.classList.add("footerMb-on");
-//   }else if(sTop>7806){
-// console.log("a");
-//   }
-};
-// if(scrollHeight==clientHeight+scrollTop){
-//   footerPc.classList.add("footer-on");
-// }

@@ -795,16 +795,13 @@ footer {
     margin-top: 333px;
     transition: all 1s linear;
     .footer-pc {
-      transform: translate(0,40px);
-      opacity: 0;
-      transition: 0.9s;
       @include mb767 {
         display: none;
       }
       margin-top: 102px;
       width: 100%;
       height: 120px;
-      padding: 0 23.8% 50px 23.8%;
+      padding: 50px 23.8% 50px 23.8%;
       @include pc1400 {
         padding: 1.1% 15.7%;
       }
@@ -878,9 +875,6 @@ footer {
       }
     }
     .footer-mb {
-      transform: translate(0,40px);
-      opacity: 0;
-      transition: 0.9s;
       display: none;
       position: relative;
       @include mb767 {
