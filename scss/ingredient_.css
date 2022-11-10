@@ -986,6 +986,7 @@ main .middle .ingredient1 .ingredient1-contents .ingredient1-contents-text p {
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-bottom: 100px;
 }
 .brandpersistence-content .brandpersistence-text {
   width: 200px;

@@ -1599,9 +1599,6 @@ footer .footer-pc.footer-on {
   }
 }
 footer .footer-mb {
-  transform: translate(0, 40px);
-  opacity: 0;
-  transition: 0.9s;
   display: none;
   position: relative;
   flex-direction: column;

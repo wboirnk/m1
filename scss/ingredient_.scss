@@ -944,6 +944,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-bottom:100px;
   .brandpersistence-text {
     @include size(200px, 130px);
     letter-spacing: 5px;
